@@ -414,15 +414,60 @@ function loadPrefs(){
 /* ════════════════ LOAD ════════════════ */
 async function loadPerks(){
   try{
-    const res = await fetch('./perks.json');
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    PERKS = await res.json();
-    loadPrefs();
-    onReady();
-  }catch(err){
-    setStatus('Error cargando perks.json — '+err.message, false, true);
-    document.getElementById('cardsArea').innerHTML='';
+    // Try split loading first (faster UI)
+    const [metaRes] = await Promise.all([fetch('./perks-meta.json')]);
+    if(metaRes.ok){
+      PERKS = await metaRes.json();
+      loadPrefs();
+      onReady();
+      // Load icons async in background
+      loadIconsAsync();
+    } else {
+      throw new Error('meta not found');
+    }
+  }catch(e){
+    // Fallback to single perks.json
+    try{
+      setStatus('Cargando perks…');
+      const res = await fetch('./perks.json');
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      PERKS = await res.json();
+      loadPrefs();
+      onReady();
+    }catch(err){
+      setStatus('Error cargando perks.json — '+err.message, false, true);
+      document.getElementById('cardsArea').innerHTML='';
+    }
   }
+}
+
+async function loadIconsAsync(){
+  try{
+    const res = await fetch('./perks-icons.json');
+    if(!res.ok) return;
+    const icons = await res.json();
+    // Inject icons into PERKS data
+    for(const arr of [PERKS.survivor, PERKS.killer]){
+      for(const p of arr){
+        if(p.wikiKey && icons[p.wikiKey]){
+          p.icon = icons[p.wikiKey];
+        }
+      }
+    }
+    // Refresh any visible card icons
+    document.querySelectorAll('.perk-img').forEach(img=>{
+      const name = img.alt;
+      const all = [...PERKS.survivor,...PERKS.killer];
+      const perk = all.find(p=>p.name===name);
+      if(perk && perk.icon && img.src !== perk.icon){
+        img.src = perk.icon;
+      }
+    });
+    // Refresh config grid icons if visible
+    if(document.getElementById('page-config').classList.contains('active')){
+      renderCharGrid();
+    }
+  }catch(e){}
 }
 
 function onReady(){
