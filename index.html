@@ -29,6 +29,34 @@ body{
   100%{transform:translateY(-100vh) scale(.3);opacity:0}
 }
 
+/* ── Candle glow — luz desde donde nacen las partículas ── */
+#candle-glow{position:fixed;bottom:0;left:0;right:0;height:55vh;pointer-events:none;z-index:0}
+.glow-orb{position:absolute;bottom:0;border-radius:50%;transform:translateY(55%)}
+.glow-orb:nth-child(1){
+  width:70vw;height:38vh;left:15vw;
+  background:radial-gradient(ellipse at center bottom,rgba(255,160,40,.13) 0%,rgba(155,93,229,.07) 45%,transparent 75%);
+  animation:flicker1 4.2s ease-in-out infinite;
+}
+.glow-orb:nth-child(2){
+  width:45vw;height:28vh;left:8vw;
+  background:radial-gradient(ellipse at center bottom,rgba(255,209,102,.10) 0%,rgba(247,37,133,.04) 50%,transparent 72%);
+  animation:flicker2 3.1s ease-in-out infinite;
+}
+.glow-orb:nth-child(3){
+  width:40vw;height:26vh;right:5vw;
+  background:radial-gradient(ellipse at center bottom,rgba(255,140,30,.09) 0%,rgba(155,93,229,.05) 50%,transparent 72%);
+  animation:flicker3 5.7s ease-in-out infinite;
+}
+.glow-orb:nth-child(4){
+  width:22vw;height:18vh;left:38vw;
+  background:radial-gradient(ellipse at center bottom,rgba(255,220,120,.15) 0%,rgba(255,160,40,.06) 55%,transparent 78%);
+  animation:flicker4 2.6s ease-in-out infinite;
+}
+@keyframes flicker1{0%,100%{opacity:.75;transform:translateY(55%) scaleX(1)}50%{opacity:1;transform:translateY(52%) scaleX(1.04)}}
+@keyframes flicker2{0%,100%{opacity:.6;transform:translateY(55%) scaleX(1)}33%{opacity:.9;transform:translateY(53%) scaleX(1.06)}66%{opacity:.55;transform:translateY(56%) scaleX(.97)}}
+@keyframes flicker3{0%,100%{opacity:.5;transform:translateY(55%) scaleX(1)}40%{opacity:.8;transform:translateY(53%) scaleX(1.05)}75%{opacity:.45;transform:translateY(57%) scaleX(.95)}}
+@keyframes flicker4{0%,100%{opacity:.85;transform:translateY(55%) scaleX(1)}25%{opacity:1;transform:translateY(51%) scaleX(1.08)}60%{opacity:.7;transform:translateY(54%) scaleX(.96)}}
+
 /* ── Nav tabs ── */
 .nav{
   position:relative;z-index:10;width:100%;
@@ -398,6 +426,12 @@ body{
 <body>
 
 <div id="particles"></div>
+<div id="candle-glow">
+  <div class="glow-orb"></div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb"></div>
+</div>
 
 <!-- ── Navigation ── -->
 <nav class="nav">
