@@ -1422,7 +1422,7 @@
     },
     {
       "name": "Discordance",
-      "character": "The Frank, Julie, Susie, Joey",
+      "character": "The Legion",
       "wikiKey": "discordance",
       "nameEs": "discordancia",
       "characterEs": "La Legión"
@@ -1506,7 +1506,7 @@
     },
     {
       "name": "Furtive Chase",
-      "character": "The Danny Johnson",
+      "character": "The Ghost Face",
       "wikiKey": "furtiveChase",
       "nameEs": "persecución furtiva",
       "characterEs": "Ghost Face"
@@ -1695,7 +1695,7 @@
     },
     {
       "name": "I'm All Ears",
-      "character": "The Danny Johnson",
+      "character": "The Ghost Face",
       "wikiKey": "i'mAllEars",
       "nameEs": "soy todo oídos",
       "characterEs": "Ghost Face"
@@ -1709,7 +1709,7 @@
     },
     {
       "name": "Iron Maiden",
-      "character": "The Frank, Julie, Susie, Joey",
+      "character": "The Legion",
       "wikiKey": "ironMaiden",
       "nameEs": "doncella de hierro",
       "characterEs": "La Legión"
@@ -1758,7 +1758,7 @@
     },
     {
       "name": "Mad Grit",
-      "character": "The Frank, Julie, Susie, Joey",
+      "character": "The Legion",
       "wikiKey": "madGrit",
       "nameEs": "furia ciega",
       "characterEs": "La Legión"
@@ -2017,7 +2017,7 @@
     },
     {
       "name": "Thrilling Tremors",
-      "character": "The Danny Johnson",
+      "character": "The Ghost Face",
       "wikiKey": "thrillingTremors",
       "nameEs": "temblores trepidantes",
       "characterEs": "Ghost Face"
