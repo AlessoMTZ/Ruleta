@@ -1,0 +1,1785 @@
+{
+  "_meta": {
+    "source": "deadbydaylight.wiki.gg",
+    "version": "9.4.0",
+    "dlc": "Stranger Things Chapter 2",
+    "date": "2026-01-28",
+    "totalSurvivor": 153,
+    "totalKiller": 122,
+    "emptySlotCopies": 8,
+    "note": "Icons from wiki.gg CDN. 15 very-new perks use SVG placeholder pending wiki icon upload."
+  },
+  "emptySlot": {
+    "name": "Slot Vacío",
+    "character": "General",
+    "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+    "wikiKey": "emptySlot",
+    "isEmpty": true
+  },
+  "survivor": [
+    {
+      "name": "A Place For Us",
+      "character": "Kwon Tae-young",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "aPlaceForUs"
+    },
+    {
+      "name": "Ace in the Hole",
+      "character": "Ace Visconti",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_aceInTheHole.png?528a2e",
+      "wikiKey": "aceInTheHole"
+    },
+    {
+      "name": "Adrenaline",
+      "character": "Meg Thomas",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_adrenaline.png?9f8d2a",
+      "wikiKey": "adrenaline"
+    },
+    {
+      "name": "Aftercare",
+      "character": "Jeff Johansen",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_aftercare.png?ba64f9",
+      "wikiKey": "aftercare"
+    },
+    {
+      "name": "Alert",
+      "character": "Feng Min",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_alert.png?e13660",
+      "wikiKey": "alert"
+    },
+    {
+      "name": "Any Means Necessary",
+      "character": "Yui Kimura",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_anyMeansNecessary.png?5eb1f2",
+      "wikiKey": "anyMeansNecessary"
+    },
+    {
+      "name": "Apocalyptic Ingenuity",
+      "character": "Rick Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_apocalypticIngenuity.png?271ffd",
+      "wikiKey": "apocalypticIngenuity"
+    },
+    {
+      "name": "Appraisal",
+      "character": "Élodie Rakoto",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_appraisal.png?1342d7",
+      "wikiKey": "appraisal"
+    },
+    {
+      "name": "Autodidact",
+      "character": "Adam Francis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_autodidact.png?ec9985",
+      "wikiKey": "autodidact"
+    },
+    {
+      "name": "Babysitter",
+      "character": "Steve Harrington",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_babysitter.png?be1f6b",
+      "wikiKey": "babysitter"
+    },
+    {
+      "name": "Background Player",
+      "character": "Renato Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_backgroundPlayer.png?cdf056",
+      "wikiKey": "backgroundPlayer"
+    },
+    {
+      "name": "Bada Bada Boom",
+      "character": "Dustin Henderson",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "badaBadaBoom"
+    },
+    {
+      "name": "Balanced Landing",
+      "character": "Nea Karlsson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_balancedLanding.png?6be7d6",
+      "wikiKey": "balancedLanding"
+    },
+    {
+      "name": "Bardic Inspiration",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bardicInspiration.png?bae2a8",
+      "wikiKey": "bardicInspiration"
+    },
+    {
+      "name": "Better Together",
+      "character": "Nancy Wheeler",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_betterTogether.png?3241c8",
+      "wikiKey": "betterTogether"
+    },
+    {
+      "name": "Better than New",
+      "character": "Rebecca Chambers",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_betterThanNew.png?bac710",
+      "wikiKey": "betterThanNew"
+    },
+    {
+      "name": "Bite the Bullet",
+      "character": "Leon Scott Kennedy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_biteTheBullet.png?910cfd",
+      "wikiKey": "biteTheBullet"
+    },
+    {
+      "name": "Blast Mine",
+      "character": "Jill Valentine",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_blastMine.png?b1a23e",
+      "wikiKey": "blastMine"
+    },
+    {
+      "name": "Blood Pact",
+      "character": "Cheryl Mason",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bloodPact.png?f9c5c4",
+      "wikiKey": "bloodPact"
+    },
+    {
+      "name": "Blood Rush",
+      "character": "Renato Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bloodRush.png?195902",
+      "wikiKey": "bloodRush"
+    },
+    {
+      "name": "Boil Over",
+      "character": "Kate Denson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boilOver.png?bad60a",
+      "wikiKey": "boilOver"
+    },
+    {
+      "name": "Bond",
+      "character": "Dwight Fairfield",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bond.png?9a53ad",
+      "wikiKey": "bond"
+    },
+    {
+      "name": "Boon: Circle of Healing",
+      "character": "Mikaela Reid",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boonCircleOfHealing.png?e36c2d",
+      "wikiKey": "boonCircleOfHealing"
+    },
+    {
+      "name": "Boon: Dark Theory",
+      "character": "Yoichi Asakawa",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boonDarkTheory.png?8b62ae",
+      "wikiKey": "boonDarkTheory"
+    },
+    {
+      "name": "Boon: Exponential",
+      "character": "Jonah Vasquez",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boonExponential.png?fc175e",
+      "wikiKey": "boonExponential"
+    },
+    {
+      "name": "Boon: Illumination",
+      "character": "Alan Wake",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boonIllumination.png?a90fcc",
+      "wikiKey": "boonIllumination"
+    },
+    {
+      "name": "Boon: Shadow Step",
+      "character": "Mikaela Reid",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_boonShadowStep.png?a3ecc7",
+      "wikiKey": "boonShadowStep"
+    },
+    {
+      "name": "Borrowed Time",
+      "character": "Bill Overbeck",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_borrowedTime.png?5a951f",
+      "wikiKey": "borrowedTime"
+    },
+    {
+      "name": "Botany Knowledge",
+      "character": "Claudette Morel",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_botanyKnowledge.png?6bf985",
+      "wikiKey": "botanyKnowledge"
+    },
+    {
+      "name": "Breakdown",
+      "character": "Jeff Johansen",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_breakdown.png?7d6823",
+      "wikiKey": "breakdown"
+    },
+    {
+      "name": "Breakout",
+      "character": "Yui Kimura",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_breakout.png?6efb27",
+      "wikiKey": "breakout"
+    },
+    {
+      "name": "Buckle Up",
+      "character": "Ash Williams",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_buckleUp.png?5ce8dd",
+      "wikiKey": "buckleUp"
+    },
+    {
+      "name": "Built to Last",
+      "character": "Felix Richter",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_builtToLast.png?2f415d",
+      "wikiKey": "builtToLast"
+    },
+    {
+      "name": "Calm Spirit",
+      "character": "Jake Park",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_calmSpirit.png?7db2d2",
+      "wikiKey": "calmSpirit"
+    },
+    {
+      "name": "Camaraderie",
+      "character": "Steve Harrington",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_camaraderie.png?ca30a6",
+      "wikiKey": "camaraderie"
+    },
+    {
+      "name": "Champion of Light",
+      "character": "Alan Wake",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_championOfLight.png?47998c",
+      "wikiKey": "championOfLight"
+    },
+    {
+      "name": "Change of Plan",
+      "character": "Dustin Henderson",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "changeOfPlan"
+    },
+    {
+      "name": "Chemical Trap",
+      "character": "Ellen Ripley",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_chemicalTrap.png?f16588",
+      "wikiKey": "chemicalTrap"
+    },
+    {
+      "name": "Clairvoyance",
+      "character": "Mikaela Reid",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_clairvoyance.png?297751",
+      "wikiKey": "clairvoyance"
+    },
+    {
+      "name": "Clean Break",
+      "character": "Taurie Cain",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_cleanBreak.png?5b7e94",
+      "wikiKey": "cleanBreak"
+    },
+    {
+      "name": "Come and Get Me!",
+      "character": "Rick Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_comeAndGetMe.png?f4490c",
+      "wikiKey": "comeAndGetMe"
+    },
+    {
+      "name": "Conviction",
+      "character": "Michonne Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_conviction.png?ad7956",
+      "wikiKey": "conviction"
+    },
+    {
+      "name": "Corrective Action",
+      "character": "Jonah Vasquez",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_correctiveAction.png?5ef598",
+      "wikiKey": "correctiveAction"
+    },
+    {
+      "name": "Counterforce",
+      "character": "Jill Valentine",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_counterforce.png?b76d0c",
+      "wikiKey": "counterforce"
+    },
+    {
+      "name": "Cut Loose",
+      "character": "Thalita Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_cutLoose.png?45851f",
+      "wikiKey": "cutLoose"
+    },
+    {
+      "name": "Dance With Me",
+      "character": "Kate Denson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_danceWithMe.png?eacd41",
+      "wikiKey": "danceWithMe"
+    },
+    {
+      "name": "Dead Hard",
+      "character": "David King",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deadHard.png?48782d",
+      "wikiKey": "deadHard"
+    },
+    {
+      "name": "Deadline",
+      "character": "Alan Wake",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deadline.png?69d516",
+      "wikiKey": "deadline"
+    },
+    {
+      "name": "Deception",
+      "character": "Élodie Rakoto",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deception.png?4b4f9a",
+      "wikiKey": "deception"
+    },
+    {
+      "name": "Deliverance",
+      "character": "Adam Francis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deliverance.png?1b43e6",
+      "wikiKey": "deliverance"
+    },
+    {
+      "name": "Desperate Measures",
+      "character": "Felix Richter",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_desperateMeasures.png?b18c18",
+      "wikiKey": "desperateMeasures"
+    },
+    {
+      "name": "Detective's Hunch",
+      "character": "David Tapp",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_detectivesHunch.png?836ede",
+      "wikiKey": "detectivesHunch"
+    },
+    {
+      "name": "Distortion",
+      "character": "Jeff Johansen",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_distortion.png?60a80b",
+      "wikiKey": "distortion"
+    },
+    {
+      "name": "Diversion",
+      "character": "Adam Francis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_diversion.png?88981a",
+      "wikiKey": "diversion"
+    },
+    {
+      "name": "Do No Harm",
+      "character": "Orela Rose",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "doNoHarm"
+    },
+    {
+      "name": "Dramaturgy",
+      "character": "Nicolas Cage",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_dramaturgy.png?4ea20a",
+      "wikiKey": "dramaturgy"
+    },
+    {
+      "name": "Duty of Care",
+      "character": "Orela Rose",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "dutyOfCare"
+    },
+    {
+      "name": "Empathic Connection",
+      "character": "Yoichi Asakawa",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_empathicConnection.png?728368",
+      "wikiKey": "empathicConnection"
+    },
+    {
+      "name": "Empathy",
+      "character": "Claudette Morel",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_empathy.png?812eb0",
+      "wikiKey": "empathy"
+    },
+    {
+      "name": "Extrasensory Perception",
+      "character": "Eleven",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "extrasensoryPerception"
+    },
+    {
+      "name": "Exultation",
+      "character": "Trevor Belmont",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_Exultation.png?62d4c5",
+      "wikiKey": "exultation"
+    },
+    {
+      "name": "Eyes of Belmont",
+      "character": "Trevor Belmont",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_EyesOfBelmont.png?f94e2b",
+      "wikiKey": "eyesOfBelmont"
+    },
+    {
+      "name": "Fast Track",
+      "character": "Lee Yun-jin",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_fastTrack.png?57ee75",
+      "wikiKey": "fastTrack"
+    },
+    {
+      "name": "Finesse",
+      "character": "Lara Croft",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_finesse.png?38d700",
+      "wikiKey": "finesse"
+    },
+    {
+      "name": "Five Moves Ahead",
+      "character": "Kwon Tae-young",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "fiveMovesAhead"
+    },
+    {
+      "name": "Fixated",
+      "character": "Nancy Wheeler",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_fixated.png?c64cb2",
+      "wikiKey": "fixated"
+    },
+    {
+      "name": "Flashbang",
+      "character": "Leon Scott Kennedy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_flashbang.png?dd91f3",
+      "wikiKey": "flashbang"
+    },
+    {
+      "name": "Flip-Flop",
+      "character": "Ash Williams",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_flip-Flop.png?a27724",
+      "wikiKey": "flip-Flop"
+    },
+    {
+      "name": "Flow State",
+      "character": "Kwon Tae-young",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "flowState"
+    },
+    {
+      "name": "Fogwise",
+      "character": "Vittorio Toscano",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_fogwise.png?6a146b",
+      "wikiKey": "fogwise"
+    },
+    {
+      "name": "For the People",
+      "character": "Zarina Kassir",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_forThePeople.png?dc6134",
+      "wikiKey": "forThePeople"
+    },
+    {
+      "name": "Friendly Competition",
+      "character": "Thalita Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_friendlyCompetition.png?78ee93",
+      "wikiKey": "friendlyCompetition"
+    },
+    {
+      "name": "Ghost Notes",
+      "character": "Vee Boonyasak",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_GhostNotes.png?92b28f",
+      "wikiKey": "ghostNotes"
+    },
+    {
+      "name": "Hardened",
+      "character": "Lara Croft",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hardened.png?ea6976",
+      "wikiKey": "hardened"
+    },
+    {
+      "name": "Head On",
+      "character": "Jane Romero",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_headOn.png?29e687",
+      "wikiKey": "headOn"
+    },
+    {
+      "name": "Hyperfocus",
+      "character": "Rebecca Chambers",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hyperfocus.png?5e7d38",
+      "wikiKey": "hyperfocus"
+    },
+    {
+      "name": "Inner Focus",
+      "character": "Haddie Kaur",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_innerFocus.png?9265f4",
+      "wikiKey": "innerFocus"
+    },
+    {
+      "name": "Inner Strength",
+      "character": "Nancy Wheeler",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_innerStrength.png?840b95",
+      "wikiKey": "innerStrength"
+    },
+    {
+      "name": "Invocation: Treacherous Crows",
+      "character": "Taurie Cain",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_invocationTreacherousCrows.png?1e1ba8",
+      "wikiKey": "invocationTreacherousCrows"
+    },
+    {
+      "name": "Invocation: Weaving Spiders",
+      "character": "Sable Ward",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_invocationWeavingSpiders.png?fc3a63",
+      "wikiKey": "invocationWeavingSpiders"
+    },
+    {
+      "name": "Iron Will",
+      "character": "Jake Park",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_ironWill.png?65bc91",
+      "wikiKey": "ironWill"
+    },
+    {
+      "name": "Last Stand",
+      "character": "Michonne Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_lastStand.png?cb8a9f",
+      "wikiKey": "lastStand"
+    },
+    {
+      "name": "Leader",
+      "character": "Dwight Fairfield",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_leader.png?9564d9",
+      "wikiKey": "leader"
+    },
+    {
+      "name": "Left Behind",
+      "character": "Bill Overbeck",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_leftBehind.png?23e038",
+      "wikiKey": "leftBehind"
+    },
+    {
+      "name": "Light-Footed",
+      "character": "Ellen Ripley",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_light-Footed.png?cdc815",
+      "wikiKey": "light-Footed"
+    },
+    {
+      "name": "Lithe",
+      "character": "Feng Min",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_lithe.png?74ca81",
+      "wikiKey": "lithe"
+    },
+    {
+      "name": "Low Profile",
+      "character": "Ada Wong",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_lowProfile.png?962be5",
+      "wikiKey": "lowProfile"
+    },
+    {
+      "name": "Lucky Break",
+      "character": "Yui Kimura",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_luckyBreak.png?69ab01",
+      "wikiKey": "luckyBreak"
+    },
+    {
+      "name": "Lucky Star",
+      "character": "Ellen Ripley",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_luckyStar.png?189218",
+      "wikiKey": "luckyStar"
+    },
+    {
+      "name": "Made for This",
+      "character": "Gabriel Soma",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_madeForThis.png?9e3242",
+      "wikiKey": "madeForThis"
+    },
+    {
+      "name": "Mettle of Man",
+      "character": "Ash Williams",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_mettleOfMan.png?deba27",
+      "wikiKey": "mettleOfMan"
+    },
+    {
+      "name": "Mirrored Illusion",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_mirroredIllusion.png?7792d0",
+      "wikiKey": "mirroredIllusion"
+    },
+    {
+      "name": "Moment of Glory",
+      "character": "Trevor Belmont",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_MomentOfGlory.png?6294f9",
+      "wikiKey": "momentOfGlory"
+    },
+    {
+      "name": "No Mither",
+      "character": "David King",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_noMither.png?4bea64",
+      "wikiKey": "noMither"
+    },
+    {
+      "name": "Off the Record",
+      "character": "Zarina Kassir",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_offTheRecord.png?35caf8",
+      "wikiKey": "offTheRecord"
+    },
+    {
+      "name": "One-Two-Three-Four!",
+      "character": "Vee Boonyasak",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_OneTwoThreeFour.png?bc3808",
+      "wikiKey": "oneTwoThreeFour"
+    },
+    {
+      "name": "Open-Handed",
+      "character": "Ace Visconti",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_open-Handed.png?22cbcf",
+      "wikiKey": "open-Handed"
+    },
+    {
+      "name": "Overcome",
+      "character": "Jonah Vasquez",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_overcome.png?ce6f96",
+      "wikiKey": "overcome"
+    },
+    {
+      "name": "Overzealous",
+      "character": "Haddie Kaur",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_overzealous.png?edf207",
+      "wikiKey": "overzealous"
+    },
+    {
+      "name": "Parental Guidance",
+      "character": "Yoichi Asakawa",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_parentalGuidance.png?62fe32",
+      "wikiKey": "parentalGuidance"
+    },
+    {
+      "name": "Pharmacy",
+      "character": "Quentin Smith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_pharmacy.png?5abc0f",
+      "wikiKey": "pharmacy"
+    },
+    {
+      "name": "Plot Twist",
+      "character": "Nicolas Cage",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_plotTwist.png?a106be",
+      "wikiKey": "plotTwist"
+    },
+    {
+      "name": "Poised",
+      "character": "Jane Romero",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_poised.png?3d5c89",
+      "wikiKey": "poised"
+    },
+    {
+      "name": "Potential Energy",
+      "character": "Vittorio Toscano",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_potentialEnergy.png?ca8f3c",
+      "wikiKey": "potentialEnergy"
+    },
+    {
+      "name": "Power Struggle",
+      "character": "Élodie Rakoto",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_powerStruggle.png?e01602",
+      "wikiKey": "powerStruggle"
+    },
+    {
+      "name": "Prove Thyself",
+      "character": "Dwight Fairfield",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_proveThyself.png?111502",
+      "wikiKey": "proveThyself"
+    },
+    {
+      "name": "Quick & Quiet",
+      "character": "Meg Thomas",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_quickAndQuiet.png?8488b6",
+      "wikiKey": "quickAndQuiet"
+    },
+    {
+      "name": "Quick Gambit",
+      "character": "Vittorio Toscano",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_quickGambit.png?153033",
+      "wikiKey": "quickGambit"
+    },
+    {
+      "name": "Rapid Response",
+      "character": "Orela Rose",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "rapidResponse"
+    },
+    {
+      "name": "Reactive Healing",
+      "character": "Ada Wong",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_reactiveHealing.png?349e39",
+      "wikiKey": "reactiveHealing"
+    },
+    {
+      "name": "Reassurance",
+      "character": "Rebecca Chambers",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_reassurance.png?8913c9",
+      "wikiKey": "reassurance"
+    },
+    {
+      "name": "Red Herring",
+      "character": "Zarina Kassir",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_redHerring.png?8db0d1",
+      "wikiKey": "redHerring"
+    },
+    {
+      "name": "Repressed Alliance",
+      "character": "Cheryl Mason",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_repressedAlliance.png?2a696f",
+      "wikiKey": "repressedAlliance"
+    },
+    {
+      "name": "Residual Manifest",
+      "character": "Haddie Kaur",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_residualManifest.png?612bbb",
+      "wikiKey": "residualManifest"
+    },
+    {
+      "name": "Resurgence",
+      "character": "Jill Valentine",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_resurgence.png?b3bc7d",
+      "wikiKey": "resurgence"
+    },
+    {
+      "name": "Road Life",
+      "character": "Vee Boonyasak",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_RoadLife.png?e0ae39",
+      "wikiKey": "roadLife"
+    },
+    {
+      "name": "Rookie Spirit",
+      "character": "Leon Scott Kennedy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_rookieSpirit.png?cb2ed0",
+      "wikiKey": "rookieSpirit"
+    },
+    {
+      "name": "Saboteur",
+      "character": "Jake Park",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_saboteur.png?9f0313",
+      "wikiKey": "saboteur"
+    },
+    {
+      "name": "Scavenger",
+      "character": "Gabriel Soma",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scavenger.png?1fc2de",
+      "wikiKey": "scavenger"
+    },
+    {
+      "name": "Scene Partner",
+      "character": "Nicolas Cage",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scenePartner.png?8a80ad",
+      "wikiKey": "scenePartner"
+    },
+    {
+      "name": "Second Wind",
+      "character": "Steve Harrington",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_secondWind.png?628298",
+      "wikiKey": "secondWind"
+    },
+    {
+      "name": "Self-Care",
+      "character": "Claudette Morel",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_self-Care.png?f58526",
+      "wikiKey": "self-Care"
+    },
+    {
+      "name": "Self-Preservation",
+      "character": "Lee Yun-jin",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_self-Preservation.png?e3b2dc",
+      "wikiKey": "selfPreservation"
+    },
+    {
+      "name": "Shoulder the Burden",
+      "character": "Taurie Cain",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_shoulderTheBurden.png?586691",
+      "wikiKey": "shoulderTheBurden"
+    },
+    {
+      "name": "Smash Hit",
+      "character": "Lee Yun-jin",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_smashHit.png?27f3e6",
+      "wikiKey": "smashHit"
+    },
+    {
+      "name": "Solidarity",
+      "character": "Jane Romero",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_solidarity.png?ff4662",
+      "wikiKey": "solidarity"
+    },
+    {
+      "name": "Soul Guard",
+      "character": "Cheryl Mason",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_soulGuard.png?34dc60",
+      "wikiKey": "soulGuard"
+    },
+    {
+      "name": "Specialist",
+      "character": "Lara Croft",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_specialist.png?a611f9",
+      "wikiKey": "specialist"
+    },
+    {
+      "name": "Sprint Burst",
+      "character": "Meg Thomas",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_sprintBurst.png?7d17fc",
+      "wikiKey": "sprintBurst"
+    },
+    {
+      "name": "Stake Out",
+      "character": "David Tapp",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_stakeOut.png?d920e9",
+      "wikiKey": "stakeOut"
+    },
+    {
+      "name": "Still Sight",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_stillSight.png?82ea5c",
+      "wikiKey": "stillSight"
+    },
+    {
+      "name": "Streetwise",
+      "character": "Nea Karlsson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_streetwise.png?2d4028",
+      "wikiKey": "streetwise"
+    },
+    {
+      "name": "Strength in Shadows",
+      "character": "Sable Ward",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_strengthInShadows.png?c1507c",
+      "wikiKey": "strengthInShadows"
+    },
+    {
+      "name": "Teamwork: Collective Stealth",
+      "character": "Renato Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_teamworkCollectiveStealth.png?9b3acd",
+      "wikiKey": "teamworkCollectiveStealth"
+    },
+    {
+      "name": "Teamwork: Full Circuit",
+      "character": "Dustin Henderson",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "teamwork:FullCircuit"
+    },
+    {
+      "name": "Teamwork: Power of Two",
+      "character": "Thalita Lyra",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_teamworkPowerOfTwo.png?5cdb75",
+      "wikiKey": "teamworkPowerOfTwo"
+    },
+    {
+      "name": "Teamwork: Soft-Spoken",
+      "character": "Eleven",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "teamwork:Soft-Spoken"
+    },
+    {
+      "name": "Teamwork: Throw Down",
+      "character": "Michonne Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_teamworkThrowDown.png?69a5fd",
+      "wikiKey": "teamworkThrowDown"
+    },
+    {
+      "name": "Teamwork: Toughen Up",
+      "character": "Rick Grimes",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_teamworkToughenUp.png?f0b7f2",
+      "wikiKey": "teamworkToughenUp"
+    },
+    {
+      "name": "Technician",
+      "character": "Feng Min",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_technician.png?c3c5de",
+      "wikiKey": "technician"
+    },
+    {
+      "name": "Tenacity",
+      "character": "David Tapp",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_tenacity.png?2842d0",
+      "wikiKey": "tenacity"
+    },
+    {
+      "name": "Troubleshooter",
+      "character": "Gabriel Soma",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_troubleshooter.png?662533",
+      "wikiKey": "troubleshooter"
+    },
+    {
+      "name": "Unbreakable",
+      "character": "Bill Overbeck",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_unbreakable.png?7d2266",
+      "wikiKey": "unbreakable"
+    },
+    {
+      "name": "Up the Ante",
+      "character": "Ace Visconti",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_upTheAnte.png?f34283",
+      "wikiKey": "upTheAnte"
+    },
+    {
+      "name": "Urban Evasion",
+      "character": "Nea Karlsson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_urbanEvasion.png?e98ead",
+      "wikiKey": "urbanEvasion"
+    },
+    {
+      "name": "Vigil",
+      "character": "Quentin Smith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_vigil.png?3fe709",
+      "wikiKey": "vigil"
+    },
+    {
+      "name": "Visionary",
+      "character": "Felix Richter",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_visionary.png?2a48fc",
+      "wikiKey": "visionary"
+    },
+    {
+      "name": "Wake Up!",
+      "character": "Quentin Smith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_wakeUp.png?f96073",
+      "wikiKey": "wakeUp"
+    },
+    {
+      "name": "We See You",
+      "character": "Eleven",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "weSeeYou"
+    },
+    {
+      "name": "We're Gonna Live Forever",
+      "character": "David King",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_wereGonnaLiveForever.png?12c8c5",
+      "wikiKey": "wereGonnaLiveForever"
+    },
+    {
+      "name": "Wicked",
+      "character": "Sable Ward",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_wicked.png?813308",
+      "wikiKey": "wicked"
+    },
+    {
+      "name": "Windows of Opportunity",
+      "character": "Kate Denson",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_windowsOfOpportunity.png?9a11a9",
+      "wikiKey": "windowsOfOpportunity"
+    },
+    {
+      "name": "Wiretap",
+      "character": "Ada Wong",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_wiretap.png?a90034",
+      "wikiKey": "wiretap"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    }
+  ],
+  "killer": [
+    {
+      "name": "A Nurse's Calling",
+      "character": "The Nurse",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_aNursesCalling.png?e79e94",
+      "wikiKey": "aNursesCalling"
+    },
+    {
+      "name": "Agitation",
+      "character": "The Trapper",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_agitation.png?215642",
+      "wikiKey": "agitation"
+    },
+    {
+      "name": "Alien Instinct",
+      "character": "The Xenomorph",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_alienInstinct.png?5e7374",
+      "wikiKey": "alienInstinct"
+    },
+    {
+      "name": "All-Shaking Thunder",
+      "character": "The Houndmaster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_allShakingThunder.png?9546d5",
+      "wikiKey": "allShakingThunder"
+    },
+    {
+      "name": "Awakened Awareness",
+      "character": "The Mastermind",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_awakenedAwareness.png?db8767",
+      "wikiKey": "awakenedAwareness"
+    },
+    {
+      "name": "Bamboozle",
+      "character": "The Clown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bamboozle.png?2f97f6",
+      "wikiKey": "bamboozle"
+    },
+    {
+      "name": "Barbecue & Chilli",
+      "character": "The Cannibal",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_barbecueAndChilli.png?b6f08b",
+      "wikiKey": "barbecueAndChilli"
+    },
+    {
+      "name": "Batteries Included",
+      "character": "The Good Guy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_batteriesIncluded.png?9b8fbc",
+      "wikiKey": "batteriesIncluded"
+    },
+    {
+      "name": "Beast of Prey",
+      "character": "The Huntress",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_beastOfPrey.png?813f5f",
+      "wikiKey": "beastOfPrey"
+    },
+    {
+      "name": "Blood Echo",
+      "character": "The Oni",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bloodEcho.png?75f115",
+      "wikiKey": "bloodEcho"
+    },
+    {
+      "name": "Blood Warden",
+      "character": "The Nightmare",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bloodWarden.png?160f68",
+      "wikiKey": "bloodWarden"
+    },
+    {
+      "name": "Bloodhound",
+      "character": "The Wraith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_bloodhound.png?7ea1e1",
+      "wikiKey": "bloodhound"
+    },
+    {
+      "name": "Brutal Strength",
+      "character": "The Trapper",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_brutalStrength.png?31c7c3",
+      "wikiKey": "brutalStrength"
+    },
+    {
+      "name": "Call of Brine",
+      "character": "The Onryō",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_callOfBrine.png?95161a",
+      "wikiKey": "callOfBrine"
+    },
+    {
+      "name": "Corrupt Intervention",
+      "character": "The Plague",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_corruptIntervention.png?89c714",
+      "wikiKey": "corruptIntervention"
+    },
+    {
+      "name": "Coulrophobia",
+      "character": "The Clown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_coulrophobia.png?f4801f",
+      "wikiKey": "coulrophobia"
+    },
+    {
+      "name": "Coup de Grâce",
+      "character": "The Twins",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_coupDeGr%C3%A2ce.png?3bef51",
+      "wikiKey": "coupDeGrâce"
+    },
+    {
+      "name": "Cruel Limits",
+      "character": "The Demogorgon",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_cruelLimits.png?553d10",
+      "wikiKey": "cruelLimits"
+    },
+    {
+      "name": "Dark Arrogance",
+      "character": "The Lich",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_darkArrogance.png?d3471f",
+      "wikiKey": "darkArrogance"
+    },
+    {
+      "name": "Dark Devotion",
+      "character": "The Plague",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_darkDevotion.png?d1cdc6",
+      "wikiKey": "darkDevotion"
+    },
+    {
+      "name": "Darkness Revealed",
+      "character": "The Dredge",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_darknessRevealed.png?ad8b5a",
+      "wikiKey": "darknessRevealed"
+    },
+    {
+      "name": "Dead Man's Switch",
+      "character": "The Deathslinger",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deadMansSwitch.png?39b7f0",
+      "wikiKey": "deadMansSwitch"
+    },
+    {
+      "name": "Deathbound",
+      "character": "The Executioner",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_deathbound.png?1f739b",
+      "wikiKey": "deathbound"
+    },
+    {
+      "name": "Discordance",
+      "character": "The Legion",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_discordance.png?d70fb2",
+      "wikiKey": "discordance"
+    },
+    {
+      "name": "Dissolution",
+      "character": "The Dredge",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_dissolution.png?ef52c8",
+      "wikiKey": "dissolution"
+    },
+    {
+      "name": "Dominance",
+      "character": "The Dark Lord",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_Dominance.png?4c9577",
+      "wikiKey": "dominance"
+    },
+    {
+      "name": "Dragon's Grip",
+      "character": "The Blight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_dragonsGrip.png?41494c",
+      "wikiKey": "dragonsGrip"
+    },
+    {
+      "name": "Enduring",
+      "character": "The Hillbilly",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_enduring.png?ba81b2",
+      "wikiKey": "enduring"
+    },
+    {
+      "name": "Eruption",
+      "character": "The Nemesis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_eruption.png?47f5af",
+      "wikiKey": "eruption"
+    },
+    {
+      "name": "Fire Up",
+      "character": "The Nightmare",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_fireUp.png?af3413",
+      "wikiKey": "fireUp"
+    },
+    {
+      "name": "Forced Hesitation",
+      "character": "The Singularity",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_forcedHesitation.png?46c982",
+      "wikiKey": "forcedHesitation"
+    },
+    {
+      "name": "Forced Penance",
+      "character": "The Executioner",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_forcedPenance.png?5ca0a6",
+      "wikiKey": "forcedPenance"
+    },
+    {
+      "name": "Forever Entwined",
+      "character": "The Ghoul",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_ForeverEntwined.png?8070ec",
+      "wikiKey": "foreverEntwined"
+    },
+    {
+      "name": "Franklin's Demise",
+      "character": "The Cannibal",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_franklinsDemise.png?2ac922",
+      "wikiKey": "franklinsDemise"
+    },
+    {
+      "name": "Friends 'til the End",
+      "character": "The Good Guy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_friendsTilTheEnd.png?652a64",
+      "wikiKey": "friendsTilTheEnd"
+    },
+    {
+      "name": "Furtive Chase",
+      "character": "The Ghost Face",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_furtiveChase.png?66f458",
+      "wikiKey": "furtiveChase"
+    },
+    {
+      "name": "Game Afoot",
+      "character": "The Skull Merchant",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_gameAfoot.png?32875b",
+      "wikiKey": "gameAfoot"
+    },
+    {
+      "name": "Gearhead",
+      "character": "The Deathslinger",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_gearhead.png?43cb8e",
+      "wikiKey": "gearhead"
+    },
+    {
+      "name": "Genetic Limits",
+      "character": "The Singularity",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_geneticLimits.png?41bad7",
+      "wikiKey": "geneticLimits"
+    },
+    {
+      "name": "Grim Embrace",
+      "character": "The Artist",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_grimEmbrace.png?38e910",
+      "wikiKey": "grimEmbrace"
+    },
+    {
+      "name": "Haywire",
+      "character": "The Animatronic",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_Haywire.png?f60f00",
+      "wikiKey": "haywire"
+    },
+    {
+      "name": "Help Wanted",
+      "character": "The Animatronic",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_HelpWanted.png?6b051a",
+      "wikiKey": "helpWanted"
+    },
+    {
+      "name": "Hex: Blood Favour",
+      "character": "The Blight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexBloodFavour.png?2a0118",
+      "wikiKey": "hexBloodFavour"
+    },
+    {
+      "name": "Hex: Crowd Control",
+      "character": "The Trickster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexCrowdControl.png?8abf9c",
+      "wikiKey": "hexCrowdControl"
+    },
+    {
+      "name": "Hex: Devour Hope",
+      "character": "The Hag",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexDevourHope.png?4cecbd",
+      "wikiKey": "hexDevourHope"
+    },
+    {
+      "name": "Hex: Face the Darkness",
+      "character": "The Knight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexFaceTheDarkness.png?b05275",
+      "wikiKey": "hexFaceTheDarkness"
+    },
+    {
+      "name": "Hex: Haunted Ground",
+      "character": "The Spirit",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexHauntedGround.png?fa9a66",
+      "wikiKey": "hexHauntedGround"
+    },
+    {
+      "name": "Hex: Hive Mind",
+      "character": "The First",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "hex:HiveMind"
+    },
+    {
+      "name": "Hex: Huntress Lullaby",
+      "character": "The Huntress",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexHuntressLullaby.png?75e688",
+      "wikiKey": "hexHuntressLullaby"
+    },
+    {
+      "name": "Hex: Nothing but Misery",
+      "character": "The Ghoul",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_NothingButMisery.png?a9e257",
+      "wikiKey": "NothingButMisery"
+    },
+    {
+      "name": "Hex: Overture of Doom",
+      "character": "The Krasue",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_HexOvertureOfDoom.png?a22807",
+      "wikiKey": "hexOvertureOfDoom"
+    },
+    {
+      "name": "Hex: Pentimento",
+      "character": "The Artist",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexPentimento.png?98d43b",
+      "wikiKey": "hexPentimento"
+    },
+    {
+      "name": "Hex: Retribution",
+      "character": "The Deathslinger",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexRetribution.png?9d0966",
+      "wikiKey": "hexRetribution"
+    },
+    {
+      "name": "Hex: Ruin",
+      "character": "The Hag",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexRuin.png?d096fe",
+      "wikiKey": "hexRuin"
+    },
+    {
+      "name": "Hex: The Third Seal",
+      "character": "The Hag",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexTheThirdSeal.png?9d8e8c",
+      "wikiKey": "hexTheThirdSeal"
+    },
+    {
+      "name": "Hex: Thrill of the Hunt",
+      "character": "General",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexThrillOfTheHunt.png?9eae8e",
+      "wikiKey": "hexThrillOfTheHunt"
+    },
+    {
+      "name": "Hex: Two Can Play",
+      "character": "The Good Guy",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexTwoCanPlay.png?2338db",
+      "wikiKey": "hexTwoCanPlay"
+    },
+    {
+      "name": "Hex: Undying",
+      "character": "The Blight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hexUndying.png?78b4af",
+      "wikiKey": "hexUndying"
+    },
+    {
+      "name": "Hex: Wretched Fate",
+      "character": "The Dark Lord",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_HexWretchedFate.png?7e07e3",
+      "wikiKey": "hexWretchedFate"
+    },
+    {
+      "name": "Hoarder",
+      "character": "The Twins",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hoarder.png?e97765",
+      "wikiKey": "hoarder"
+    },
+    {
+      "name": "Hubris",
+      "character": "The Knight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hubris.png?5ab9bd",
+      "wikiKey": "hubris"
+    },
+    {
+      "name": "Human Greed",
+      "character": "The Dark Lord",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_HumanGreed.png?c7b0c7",
+      "wikiKey": "humanGreed"
+    },
+    {
+      "name": "Hysteria",
+      "character": "The Nemesis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_hysteria.png?ca854c",
+      "wikiKey": "hysteria"
+    },
+    {
+      "name": "I'm All Ears",
+      "character": "The Ghost Face",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_imAllEars.png?f79e73",
+      "wikiKey": "imAllEars"
+    },
+    {
+      "name": "Infectious Fright",
+      "character": "The Plague",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_infectiousFright.png?718f19",
+      "wikiKey": "infectiousFright"
+    },
+    {
+      "name": "Iron Maiden",
+      "character": "The Legion",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_ironMaiden.png?1683da",
+      "wikiKey": "ironMaiden"
+    },
+    {
+      "name": "Knock Out",
+      "character": "The Cannibal",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_knockOut.png?3e922e",
+      "wikiKey": "knockOut"
+    },
+    {
+      "name": "Languid Touch",
+      "character": "The Lich",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_languidTouch.png?c15e67",
+      "wikiKey": "languidTouch"
+    },
+    {
+      "name": "Lethal Pursuer",
+      "character": "The Nemesis",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_lethalPursuer.png?3c8de5",
+      "wikiKey": "lethalPursuer"
+    },
+    {
+      "name": "Leverage",
+      "character": "The Skull Merchant",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_leverage.png?84d8c3",
+      "wikiKey": "leverage"
+    },
+    {
+      "name": "Lightborn",
+      "character": "The Hillbilly",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_lightborn.png?4210b0",
+      "wikiKey": "lightborn"
+    },
+    {
+      "name": "Machine Learning",
+      "character": "The Singularity",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_machineLearning.png?d42380",
+      "wikiKey": "machineLearning"
+    },
+    {
+      "name": "Mad Grit",
+      "character": "The Legion",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_madGrit.png?2f2225",
+      "wikiKey": "madGrit"
+    },
+    {
+      "name": "Make Your Choice",
+      "character": "The Pig",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_makeYourChoice.png?8919d4",
+      "wikiKey": "makeYourChoice"
+    },
+    {
+      "name": "Merciless Storm",
+      "character": "The Onryō",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_mercilessStorm.png?e67f3b",
+      "wikiKey": "mercilessStorm"
+    },
+    {
+      "name": "Mindbreaker",
+      "character": "The Demogorgon",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_mindbreaker.png?ff1e9e",
+      "wikiKey": "mindbreaker"
+    },
+    {
+      "name": "Monitor & Abuse",
+      "character": "The Doctor",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_monitorAndAbuse.png?9e96ae",
+      "wikiKey": "monitorAndAbuse"
+    },
+    {
+      "name": "Nemesis",
+      "character": "The Oni",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_nemesis.png?1d8e04",
+      "wikiKey": "nemesis"
+    },
+    {
+      "name": "No Quarter",
+      "character": "The Houndmaster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_noQuarter.png?bc4038",
+      "wikiKey": "noQuarter"
+    },
+    {
+      "name": "No Way Out",
+      "character": "The Trickster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_noWayOut.png?a1ebe4",
+      "wikiKey": "noWayOut"
+    },
+    {
+      "name": "None Are Free",
+      "character": "The Ghoul",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_NoneAreFree.png?872488",
+      "wikiKey": "noneAreFree"
+    },
+    {
+      "name": "Nowhere to Hide",
+      "character": "The Knight",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_nowhereToHide.png?977c80",
+      "wikiKey": "nowhereToHide"
+    },
+    {
+      "name": "Oppression",
+      "character": "The Twins",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_oppression.png?6fd3af",
+      "wikiKey": "oppression"
+    },
+    {
+      "name": "Overcharge",
+      "character": "The Doctor",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_overcharge.png?3e8ad6",
+      "wikiKey": "overcharge"
+    },
+    {
+      "name": "Overwhelming Presence",
+      "character": "The Doctor",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_overwhelmingPresence.png?ac8de5",
+      "wikiKey": "overwhelmingPresence"
+    },
+    {
+      "name": "Phantom Fear",
+      "character": "The Animatronic",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_PhantomFear.png?33ffc7",
+      "wikiKey": "phantomFear"
+    },
+    {
+      "name": "Pop Goes the Weasel",
+      "character": "The Clown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_popGoesTheWeasel.png?2c6571",
+      "wikiKey": "popGoesTheWeasel"
+    },
+    {
+      "name": "Predator",
+      "character": "The Wraith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_predator.png?8bbb59",
+      "wikiKey": "predator"
+    },
+    {
+      "name": "Rancor",
+      "character": "The Spirit",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_rancor.png?df9209",
+      "wikiKey": "rancor"
+    },
+    {
+      "name": "Rapid Brutality",
+      "character": "The Xenomorph",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_rapidBrutality.png?1c1f82",
+      "wikiKey": "rapidBrutality"
+    },
+    {
+      "name": "Ravenous",
+      "character": "The Krasue",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_Ravenous.png?c9c858",
+      "wikiKey": "ravenous"
+    },
+    {
+      "name": "Remember Me",
+      "character": "The Nightmare",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_rememberMe.png?4b8c1b",
+      "wikiKey": "rememberMe"
+    },
+    {
+      "name": "Scourge Hook: Floods of Rage",
+      "character": "The Onryō",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scourgeHookFloodsOfRage.png?45d664",
+      "wikiKey": "scourgeHookFloodsOfRage"
+    },
+    {
+      "name": "Scourge Hook: Hangman's Trick",
+      "character": "The Pig",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scourgeHookHangmansTrick.png?fb70f3",
+      "wikiKey": "scourgeHookHangmansTrick"
+    },
+    {
+      "name": "Scourge Hook: Jagged Compass",
+      "character": "The Houndmaster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scourgeHookJaggedCompass.png?38db55",
+      "wikiKey": "scourgeHookJaggedCompass"
+    },
+    {
+      "name": "Scourge Hook: Pain Resonance",
+      "character": "The Artist",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_scourgeHookPainResonance.png?ab0be3",
+      "wikiKey": "scourgeHookPainResonance"
+    },
+    {
+      "name": "Secret Project",
+      "character": "The First",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "secretProject"
+    },
+    {
+      "name": "Septic Touch",
+      "character": "The Dredge",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_septicTouch.png?55454b",
+      "wikiKey": "septicTouch"
+    },
+    {
+      "name": "Shadowborn",
+      "character": "The Wraith",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_shadowborn.png?20cc9e",
+      "wikiKey": "shadowborn"
+    },
+    {
+      "name": "Spies from the Shadows",
+      "character": "General",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_spiesFromTheShadows.png?e8741c",
+      "wikiKey": "spiesFromTheShadows"
+    },
+    {
+      "name": "Spirit Fury",
+      "character": "The Spirit",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_spiritFury.png?9199f1",
+      "wikiKey": "spiritFury"
+    },
+    {
+      "name": "Starstruck",
+      "character": "The Trickster",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_starstruck.png?94d656",
+      "wikiKey": "starstruck"
+    },
+    {
+      "name": "Stridor",
+      "character": "The Nurse",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_stridor.png?52e3cc",
+      "wikiKey": "stridor"
+    },
+    {
+      "name": "Superior Anatomy",
+      "character": "The Mastermind",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_superiorAnatomy.png?f818ed",
+      "wikiKey": "superiorAnatomy"
+    },
+    {
+      "name": "Surge",
+      "character": "The Demogorgon",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_surge.png?3643ca",
+      "wikiKey": "surge"
+    },
+    {
+      "name": "Surveillance",
+      "character": "The Pig",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_surveillance.png?ade1e5",
+      "wikiKey": "surveillance"
+    },
+    {
+      "name": "THWACK!",
+      "character": "The Skull Merchant",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_thwack.png?82b2f3",
+      "wikiKey": "thwack"
+    },
+    {
+      "name": "Terminus",
+      "character": "The Mastermind",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_terminus.png?2f55fe",
+      "wikiKey": "terminus"
+    },
+    {
+      "name": "Territorial Imperative",
+      "character": "The Huntress",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_territorialImperative.png?7a3439",
+      "wikiKey": "territorialImperative"
+    },
+    {
+      "name": "Thanatophobia",
+      "character": "The Nurse",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_thanatophobia.png?9940c7",
+      "wikiKey": "thanatophobia"
+    },
+    {
+      "name": "Thrilling Tremors",
+      "character": "The Ghost Face",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_thrillingTremors.png?441b43",
+      "wikiKey": "thrillingTremors"
+    },
+    {
+      "name": "Tinkerer",
+      "character": "The Hillbilly",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_tinkerer.png?4a1032",
+      "wikiKey": "tinkerer"
+    },
+    {
+      "name": "Trail of Torment",
+      "character": "The Executioner",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_trailOfTorment.png?a95e2e",
+      "wikiKey": "trailOfTorment"
+    },
+    {
+      "name": "Turn Back the Clock",
+      "character": "The First",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a0f2e' stroke='%239b5de560' stroke-width='2'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-size='28' fill='%239b5de580' font-family='serif'%3E%3F%3C/text%3E%3C/svg%3E",
+      "wikiKey": "turnBackTheClock"
+    },
+    {
+      "name": "Ultimate Weapon",
+      "character": "The Xenomorph",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_ultimateWeapon.png?77fee9",
+      "wikiKey": "ultimateWeapon"
+    },
+    {
+      "name": "Unbound",
+      "character": "The Unknown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_unbound.png?8afa67",
+      "wikiKey": "unbound"
+    },
+    {
+      "name": "Undone",
+      "character": "The Unknown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_undone.png?67f832",
+      "wikiKey": "undone"
+    },
+    {
+      "name": "Unforeseen",
+      "character": "The Unknown",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_unforeseen.png?b427d2",
+      "wikiKey": "unforeseen"
+    },
+    {
+      "name": "Unnerving Presence",
+      "character": "The Trapper",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_unnervingPresence.png?4837fb",
+      "wikiKey": "unnervingPresence"
+    },
+    {
+      "name": "Wandering Eye",
+      "character": "The Krasue",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_WanderingEye.png?80a47c",
+      "wikiKey": "wanderingEye"
+    },
+    {
+      "name": "Weave Attunement",
+      "character": "The Lich",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_weaveAttunement.png?d7177c",
+      "wikiKey": "weaveAttunement"
+    },
+    {
+      "name": "Zanshin Tactics",
+      "character": "The Oni",
+      "icon": "https://deadbydaylight.wiki.gg/images/IconPerks_zanshinTactics.png?eb070c",
+      "wikiKey": "zanshinTactics"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+      "wikiKey": "emptySlot",
+      "isEmpty": true
+    }
+  ]
+}
