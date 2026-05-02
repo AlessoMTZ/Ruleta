@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer-when-downgrade">
 <title>DBD Perk Roulette</title>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d0b10;--surface:#141018;--surface2:#1a1520;
+  --bg:#0d0b10;--surface:#141018;--surface2:#1a1520;--surface3:#201a2a;
   --border:rgba(180,140,255,0.12);--text:#e8e0f0;--muted:#9080a8;
   --accent:#9b5de5;--accent2:#f72585;--gold:#ffd166;
-  --gold-glow:rgba(255,209,102,0.35);
+  --gold-glow:rgba(255,209,102,0.35);--green:#06d6a0;--red:#ef476f;
   --fd:'Zodiak','Georgia',serif;--fb:'Satoshi','Inter',sans-serif;
   --r:14px;--flip:0.7s cubic-bezier(0.16,1,0.3,1);
 }
@@ -19,21 +18,46 @@
 body{
   background:var(--bg);font-family:var(--fb);color:var(--text);
   min-height:100dvh;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:1.4rem;padding:1.5rem;overflow:hidden;
-  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
 
-/* Particles */
+/* ── Particles ── */
 #particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .particle{position:absolute;border-radius:50%;opacity:0;animation:float-up linear infinite}
 @keyframes float-up{
-  0%{transform:translateY(0) scale(1);opacity:0}
-  10%{opacity:.4}90%{opacity:.15}
+  0%{transform:translateY(0) scale(1);opacity:0}10%{opacity:.4}90%{opacity:.15}
   100%{transform:translateY(-100vh) scale(.3);opacity:0}
 }
 
-/* Title */
-.title-area{position:relative;z-index:1;text-align:center}
+/* ── Nav tabs ── */
+.nav{
+  position:relative;z-index:10;width:100%;
+  background:rgba(13,11,16,0.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  gap:.3rem;padding:.55rem .8rem;
+}
+.nav-tab{
+  font-family:var(--fb);font-size:.82rem;font-weight:500;letter-spacing:.04em;
+  border:none;border-radius:999px;padding:.38rem 1.2rem;cursor:pointer;
+  transition:all .2s ease;background:transparent;color:var(--muted);
+}
+.nav-tab.active{background:var(--accent);color:#fff;box-shadow:0 2px 14px rgba(155,93,229,.4)}
+.nav-tab:hover:not(.active){color:var(--text);background:var(--surface2)}
+
+/* ── Pages ── */
+.page{display:none;width:100%;flex:1}
+.page.active{display:flex;flex-direction:column;align-items:center}
+
+/* ════════════════════════
+   ROULETTE PAGE
+════════════════════════ */
+.roulette-wrap{
+  display:flex;flex-direction:column;align-items:center;
+  gap:1.4rem;padding:1.5rem;width:100%;max-width:900px;
+}
+
+.title-area{text-align:center}
 .title-area h1{
   font-family:var(--fd);font-size:clamp(1.5rem,4vw,2.6rem);font-weight:700;letter-spacing:.04em;
   background:linear-gradient(135deg,var(--gold) 0%,var(--accent) 60%,var(--accent2) 100%);
@@ -42,10 +66,9 @@ body{
 }
 .title-area p{margin-top:.35rem;font-size:.82rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 
-/* Role tabs */
 .role-tabs{
-  position:relative;z-index:1;display:flex;gap:.5rem;
-  background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:.3rem
+  display:flex;gap:.5rem;background:var(--surface);
+  border:1px solid var(--border);border-radius:999px;padding:.3rem
 }
 .role-tab{
   font-family:var(--fb);font-size:.82rem;font-weight:500;border:none;
@@ -55,60 +78,36 @@ body{
 .role-tab.active{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(155,93,229,.4)}
 .role-tab:disabled{opacity:.35;cursor:not-allowed}
 
-/* Cards area */
 .cards-area{
-  position:relative;z-index:1;display:flex;
-  gap:clamp(.7rem,2vw,1.4rem);flex-wrap:nowrap;
+  display:flex;gap:clamp(.7rem,2vw,1.4rem);flex-wrap:nowrap;
   justify-content:center;align-items:center;min-height:230px;
 }
-
-/* Loading */
 .loading-msg{
-  position:relative;z-index:1;font-size:.85rem;color:var(--muted);
-  letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem
+  font-size:.85rem;color:var(--muted);letter-spacing:.1em;
+  text-transform:uppercase;display:flex;align-items:center;gap:.5rem
 }
 .ldot{animation:ldot 1.2s infinite}
 .ldot:nth-child(2){animation-delay:.2s}.ldot:nth-child(3){animation-delay:.4s}
 @keyframes ldot{0%,80%,100%{opacity:.2}40%{opacity:1}}
 
-/* Card */
+/* Cards */
 .card-wrapper{perspective:900px;width:clamp(105px,15vw,150px);height:clamp(165px,23vw,225px)}
-.card{
-  width:100%;height:100%;position:relative;transform-style:preserve-3d;
-  transition:transform var(--flip);cursor:pointer;border-radius:var(--r)
-}
+.card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform var(--flip);cursor:pointer;border-radius:var(--r)}
 .card.flipped{transform:rotateY(180deg)}
-.card-face{
-  position:absolute;inset:0;border-radius:var(--r);
-  backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden
-}
-
-/* Back */
+.card-face{position:absolute;inset:0;border-radius:var(--r);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
 .card-back{
   background:linear-gradient(145deg,#1e1128 0%,#120d1c 100%);
   border:1.5px solid rgba(155,93,229,.35);
   box-shadow:0 0 20px rgba(155,93,229,.2),0 8px 32px rgba(0,0,0,.6);
   display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem
 }
-.card-back::before{
-  content:'';position:absolute;inset:8px;
-  border:1px solid rgba(155,93,229,.2);border-radius:calc(var(--r) - 4px)
-}
-.sym{
-  font-size:clamp(1.8rem,4.5vw,3rem);opacity:.85;
-  filter:drop-shadow(0 0 12px rgba(155,93,229,.8));
-  animation:pglow 2.5s ease-in-out infinite
-}
-@keyframes pglow{
-  0%,100%{filter:drop-shadow(0 0 8px rgba(155,93,229,.6));transform:scale(1)}
-  50%{filter:drop-shadow(0 0 20px rgba(155,93,229,1));transform:scale(1.05)}
-}
+.card-back::before{content:'';position:absolute;inset:8px;border:1px solid rgba(155,93,229,.2);border-radius:calc(var(--r) - 4px)}
+.sym{font-size:clamp(1.8rem,4.5vw,3rem);opacity:.85;filter:drop-shadow(0 0 12px rgba(155,93,229,.8));animation:pglow 2.5s ease-in-out infinite}
+@keyframes pglow{0%,100%{filter:drop-shadow(0 0 8px rgba(155,93,229,.6));transform:scale(1)}50%{filter:drop-shadow(0 0 20px rgba(155,93,229,1));transform:scale(1.05)}}
 .roman{font-family:var(--fd);font-size:.72rem;letter-spacing:.2em;color:rgba(155,93,229,.7);text-transform:uppercase}
 .corner{position:absolute;width:16px;height:16px;border-color:rgba(155,93,229,.35);border-style:solid}
 .tl{top:6px;left:6px;border-width:2px 0 0 2px}.tr{top:6px;right:6px;border-width:2px 2px 0 0}
 .bl{bottom:6px;left:6px;border-width:0 0 2px 2px}.br{bottom:6px;right:6px;border-width:0 2px 2px 0}
-
-/* Front — normal */
 .card-front{
   transform:rotateY(180deg);
   background:linear-gradient(160deg,#1e0f2e 0%,#0f0a1a 100%);
@@ -117,85 +116,33 @@ body{
   display:flex;flex-direction:column;align-items:center;
   justify-content:center;padding:.65rem .5rem;gap:.45rem
 }
-/* Front — empty */
 .card-front.is-empty{
   background:linear-gradient(160deg,#18102a 0%,#0c0916 100%);
   border-color:rgba(155,93,229,.15);
   box-shadow:0 0 10px rgba(155,93,229,.08),0 4px 20px rgba(0,0,0,.7);
-  justify-content:center;gap:.55rem
 }
 .empty-sym{font-size:clamp(2rem,5vw,3rem);opacity:.2;animation:pglow 3s ease-in-out infinite}
-.empty-label{
-  font-family:var(--fd);font-size:clamp(.68rem,1.3vw,.82rem);font-weight:700;
-  color:rgba(155,93,229,.3);letter-spacing:.1em;text-align:center;text-transform:uppercase
-}
+.empty-label{font-family:var(--fd);font-size:clamp(.68rem,1.3vw,.82rem);font-weight:700;color:rgba(155,93,229,.3);letter-spacing:.1em;text-align:center;text-transform:uppercase}
 .empty-sub{font-size:.58rem;letter-spacing:.14em;color:rgba(155,93,229,.18);text-transform:uppercase}
-
-/* Icon ring */
-.icon-ring{
-  position:relative;width:clamp(64px,9vw,84px);height:clamp(64px,9vw,84px);flex-shrink:0
-}
-.icon-ring::before{
-  content:'';position:absolute;inset:-3px;border-radius:50%;
-  background:conic-gradient(from 0deg,var(--accent),var(--accent2),var(--gold),var(--accent));
-  animation:spin 3s linear infinite
-}
+.icon-ring{position:relative;width:clamp(64px,9vw,84px);height:clamp(64px,9vw,84px);flex-shrink:0}
+.icon-ring::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(from 0deg,var(--accent),var(--accent2),var(--gold),var(--accent));animation:spin 3s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .icon-ring::after{content:'';position:absolute;inset:3px;background:#1e0f2e;border-radius:50%}
-.perk-img{
-  position:absolute;inset:4px;border-radius:50%;z-index:1;
-  width:calc(100% - 8px);height:calc(100% - 8px);
-  object-fit:contain;object-position:center;
-  padding:4px;
-  background:radial-gradient(circle,rgba(30,15,46,0.95) 60%,rgba(30,15,46,0.7) 100%);
-  transition:opacity .2s
-}
-
-/* Perk text */
-.perk-name{
-  font-family:var(--fd);font-size:clamp(.63rem,1.2vw,.84rem);font-weight:700;
-  text-align:center;color:var(--gold);letter-spacing:.02em;line-height:1.2;
-  text-shadow:0 0 12px rgba(255,209,102,.5)
-}
-.perk-character{
-  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(247,37,133,.75);
-  background:rgba(247,37,133,.07);border:1px solid rgba(247,37,133,.18);
-  border-radius:999px;padding:.07rem .4rem;text-align:center;
-  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap
-}
-
-/* Reveal animations */
-.card-front .icon-ring,
-.card-front .perk-name,
-.card-front .perk-character,
-.card-front .empty-sym,
-.card-front .empty-label,
-.card-front .empty-sub{opacity:0;transform:translateY(6px);transition:opacity .38s ease .33s,transform .38s ease .33s}
-.card.flipped .card-front .icon-ring   {opacity:1;transform:translateY(0)}
-.card.flipped .card-front .perk-name   {opacity:1;transform:translateY(0);transition-delay:.42s}
+.perk-img{position:absolute;inset:4px;border-radius:50%;z-index:1;width:calc(100% - 8px);height:calc(100% - 8px);object-fit:contain;object-position:center;padding:4px;background:radial-gradient(circle,rgba(30,15,46,0.95) 60%,rgba(30,15,46,0.7) 100%);transition:opacity .2s}
+.perk-name{font-family:var(--fd);font-size:clamp(.63rem,1.2vw,.84rem);font-weight:700;text-align:center;color:var(--gold);letter-spacing:.02em;line-height:1.2;text-shadow:0 0 12px rgba(255,209,102,.5)}
+.perk-character{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,37,133,.75);background:rgba(247,37,133,.07);border:1px solid rgba(247,37,133,.18);border-radius:999px;padding:.07rem .4rem;text-align:center;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card-front .icon-ring,.card-front .perk-name,.card-front .perk-character,.card-front .empty-sym,.card-front .empty-label,.card-front .empty-sub{opacity:0;transform:translateY(6px);transition:opacity .38s ease .33s,transform .38s ease .33s}
+.card.flipped .card-front .icon-ring{opacity:1;transform:translateY(0)}
+.card.flipped .card-front .perk-name{opacity:1;transform:translateY(0);transition-delay:.42s}
 .card.flipped .card-front .perk-character{opacity:1;transform:translateY(0);transition-delay:.52s}
-.card.flipped .card-front .empty-sym   {opacity:.2;transform:translateY(0)}
-.card.flipped .card-front .empty-label {opacity:1;transform:translateY(0);transition-delay:.4s}
-.card.flipped .card-front .empty-sub   {opacity:1;transform:translateY(0);transition-delay:.5s}
-
-@keyframes card-enter{
-  0%{opacity:0;transform:translateY(40px) scale(.84)}
-  100%{opacity:1;transform:translateY(0) scale(1)}
-}
+.card.flipped .card-front .empty-sym,.card.flipped .card-front .empty-label,.card.flipped .card-front .empty-sub{opacity:1;transform:translateY(0);transition-delay:.4s}
+.card.flipped .card-front .empty-sym{opacity:.2}
+@keyframes card-enter{0%{opacity:0;transform:translateY(40px) scale(.84)}100%{opacity:1;transform:translateY(0) scale(1)}}
 .card-wrapper.entering{animation:card-enter .5s cubic-bezier(.16,1,.3,1) both}
 .card:not(.flipped):hover{filter:brightness(1.12)}
 
-/* Controls */
-.controls{
-  position:relative;z-index:1;display:flex;gap:.7rem;
-  align-items:center;flex-wrap:wrap;justify-content:center
-}
-.btn{
-  font-family:var(--fb);font-size:.86rem;font-weight:500;letter-spacing:.05em;
-  border:none;border-radius:999px;padding:.58rem 1.45rem;cursor:pointer;
-  transition:all .2s cubic-bezier(.16,1,.3,1)
-}
+.controls{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;justify-content:center}
+.btn{font-family:var(--fb);font-size:.86rem;font-weight:500;letter-spacing:.05em;border:none;border-radius:999px;padding:.58rem 1.45rem;cursor:pointer;transition:all .2s cubic-bezier(.16,1,.3,1)}
 .btn-primary{background:linear-gradient(135deg,var(--accent),#7b2fd4);color:#fff;box-shadow:0 4px 18px rgba(155,93,229,.4)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(155,93,229,.55)}
 .btn-primary:active{transform:translateY(0)}
@@ -203,70 +150,230 @@ body{
 .btn-secondary:hover{color:var(--text);border-color:rgba(155,93,229,.4);background:var(--surface2)}
 .btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important;box-shadow:none!important}
 
-/* Status */
-.status{position:relative;z-index:1;font-size:.8rem;color:var(--muted);letter-spacing:.06em;text-align:center;min-height:1.2em;transition:all .3s}
-.status.hi {color:var(--gold);text-shadow:0 0 12px var(--gold-glow)}
+.status{font-size:.8rem;color:var(--muted);letter-spacing:.06em;text-align:center;min-height:1.2em;transition:all .3s}
+.status.hi{color:var(--gold);text-shadow:0 0 12px var(--gold-glow)}
 .status.err{color:#f72585}
-
-.hint{
-  position:relative;z-index:1;font-size:.72rem;color:rgba(155,93,229,.35);
-  letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem
-}
+.hint{font-size:.72rem;color:rgba(155,93,229,.35);letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem}
 .hint::before,.hint::after{content:'';flex:1;height:1px;background:var(--border);width:40px}
+
+/* ════════════════════════
+   CONFIG PAGE
+════════════════════════ */
+.config-wrap{
+  width:100%;max-width:960px;padding:1.5rem 1rem;
+  display:flex;flex-direction:column;gap:1.2rem;
+}
+.config-header{
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center
+}
+.config-header h2{
+  font-family:var(--fd);font-size:1.5rem;font-weight:700;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.config-header p{font-size:.8rem;color:var(--muted);letter-spacing:.06em}
+
+/* Config role tabs */
+.cfg-role-tabs{
+  display:flex;gap:.5rem;background:var(--surface);
+  border:1px solid var(--border);border-radius:999px;padding:.3rem;
+  align-self:center;
+}
+.cfg-role-tab{
+  font-family:var(--fb);font-size:.82rem;font-weight:500;border:none;
+  border-radius:999px;padding:.35rem 1.3rem;cursor:pointer;transition:all .2s ease;
+  background:transparent;color:var(--muted);letter-spacing:.04em
+}
+.cfg-role-tab.active{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(155,93,229,.4)}
+
+/* Stats bar */
+.cfg-stats{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+}
+.cfg-stat{
+  background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:.5rem 1rem;text-align:center;min-width:100px;
+}
+.cfg-stat-num{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--gold)}
+.cfg-stat-label{font-size:.68rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+/* Bulk actions */
+.cfg-actions{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.btn-sm{font-family:var(--fb);font-size:.76rem;font-weight:500;letter-spacing:.04em;border:none;border-radius:999px;padding:.35rem 1rem;cursor:pointer;transition:all .2s ease}
+.btn-sm-green{background:rgba(6,214,160,.12);color:var(--green);border:1px solid rgba(6,214,160,.25)}
+.btn-sm-green:hover{background:rgba(6,214,160,.22);border-color:rgba(6,214,160,.5)}
+.btn-sm-red{background:rgba(239,71,111,.1);color:var(--red);border:1px solid rgba(239,71,111,.2)}
+.btn-sm-red:hover{background:rgba(239,71,111,.2);border-color:rgba(239,71,111,.45)}
+
+/* Character grid */
+.char-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:.8rem;
+}
+.char-card{
+  background:var(--surface);border:1.5px solid var(--border);border-radius:12px;
+  padding:.75rem .6rem;display:flex;flex-direction:column;align-items:center;
+  gap:.5rem;cursor:pointer;transition:all .22s ease;user-select:none;position:relative;
+}
+.char-card:hover{border-color:rgba(155,93,229,.4);background:var(--surface2);transform:translateY(-2px)}
+.char-card.active{border-color:rgba(6,214,160,.5);background:rgba(6,214,160,.05)}
+.char-card.inactive{border-color:rgba(239,71,111,.25);background:rgba(239,71,111,.03);opacity:.6}
+
+/* Toggle badge */
+.char-toggle{
+  position:absolute;top:8px;right:8px;
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;font-weight:700;transition:all .2s ease;
+}
+.char-card.active .char-toggle{background:var(--green);color:#000}
+.char-card.inactive .char-toggle{background:rgba(239,71,111,.3);color:var(--red);border:1px solid var(--red)}
+
+/* Perk icons strip */
+.char-perks{display:flex;gap:4px;justify-content:center;flex-wrap:nowrap}
+.char-perk-icon{
+  width:28px;height:28px;border-radius:50%;
+  border:1.5px solid rgba(155,93,229,.3);
+  object-fit:contain;padding:2px;
+  background:rgba(30,15,46,0.8);
+  flex-shrink:0;
+}
+.char-card.inactive .char-perk-icon{filter:grayscale(1);opacity:.4}
+
+.char-name{
+  font-size:.68rem;font-weight:500;text-align:center;color:var(--text);
+  line-height:1.2;letter-spacing:.01em;
+}
+.char-card.inactive .char-name{color:var(--muted)}
+.char-perk-count{
+  font-size:.58rem;color:var(--muted);letter-spacing:.06em;
+}
+.char-card.active .char-perk-count{color:rgba(6,214,160,.7)}
+.char-card.inactive .char-perk-count{color:rgba(239,71,111,.5)}
+
+/* General perks note */
+.general-note{
+  background:rgba(155,93,229,.07);border:1px solid rgba(155,93,229,.2);
+  border-radius:10px;padding:.7rem 1rem;font-size:.76rem;color:var(--muted);
+  text-align:center;line-height:1.5;
+}
+.general-note strong{color:var(--accent)}
 </style>
 </head>
 <body>
 
 <div id="particles"></div>
 
-<div class="title-area">
-  <h1>&#10022; Perk Roulette &#10022;</h1>
-  <p>Dead by Daylight &middot; Tarot Build</p>
-</div>
+<!-- ── Navigation ── -->
+<nav class="nav">
+  <button class="nav-tab active" onclick="showPage('roulette',this)">&#127921; Ruleta</button>
+  <button class="nav-tab"        onclick="showPage('config',this)">&#9881;&#65039; Configuración</button>
+</nav>
 
-<div class="role-tabs" id="roleTabs">
-  <button class="role-tab active" id="tabS" onclick="setRole('survivor',this)" disabled>&#9889; Survivor</button>
-  <button class="role-tab"        id="tabK" onclick="setRole('killer',this)"   disabled>&#128298; Killer</button>
-</div>
+<!-- ══════════════════════════
+     ROULETTE PAGE
+══════════════════════════ -->
+<div id="page-roulette" class="page active">
+<div class="roulette-wrap">
 
-<div class="cards-area" id="cardsArea">
-  <div class="loading-msg">
-    <span class="ldot">&#9679;</span><span class="ldot">&#9679;</span><span class="ldot">&#9679;</span>
+  <div class="title-area">
+    <h1>&#10022; Perk Roulette &#10022;</h1>
+    <p>Dead by Daylight &middot; Tarot Build</p>
   </div>
+
+  <div class="role-tabs" id="roleTabs">
+    <button class="role-tab active" id="tabS" onclick="setRole('survivor',this)" disabled>&#9889; Survivor</button>
+    <button class="role-tab"        id="tabK" onclick="setRole('killer',this)"   disabled>&#128298; Killer</button>
+  </div>
+
+  <div class="cards-area" id="cardsArea">
+    <div class="loading-msg">
+      <span class="ldot">&#9679;</span><span class="ldot">&#9679;</span><span class="ldot">&#9679;</span>
+    </div>
+  </div>
+
+  <div class="hint" id="hint" style="visibility:hidden">Haz clic en cada carta para revelarla</div>
+  <div class="status" id="status">Cargando perks&hellip;</div>
+
+  <div class="controls">
+    <button class="btn btn-primary"   id="dealBtn"   onclick="dealCards()" disabled>&#127921; Tirar Cartas</button>
+    <button class="btn btn-secondary" id="revealBtn" onclick="revealAll()" disabled>&#10024; Revelar Todo</button>
+  </div>
+
+</div>
 </div>
 
-<div class="hint" id="hint" style="visibility:hidden">Haz clic en cada carta para revelarla</div>
-<div class="status" id="status">Cargando perks&hellip;</div>
+<!-- ══════════════════════════
+     CONFIG PAGE
+══════════════════════════ -->
+<div id="page-config" class="page">
+<div class="config-wrap">
 
-<div class="controls">
-  <button class="btn btn-primary"   id="dealBtn"   onclick="dealCards()" disabled>&#127921; Tirar Cartas</button>
-  <button class="btn btn-secondary" id="revealBtn" onclick="revealAll()" disabled>&#10024; Revelar Todo</button>
+  <div class="config-header">
+    <h2>&#9881;&#65039; Configuración de Perks</h2>
+    <p>Desactiva los personajes que aún no has comprado. La ruleta solo usará sus perks si están activos.</p>
+  </div>
+
+  <!-- Role tabs -->
+  <div class="cfg-role-tabs">
+    <button class="cfg-role-tab active" id="cfgTabS" onclick="setCfgRole('survivor',this)">&#9889; Survivors</button>
+    <button class="cfg-role-tab"        id="cfgTabK" onclick="setCfgRole('killer',this)">&#128298; Killers</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="cfg-stats">
+    <div class="cfg-stat">
+      <div class="cfg-stat-num" id="statChars">—</div>
+      <div class="cfg-stat-label">Personajes activos</div>
+    </div>
+    <div class="cfg-stat">
+      <div class="cfg-stat-num" id="statPerks">—</div>
+      <div class="cfg-stat-label">Perks disponibles</div>
+    </div>
+    <div class="cfg-stat">
+      <div class="cfg-stat-num" id="statPool">—</div>
+      <div class="cfg-stat-label">Pool total (+ slots)</div>
+    </div>
+  </div>
+
+  <!-- Bulk actions -->
+  <div class="cfg-actions">
+    <button class="btn-sm btn-sm-green" onclick="selectAll()">&#10003; Activar todos</button>
+    <button class="btn-sm btn-sm-red"   onclick="deselectAll()">&#10005; Desactivar todos</button>
+  </div>
+
+  <!-- Character grid -->
+  <div class="char-grid" id="charGrid"></div>
+
+  <div class="general-note">
+    <strong>&#9432; Perks generales</strong> (sin personaje: Spine Chill, Kindred, etc.)
+    siempre están disponibles en la ruleta, independientemente de la configuración.
+  </div>
+
+</div>
 </div>
 
 <script>
-/* ── Audio ── */
+/* ════════════════ AUDIO ════════════════ */
 const AC = window.AudioContext || window.webkitAudioContext;
 let actx=null, flipAudio=null;
 function initAudio(){
-  if(actx) return;
-  actx=new AC();
+  if(actx) return; actx=new AC();
   const a=new Audio('./assets/sounds/card-flip.mp3');
-  a.volume=0.45;
-  a.addEventListener('canplaythrough',()=>{flipAudio=a},{once:true});
-  a.load();
+  a.volume=.45;a.addEventListener('canplaythrough',()=>{flipAudio=a},{once:true});a.load();
 }
 function playFlip(){
   try{
     if(!actx) actx=new AC();
     if(actx.state==='suspended') actx.resume();
-    if(flipAudio){const c=flipAudio.cloneNode();c.volume=0.45;c.play().catch(()=>synth());}
+    if(flipAudio){const c=flipAudio.cloneNode();c.volume=.45;c.play().catch(()=>synth());}
     else synth();
   }catch(e){}
 }
 function synth(){
-  const t=actx.currentTime,d=0.2,n=Math.floor(actx.sampleRate*d);
-  const buf=actx.createBuffer(1,n,actx.sampleRate);
-  const data=buf.getChannelData(0);
+  const t=actx.currentTime,d=.2,n=Math.floor(actx.sampleRate*d);
+  const buf=actx.createBuffer(1,n,actx.sampleRate),data=buf.getChannelData(0);
   for(let i=0;i<n;i++) data[i]=Math.random()*2-1;
   const src=actx.createBufferSource();src.buffer=buf;
   const bpf=actx.createBiquadFilter();bpf.type='bandpass';bpf.frequency.value=3000;bpf.Q.value=.8;
@@ -277,45 +384,75 @@ function synth(){
   o.connect(og);og.connect(actx.destination);o.start(t);o.stop(t+.07);
 }
 
-/* ── Data ── */
-let PERKS=null, role='survivor', flipped=0;
+/* ════════════════ DATA & STATE ════════════════ */
+let PERKS = null;
+let role = 'survivor';
+let cfgRole = 'survivor';
+let flipped = 0;
 
+// disabled = set of character names the player has turned OFF
+let disabledChars = { survivor: new Set(), killer: new Set() };
+
+const LS_KEY = 'dbdRoulette_disabled';
+
+function savePrefs(){
+  localStorage.setItem(LS_KEY, JSON.stringify({
+    survivor: [...disabledChars.survivor],
+    killer:   [...disabledChars.killer]
+  }));
+}
+function loadPrefs(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return;
+    const obj = JSON.parse(raw);
+    disabledChars.survivor = new Set(obj.survivor || []);
+    disabledChars.killer   = new Set(obj.killer   || []);
+  }catch(e){}
+}
+
+/* ════════════════ LOAD ════════════════ */
 async function loadPerks(){
   try{
-    const res=await fetch('./perks.json');
+    const res = await fetch('./perks.json');
     if(!res.ok) throw new Error('HTTP '+res.status);
-    PERKS=await res.json();
+    PERKS = await res.json();
+    loadPrefs();
     onReady();
   }catch(err){
-    setStatus('Error cargando perks.json — '+err.message,false,true);
+    setStatus('Error cargando perks.json — '+err.message, false, true);
     document.getElementById('cardsArea').innerHTML='';
   }
 }
+
 function onReady(){
-  document.getElementById('tabS').disabled=false;
-  document.getElementById('tabK').disabled=false;
-  document.getElementById('dealBtn').disabled=false;
-  document.getElementById('cardsArea').innerHTML='';
-  document.getElementById('hint').style.visibility='visible';
-  const m=PERKS._meta;
-  setStatus(m.totalSurvivor+' survivor · '+m.totalKiller+' killer · v'+m.version+' · '+m.source);
+  document.getElementById('tabS').disabled = false;
+  document.getElementById('tabK').disabled = false;
+  document.getElementById('dealBtn').disabled = false;
+  document.getElementById('cardsArea').innerHTML = '';
+  document.getElementById('hint').style.visibility = 'visible';
+  const m = PERKS._meta;
+  setStatus(m.totalSurvivor+' survivor · '+m.totalKiller+' killer · v'+m.version);
+  // Render config grid for current role
+  renderCharGrid();
 }
 
-/* ── Particles ── */
-(()=>{
-  const c=document.getElementById('particles');
-  for(let i=0;i<25;i++){
-    const p=document.createElement('div');p.className='particle';
-    const s=Math.random()*3+1;
-    p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${8+Math.random()*12}s;animation-delay:${Math.random()*12}s;background:${Math.random()>.5?'#9b5de5':'#ffd166'};`;
-    c.appendChild(p);
-  }
-})();
+/* ════════════════ ACTIVE POOL ════════════════ */
+function getActivePool(r){
+  const pool = PERKS[r];
+  const disabled = disabledChars[r];
+  return pool.filter(p => {
+    if(p.isEmpty) return true;              // always keep empty slots
+    if(p.character === 'General') return true; // always keep general perks
+    return !disabled.has(p.character);     // filter disabled characters
+  });
+}
 
+/* ════════════════ ROULETTE ════════════════ */
 const TAROT=['☽','✦','⊗','♰','⍟','⋈','⁂','⌘'];
 const ROMAN=['I','II','III','IV'];
 
-function setRole(r,btn){
+function setRole(r, btn){
   if(!PERKS) return;
   role=r;
   document.querySelectorAll('.role-tab').forEach(b=>b.classList.remove('active'));
@@ -323,16 +460,21 @@ function setRole(r,btn){
   document.getElementById('cardsArea').innerHTML='';
   document.getElementById('revealBtn').disabled=true;
   document.getElementById('dealBtn').textContent='🃏 Tirar Cartas';
-  const total=r==='survivor'?PERKS._meta.totalSurvivor:PERKS._meta.totalKiller;
-  setStatus(total+' perks disponibles · '+r);
+  const pool = getActivePool(r);
+  const perkCount = pool.filter(p=>!p.isEmpty).length;
+  setStatus(perkCount+' perks activas · '+r);
 }
 
 function dealCards(){
   if(!PERKS) return;
-  initAudio();flipped=0;
-  const pool=PERKS[role];
-  const picked=[...pool].sort(()=>Math.random()-.5).slice(0,4);
-  const area=document.getElementById('cardsArea');
+  initAudio(); flipped=0;
+  const pool = getActivePool(role);
+  if(pool.filter(p=>!p.isEmpty).length < 1){
+    setStatus('⚠ No hay perks activas. Activa personajes en Configuración.', false, true);
+    return;
+  }
+  const picked = [...pool].sort(()=>Math.random()-.5).slice(0,4);
+  const area = document.getElementById('cardsArea');
   area.innerHTML='';
   picked.forEach((perk,i)=>{
     const w=document.createElement('div');
@@ -341,24 +483,18 @@ function dealCards(){
     const sym=TAROT[Math.floor(Math.random()*TAROT.length)];
     const empty=perk.isEmpty===true;
     const front=empty
-      ?`<div class="empty-sym">✦</div>
-        <div class="empty-label">Slot Vacío</div>
-        <div class="empty-sub">Sin perk</div>`
-      :`<div class="icon-ring">
-          <img class="perk-img" src="${perk.icon}" alt="${perk.name}" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.opacity='0.15'">
-        </div>
+      ?`<div class="empty-sym">✦</div><div class="empty-label">Slot Vacío</div><div class="empty-sub">Sin perk</div>`
+      :`<div class="icon-ring"><img class="perk-img" src="${perk.icon}" alt="${perk.name}" onerror="this.style.opacity='0.15'"></div>
         <div class="perk-name">${perk.name}</div>
         <div class="perk-character">${perk.character}</div>`;
-    w.innerHTML=`
-      <div class="card" id="c${i}" onclick="flip(${i})">
-        <div class="card-face card-back">
-          <div class="corner tl"></div><div class="corner tr"></div>
-          <div class="corner bl"></div><div class="corner br"></div>
-          <div class="sym">${sym}</div>
-          <div class="roman">${ROMAN[i]}</div>
-        </div>
-        <div class="card-face card-front${empty?' is-empty':''}">${front}</div>
-      </div>`;
+    w.innerHTML=`<div class="card" id="c${i}" onclick="flip(${i})">
+      <div class="card-face card-back">
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="corner bl"></div><div class="corner br"></div>
+        <div class="sym">${sym}</div><div class="roman">${ROMAN[i]}</div>
+      </div>
+      <div class="card-face card-front${empty?' is-empty':''}">${front}</div>
+    </div>`;
     area.appendChild(w);
   });
   setStatus('4 cartas listas · Revélalas una a una ✦');
@@ -369,17 +505,16 @@ function dealCards(){
 function flip(i){
   const card=document.getElementById(`c${i}`);
   if(!card||card.classList.contains('flipped')) return;
-  card.classList.add('flipped');
-  playFlip();
+  card.classList.add('flipped'); playFlip();
   card.style.filter='brightness(1.4)';
   setTimeout(()=>card.style.filter='',400);
   flipped++;
   if(flipped===4){
     const empties=document.querySelectorAll('.card-front.is-empty').length;
     const perks=4-empties;
-    if(empties===4)      setStatus('✦ Sin perks · ¡Buena suerte, la vas a necesitar! ✦',true);
-    else if(empties>0)   setStatus(`✦ Build con ${perks} perk${perks!==1?'s':''} · ¡Buena suerte! ✦`,true);
-    else                 setStatus('✦ Build completa · ¡Buena suerte en la partida! ✦',true);
+    if(empties===4)    setStatus('✦ Sin perks · ¡Buena suerte, la vas a necesitar! ✦',true);
+    else if(empties>0) setStatus(`✦ Build con ${perks} perk${perks!==1?'s':''} · ¡Buena suerte! ✦`,true);
+    else               setStatus('✦ Build completa · ¡Buena suerte en la partida! ✦',true);
     document.getElementById('revealBtn').disabled=true;
   }else{
     setStatus(`${flipped} revelada${flipped>1?'s':''} · ${4-flipped} restante${4-flipped>1?'s':''}`);
@@ -387,7 +522,7 @@ function flip(i){
 }
 
 function revealAll(){
-  initAudio();let d=0;
+  initAudio(); let d=0;
   for(let i=0;i<4;i++){
     const c=document.getElementById(`c${i}`);
     if(c&&!c.classList.contains('flipped')){setTimeout(()=>flip(i),d);d+=420;}
@@ -400,6 +535,109 @@ function setStatus(m,hi=false,err=false){
   e.textContent=m;
   e.className='status'+(hi?' hi':err?' err':'');
 }
+
+/* ════════════════ CONFIG ════════════════ */
+function setCfgRole(r, btn){
+  cfgRole = r;
+  document.querySelectorAll('.cfg-role-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCharGrid();
+}
+
+function getCharData(r){
+  // Build map: character -> [perks]
+  const map = {};
+  for(const p of PERKS[r]){
+    if(p.isEmpty || p.character==='General') continue;
+    if(!map[p.character]) map[p.character]=[];
+    map[p.character].push(p);
+  }
+  return map;
+}
+
+function renderCharGrid(){
+  if(!PERKS) return;
+  const grid = document.getElementById('charGrid');
+  const map = getCharData(cfgRole);
+  const disabled = disabledChars[cfgRole];
+  const chars = Object.keys(map).sort();
+
+  grid.innerHTML = chars.map(char=>{
+    const perks = map[char];
+    const isActive = !disabled.has(char);
+    const iconsHtml = perks.map(p=>
+      `<img class="char-perk-icon" src="${p.icon}" alt="${p.name}" title="${p.name}" onerror="this.style.display='none'">`
+    ).join('');
+    return `<div class="char-card ${isActive?'active':'inactive'}" onclick="toggleChar('${char.replace(/'/g,"\\'")}')">
+      <div class="char-toggle">${isActive?'✓':'✕'}</div>
+      <div class="char-perks">${iconsHtml}</div>
+      <div class="char-name">${char}</div>
+      <div class="char-perk-count">${perks.length} perk${perks.length!==1?'s':''}</div>
+    </div>`;
+  }).join('');
+
+  updateStats();
+}
+
+function toggleChar(char){
+  const disabled = disabledChars[cfgRole];
+  if(disabled.has(char)) disabled.delete(char);
+  else disabled.add(char);
+  savePrefs();
+  renderCharGrid();
+  // Update roulette status if on same role
+  if(PERKS && role === cfgRole){
+    const pool = getActivePool(role);
+    const perkCount = pool.filter(p=>!p.isEmpty).length;
+    setStatus(perkCount+' perks activas · '+role);
+  }
+}
+
+function updateStats(){
+  if(!PERKS) return;
+  const map = getCharData(cfgRole);
+  const disabled = disabledChars[cfgRole];
+  const activeChars = Object.keys(map).filter(c=>!disabled.has(c)).length;
+  const activePerks = Object.entries(map)
+    .filter(([c])=>!disabled.has(c))
+    .reduce((acc,[,perks])=>acc+perks.length, 0);
+  // Add general perks
+  const generalCount = PERKS[cfgRole].filter(p=>!p.isEmpty&&p.character==='General').length;
+  const pool = getActivePool(cfgRole);
+  document.getElementById('statChars').textContent = activeChars+'/'+Object.keys(map).length;
+  document.getElementById('statPerks').textContent = activePerks+generalCount;
+  document.getElementById('statPool').textContent  = pool.length;
+}
+
+function selectAll(){
+  disabledChars[cfgRole].clear();
+  savePrefs(); renderCharGrid();
+}
+function deselectAll(){
+  const map = getCharData(cfgRole);
+  Object.keys(map).forEach(c=>disabledChars[cfgRole].add(c));
+  savePrefs(); renderCharGrid();
+}
+
+/* ════════════════ PAGE NAV ════════════════ */
+function showPage(id, btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='config' && PERKS) renderCharGrid();
+}
+
+/* ════════════════ PARTICLES ════════════════ */
+(()=>{
+  const c=document.getElementById('particles');
+  for(let i=0;i<25;i++){
+    const p=document.createElement('div');p.className='particle';
+    const s=Math.random()*3+1;
+    p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${8+Math.random()*12}s;animation-delay:${Math.random()*12}s;background:${Math.random()>.5?'#9b5de5':'#ffd166'};`;
+    c.appendChild(p);
+  }
+})();
 
 loadPerks();
 </script>
