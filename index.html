@@ -437,6 +437,7 @@ body{
 <nav class="nav">
   <button class="nav-tab active" onclick="showPage('roulette',this)">&#127921; Ruleta</button>
   <button class="nav-tab"        onclick="showPage('config',this)">&#9881;&#65039; Configuración</button>
+  <button class="nav-tab" id="langBtn" onclick="setLang(currentLang==='es'?'en':'es')" style="margin-left:auto;font-size:.75rem;padding:.3rem .9rem">&#127760; EN</button>
 </nav>
 
 <!-- ══════════════════════════
@@ -622,32 +623,437 @@ function loadPrefs(){
 }
 
 /* ════════════════ LOAD ════════════════ */
+
+/* ════════════════ i18n ════════════════ */
+const PERK_NAMES_ES = {
+  "Ace in the Hole": "A mano descubierta",
+  "Open-Handed": "As en la manga",
+  "Up the Ante": "Subir las apuestas",
+  "Low Profile": "Perfil bajo",
+  "Reactive Healing": "Curación reactiva",
+  "Wiretap": "Sitema de espionaje",
+  "Autodidact": "Autodidacta",
+  "Deliverance": "Distracción",
+  "Diversion": "Liberacion",
+  "Bardic Inspiration": "Ilusión reflejada",
+  "Mirrored Illusion": "Inspiración bardica",
+  "Still Sight": "Mirada fija",
+  "Boon: Illumination": "Bendicion: iluminación",
+  "Champion of Light": "Campeón de la luz",
+  "Deadline": "Fecha limite",
+  "Buckle Up": "El temple del hombre",
+  "Flip-Flop": "Nos vemos",
+  "Mettle of Man": "Sujetate",
+  "Borrowed Time": "Abandonado a tu suerte",
+  "Left Behind": "Inquebrantable",
+  "Unbreakable": "Tiempo prestado",
+  "Blood Pact": "Alianza reprimida",
+  "Repressed Alliance": "Defensa de alma",
+  "Soul Guard": "Pacto de sangre",
+  "Botany Knowledge": "Autocuración",
+  "Empathy": "Conocimientos de botanica",
+  "Self-Care": "Empatia",
+  "Dead Hard": "Autopreservación",
+  "No Mither": "Via rápida",
+  "We're Gonna Live Forever": "Éxito arrollador",
+  "Detective's Hunch": "Bajo vigilancia",
+  "Stake Out": "Corazonada",
+  "Tenacity": "Tenacidad",
+  "Bada Bada Boom": "Bada, bada, bum",
+  "Change of Plan": "Cambio de planes",
+  "Teamwork: Full Circuit": "Trabajo en equipo: circuito completo",
+  "Bond": "Demuestra lo que vales",
+  "Leader": "Líder",
+  "Prove Thyself": "Vinculo",
+  "Extrasensory Perception": "Percepción extrasensorial",
+  "Teamwork: Soft-Spoken": "Te vemos",
+  "We See You": "Trabajo en equipo: tono gentil",
+  "Chemical Trap": "Estrella de la suerte",
+  "Light-Footed": "Trampa química",
+  "Lucky Star": "Agil",
+  "Built to Last": "Diseñado para durar",
+  "Desperate Measures": "Medidas desesperadas",
+  "Visionary": "Visionario",
+  "Alert": "Agilidad",
+  "Lithe": "Alerta",
+  "Technician": "Pericia técnica",
+  "Made for This": "Chatarrero",
+  "Scavenger": "Nacido para esto",
+  "Troubleshooter": "Solucionador de problemas",
+  "Inner Focus": "Demasiado entusiasta",
+  "Overzealous": "Enfoque interno",
+  "Residual Manifest": "Manifiesto residual",
+  "Calm Spirit": "Espíritu calmado",
+  "Iron Will": "Sabotear",
+  "Saboteur": "Voluntad de hierro",
+  "Head On": "De frente",
+  "Poised": "Serenidad",
+  "Solidarity": "Solidaridad",
+  "Aftercare": "Distorsion",
+  "Breakdown": "Postratamiento",
+  "Distortion": "Ruptura",
+  "Blast Mine": "Contramedida",
+  "Counterforce": "Mina cegadora",
+  "Resurgence": "Resurgimiento",
+  "Boon: Exponential": "Bendición: exponencial",
+  "Corrective Action": "Corrección",
+  "Overcome": "Superar",
+  "Boil Over": "Arrebato",
+  "Dance With Me": "Baila conmigo",
+  "Windows of Opportunity": "Oportunidades",
+  "A Place For Us": "Cinco movimientos adelante",
+  "Five Moves Ahead": "Estado fluido",
+  "Flow State": "Un lugar para nosotros",
+  "Finesse": "Elegancia",
+  "Hardened": "Endurecida",
+  "Specialist": "Especialista",
+  "Bite the Bullet": "Aguante el dolor",
+  "Flashbang": "Espíritu de novato",
+  "Rookie Spirit": "Granada aturdidora",
+  "Adrenaline": "Adrenalina",
+  "Quick & Quiet": "Esprint",
+  "Sprint Burst": "Velocidad silenciosa",
+  "Conviction": "Convicción",
+  "Last Stand": "Trabajo en equipo: lanzamiento",
+  "Teamwork: Throw Down": "Ultimo enfrentamiento",
+  "Boon: Circle of Healing": "Bendición: circulo de curación",
+  "Boon: Shadow Step": "Bendición: paso de las sombras",
+  "Clairvoyance": "Clarividencia",
+  "Better Together": "Fijación",
+  "Fixated": "Fuerza interior",
+  "Inner Strength": "Mejor juntos",
+  "Balanced Landing": "Caída equilibrada",
+  "Streetwise": "De la calle",
+  "Urban Evasion": "Evasion urbana",
+  "Dramaturgy": "Compañero de escena",
+  "Plot Twist": "Dramaturgia",
+  "Scene Partner": "Giro argumental",
+  "Do No Harm": "El deber de cuidar",
+  "Duty of Care": "No hagas daño",
+  "Rapid Response": "Respuesta rápida",
+  "Pharmacy": "Farmacia",
+  "Vigil": "Vigilia",
+  "Wake Up!": "¡despierta!",
+  "Better than New": "Consuelo",
+  "Hyperfocus": "Hiperconcentración",
+  "Reassurance": "Mejor que nuevo",
+  "Background Player": "Impulso sangriento",
+  "Blood Rush": "Personaje secundario",
+  "Teamwork: Collective Stealth": "Trabajo en equipo: sigilo colectivo",
+  "Apocalyptic Ingenuity": "Ingenio apocalíptico",
+  "Come and Get Me!": "Trabajo en equipo: entereza",
+  "Teamwork: Toughen Up": "¡ven por mi!",
+  "Invocation: Weaving Spiders": "Fortaleza de las sombras",
+  "Strength in Shadows": "Invocación: arañas tejedoras",
+  "Wicked": "Malicia",
+  "Babysitter": "Camaradería",
+  "Camaraderie": "Niñero",
+  "Second Wind": "Segundo aliento",
+  "Clean Break": "Cargar a cuestas",
+  "Invocation: Treacherous Crows": "Invocación: cuervos traicioneros",
+  "Shoulder the Burden": "Punto y aparte",
+  "Cut Loose": "Competencia amistosa",
+  "Friendly Competition": "Suéltate",
+  "Teamwork: Power of Two": "Trabajo en equipo: el poder de dos",
+  "Exultation": "Exultación",
+  "Eyes of Belmont": "Momento de gloria",
+  "Moment of Glory": "Ojos de belmont",
+  "Ghost Notes": "Notas fantasmas",
+  "One-Two-Three-Four!": "Vida itinerante",
+  "Road Life": "¡uno, dos, tres, cuatro!",
+  "Fogwise": "Conocimiento de la niebla",
+  "Potential Energy": "Energía potencial",
+  "Quick Gambit": "Táctica rápida",
+  "Boon: Dark Theory": "Bendición: teoría oscura",
+  "Empathic Connection": "Conexión empática",
+  "Parental Guidance": "Consejos de papá",
+  "Any Means Necessary": "Fuga",
+  "Breakout": "Golpe de suerte",
+  "Lucky Break": "Por cualquier medio",
+  "For the People": "Arenque rojo",
+  "Off the Record": "Extraoficialmente",
+  "Red Herring": "Por la gente",
+  "Appraisal": "Detallista",
+  "Deception": "Engaño",
+  "Power Struggle": "Lucha de poderes",
+  "Agitation": "Agitación",
+  "Brutal Strength": "Fuerza brutal",
+  "Unnerving Presence": "Presencia perturbadora",
+  "Bloodhound": "Sabueso de sangre",
+  "Predator": "Depredación",
+  "Shadowborn": "Hijo de las sombras",
+  "Enduring": "Resistente",
+  "Lightborn": "Hijo de la luz",
+  "Tinkerer": "Manitas",
+  "A Nurse's Calling": "Vocación de enfermera",
+  "Stridor": "Aliento",
+  "Thanatophobia": "Tanatofobia",
+  "Hex: Devour Hope": "Maleficio: devorador de esperanza",
+  "Hex: Ruin": "Maleficio: ruina",
+  "Hex: The Third Seal": "Maleficio: el tercer sello",
+  "Monitor & Abuse": "Sobrecarga",
+  "Overcharge": "Monitorización",
+  "Overwhelming Presence": "Presencia abrumadora",
+  "Beast of Prey": "Bestia de presa",
+  "Hex: Huntress Lullaby": "Maleficio: nana de cazadora",
+  "Territorial Imperative": "Sangre oscura",
+  "Barbecue & Chilli": "Barbacoa y chile",
+  "Franklin's Demise": "Muerte de franklin",
+  "Knock Out": "Noqueo",
+  "Blood Warden": "Guardian de sangre",
+  "Fire Up": "Enfurecimiento",
+  "Remember Me": "Recuérdame",
+  "Make Your Choice": "Gancho flagelante: truco del verdugo",
+  "Scourge Hook: Hangman's Trick": "Toma una decisión",
+  "Surveillance": "Supervision",
+  "Bamboozle": "Desconcierto",
+  "Coulrophobia": "Coulrofobia",
+  "Pop Goes the Weasel": "Pim, pam, pum",
+  "Hex: Haunted Ground": "Maleficio: tierra embrujada",
+  "Rancor": "Rencor",
+  "Spirit Fury": "Furia espiritual",
+  "Discordance": "Discordancia",
+  "Iron Maiden": "Doncella de hierro",
+  "Mad Grit": "Furia ciega",
+  "Corrupt Intervention": "Intervención corrupta",
+  "Dark Devotion": "Devoción oscura",
+  "Infectious Fright": "Terror contagioso",
+  "Furtive Chase": "Persecución furtiva",
+  "I'm All Ears": "Soy todo oídos",
+  "Thrilling Tremors": "Temblores trepidantes",
+  "Cruel Limits": "Restricción cruel",
+  "Mindbreaker": "Quebrantamentes",
+  "Surge": "Sobretension",
+  "Blood Echo": "Eco sangriento",
+  "Nemesis": "Nemesis",
+  "Zanshin Tactics": "Tácticas zanshin",
+  "Dead Man's Switch": "Interruptor del hombre muerto",
+  "Gearhead": "Oído para la maquinaria",
+  "Hex: Retribution": "Maleficio: represalias",
+  "Deathbound": "Vinculo inmortal",
+  "Forced Penance": "Imposición de penitencia",
+  "Trail of Torment": "Rastro de tormento",
+  "Dragon's Grip": "Agarre del dragon",
+  "Hex: Blood Favour": "Maleficio: favor de sangre",
+  "Hex: Undying": "Maleficio: inmortal",
+  "Coup de Grâce": "Acaparadora",
+  "Hoarder": "Opresión",
+  "Oppression": "Golpe de gracia",
+  "Hex: Crowd Control": "Deslumbrado",
+  "No Way Out": "Maleficio: control de masas",
+  "Starstruck": "Sin escapatoria",
+  "Eruption": "Acecho letal",
+  "Hysteria": "Histeria",
+  "Lethal Pursuer": "Erupcion",
+  "Dominance": "Candado: maleficio: juguete",
+  "Hex: Wretched Fate": "Gancho flagelante: obsequio doloroso",
+  "Human Greed": "Dolor sin fin",
+  "Grim Embrace": "Acogida nefasta",
+  "Hex: Pentimento": "Gancho flagelante",
+  "Scourge Hook: Pain Resonance": "Maleficio: arrepentimiento",
+  "Call of Brine": "Gancho flagelante: torrente de ira",
+  "Merciless Storm": "Anuncio de salmuera",
+  "Scourge Hook: Floods of Rage": "Tormenta despiadada",
+  "Darkness Revealed": "Disolución",
+  "Dissolution": "Oscuridad revelada",
+  "Septic Touch": "Contacto séptico",
+  "Awakened Awareness": "Anatomía superior",
+  "Superior Anatomy": "Conciencia de estar despiertos",
+  "Terminus": "Terminal",
+  "Hex: Face the Darkness": "No hay donde esconderse",
+  "Hubris": "Maleficio: enfrentar la oscuridad",
+  "Nowhere to Hide": "Soberbia",
+  "Game Afoot": "Hora de la caceria",
+  "Leverage": "¡plaf!",
+  "THWACK!": "Influencia",
+  "Forced Hesitation": "Limites genéticos",
+  "Genetic Limits": "Duda forzada",
+  "Machine Learning": "Aprendizaje automatizado",
+  "Alien Instinct": "Arma definitiva",
+  "Rapid Brutality": "Brutalidad veloz",
+  "Ultimate Weapon": "Instinto alienígena",
+  "Batteries Included": "Maleficio: yo también puedo jugar",
+  "Friends 'til the End": "Amigos hasta el fin",
+  "Hex: Two Can Play": "Baterías incluidas",
+  "Unbound": "Desatado",
+  "Undone": "Imprevisto",
+  "Unforeseen": "Inacabado",
+  "Dark Arrogance": "Armonización de tejido",
+  "Languid Touch": "Toque lánguido",
+  "Weave Attunement": "Arrogancia oscura",
+  "All-Shaking Thunder": "Trueno sismico",
+  "No Quarter": "Gancho flagelante: brujula irregular",
+  "Scourge Hook: Jagged Compass": "Sin piedad",
+  "Forever Entwined": "Maleficio: pura miseria",
+  "Hex: Nothing but Misery": "Unidos por siempre",
+  "None Are Free": "Nadie es libre",
+  "Haywire": "Pedido de ayuda",
+  "Help Wanted": "Miedo fantasmal",
+  "Phantom Fear": "Caos",
+  "Hex: Overture of Doom": "Voracidad",
+  "Ravenous": "Ojo errante",
+  "Wandering Eye": "Maleficio: obertura de la perdición",
+  "Hex: Hive Mind": "Atrás en el tiempo",
+  "Secret Project": "Proyecto secreto",
+  "Turn Back the Clock": "Maleficio: mente colmena",
+  "Dark Sense": "Percepción oscura",
+  "Déjà Vu": "Déjà vu",
+  "Hope": "Esperanza",
+  "Kindred": "Familia",
+  "Lightweight": "De pies ligeros",
+  "No One Left Behind": "Nadie se queda atrás",
+  "Plunderer's Instinct": "Instinto de saqueador",
+  "Premonition": "Premonición",
+  "Resilience": "Resiliencia",
+  "Slippery Meat": "Carne resbaladiza",
+  "Small Game": "Caza menor",
+  "Spine Chill": "Escalofríos",
+  "This Is Not Happening": "Esto no puede estar pasando",
+  "We'll Make It": "Lo lograremos",
+  "Bitter Murmur": "Murmullo amargo",
+  "Deerstalker": "Acechador de ciervos",
+  "Distressing": "Desasosiego",
+  "Hex: No One Escapes Death": "Maleficio: nadie escapa de la muerte",
+  "Hex: Thrill of the Hunt": "Maleficio: la emoción de la caza",
+  "Insidious": "Insidia",
+  "Iron Grasp": "Apretón de hierro",
+  "Scourge Hook: Monstrous Shrine": "Gancho flagelante: santuario monstruoso",
+  "Shattered Hope": "Esperanza rota",
+  "Sloppy Butcher": "Carnicero chapucero",
+  "Spies from the Shadows": "Espías de las sombras",
+  "Unrelenting": "Implacable",
+  "Whispers": "Susurros"
+};
+const CHAR_NAMES_ES = {
+  "Ace Visconti": "Ace Visconti",
+  "Ada Wong": "Ada Wong",
+  "Adam Francis": "Adam Francis",
+  "Aestri Yazar & Baermar Uraz": "Aestri Yazar",
+  "Alan Wake": "Alan Wake",
+  "Ash Williams": "Ash Williams",
+  "Bill Overbeck": "Bill Overbeck",
+  "Cheryl Mason": "Cheryl Mason",
+  "Claudette Morel": "Claudette Morel",
+  "David King": "Lee Yun Kin",
+  "David Tapp": "David Tapp",
+  "Dustin Henderson": "Dustin Henderson",
+  "Dwight Fairfield": "Dwight Fairfield",
+  "Eleven": "Eleven",
+  "Ellen Ripley": "Ellen Ripley",
+  "Felix Richter": "Felix Richter",
+  "Feng Min": "Feng Min",
+  "Gabriel Soma": "Gabriel Soma",
+  "Haddie Kaur": "Haddie Kaur",
+  "Jake Park": "Jake Park",
+  "Jane Romero": "Jane Romero",
+  "Jeff Johansen": "Jeff Johansen",
+  "Jill Valentine": "Jill Valentine",
+  "Jonah Vasquez": "Jonah Vasquez",
+  "Kate Denson": "Kate Denson",
+  "Kwon Tae-young": "Kwon Tae-young",
+  "Lara Croft": "Lara Croft",
+  "Leon Scott Kennedy": "Leon Kennedy",
+  "Meg Thomas": "Meg Thomas",
+  "Michonne Grimes": "Michonne Grimes",
+  "Mikaela Reid": "Mikaela Reid",
+  "Nancy Wheeler": "Nancy Wheeler",
+  "Nea Karlsson": "Nea Karlsson",
+  "Nicolas Cage": "Nicolas Cage",
+  "Orela Rose": "Orela Rose",
+  "Quentin Smith": "Quentin Smith",
+  "Rebecca Chambers": "Rebecca Chambers",
+  "Renato Lyra": "Renato Lyra",
+  "Rick Grimes": "Rick Grimes",
+  "Sable Ward": "Sable Ward",
+  "Steve Harrington": "Steve Harrington",
+  "Taurie Cain": "Taurie Cain",
+  "Thalita Lyra": "Thalita Lyra",
+  "Trevor Belmont": "Trevor Belmont",
+  "Vee Boonyasak": "Vee Boonyasak",
+  "Vittorio Toscano": "Vittorio Toscano",
+  "Yoichi Asakawa": "Yoichi Asakawa",
+  "Yui Kimura": "Yui Kimura",
+  "Zarina Kassir": "Zarina Kassir",
+  "Élodie Rakoto": "Élodie Rakoto",
+  "The Trapper": "El Trampero",
+  "The Wraith": "El Espectro",
+  "The Hillbilly": "El Pueblerino",
+  "The Nurse": "La Enfermera",
+  "The Kenneth Chase": "El Payaso",
+  "The Frank, Julie, Susie, Joey": "La Legión",
+  "The Danny Johnson": "Ghost Face",
+  "The Dark Lord": "El Cenobita",
+  "The First": "El Primero",
+  "The Hag": "La Bruja",
+  "The Doctor": "El Doctor",
+  "The Huntress": "La Cazadora",
+  "The Cannibal": "El Caníbal",
+  "The Nightmare": "La Pesadilla",
+  "The Pig": "La Cerda",
+  "The Clown": "El Payaso",
+  "The Spirit": "El Espíritu",
+  "The Legion": "La Legión",
+  "The Plague": "La Plaga",
+  "The Demogorgon": "El Demogorgon",
+  "The Oni": "El Oni",
+  "The Deathslinger": "El Arponero",
+  "The Executioner": "El Verdugo",
+  "The Blight": "El Deterioro",
+  "The Twins": "Los Mellizos",
+  "The Trickster": "El Tramposo",
+  "The Nemesis": "El Nemesis",
+  "The Cenobite": "El Cenobita",
+  "The Artist": "La Artista",
+  "The Onryō": "La Onryō",
+  "The Dredge": "La Draga",
+  "The Mastermind": "La Mente Maestra",
+  "The Knight": "El Caballero",
+  "The Skull Merchant": "La Comerciante de Calaveras",
+  "The Singularity": "La Singularidad",
+  "The Xenomorph": "El Xenomorfo",
+  "The Good Guy": "El Chico Bueno",
+  "The Unknown": "Lo Desconocido",
+  "The Lich": "El Liche",
+  "The Houndmaster": "La Señora de los Sabuesos",
+  "The Ghoul": "El Ghoul",
+  "The Animatronic": "El Animatrónico",
+  "The Krasue": "La Krasue"
+};
+
+let currentLang = localStorage.getItem('dbdLang') || 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('dbdLang', lang);
+  document.getElementById('langBtn').textContent = lang === 'es' ? '🌐 EN' : '🌐 ES';
+  // Re-render current cards if any are shown
+  const cards = document.querySelectorAll('.card.flipped');
+  if(cards.length) dealCards();
+  // Re-render config if visible
+  if(document.getElementById('page-config').classList.contains('active')) renderCharGrid();
+}
+
+function tPerk(enName) {
+  if(currentLang === 'es') return PERK_NAMES_ES[enName] || enName;
+  return enName;
+}
+
+function tChar(enName) {
+  if(currentLang === 'es') return CHAR_NAMES_ES[enName] || enName;
+  return enName;
+}
+
 async function loadPerks(){
   try{
-    // Try split loading first (faster UI)
-    const [metaRes] = await Promise.all([fetch('./perks-meta.json')]);
-    if(metaRes.ok){
-      PERKS = await metaRes.json();
-      loadPrefs();
-      onReady();
-      // Load icons async in background
-      loadIconsAsync();
-    } else {
-      throw new Error('meta not found');
-    }
-  }catch(e){
-    // Fallback to single perks.json
-    try{
-      setStatus('Cargando perks…');
-      const res = await fetch('./perks.json');
-      if(!res.ok) throw new Error('HTTP '+res.status);
-      PERKS = await res.json();
-      loadPrefs();
-      onReady();
-    }catch(err){
-      setStatus('Error cargando perks.json — '+err.message, false, true);
-      document.getElementById('cardsArea').innerHTML='';
-    }
+    setStatus('Cargando perks…');
+    const res = await fetch('./perks.json');
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    PERKS = await res.json();
+    loadPrefs();
+    onReady();
+  }catch(err){
+    setStatus('Error cargando perks.json — '+err.message, false, true);
+    document.getElementById('cardsArea').innerHTML='';
   }
 }
 
@@ -700,6 +1106,8 @@ function onReady(){
   document.getElementById('hint').style.visibility = 'visible';
   const m = PERKS._meta;
   setStatus(m.totalSurvivor+' survivor · '+m.totalKiller+' killer · v'+m.version);
+  // Apply saved language
+  document.getElementById('langBtn').textContent = currentLang === 'es' ? '🌐 EN' : '🌐 ES';
   // Render config grid for current role
   renderCharGrid();
   loadPortraitsAsync();
@@ -754,9 +1162,9 @@ function dealCards(){
     const empty=perk.isEmpty===true;
     const front=empty
       ?`<div class="empty-sym">✦</div><div class="empty-label">Slot Vacío</div><div class="empty-sub">Sin perk</div>`
-      :`<div class="icon-ring"><img class="perk-img" src="${perk.icon}" alt="${perk.name}" onerror="this.style.opacity='0.15'"></div>
-        <div class="perk-name">${perk.name}</div>
-        <div class="perk-character">${perk.character}</div>`;
+      :`<div class="icon-ring"><img class="perk-img" src="${perk.icon||'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'}" alt="${perk.name}" onerror="this.style.opacity='0.15'"></div>
+        <div class="perk-name">${tPerk(perk.name)}</div>
+        <div class="perk-character">${tChar(perk.character)}</div>`;
     w.innerHTML=`<div class="card" id="c${i}" onclick="flip(${i})">
       <div class="card-face card-back">
         <div class="corner tl"></div><div class="corner tr"></div>
@@ -851,7 +1259,7 @@ function renderCharGrid(){
         <div class="char-toggle">${isActive?'✓':'✕'}</div>
       </div>
       <div class="char-info">
-        <div class="char-name">${char}</div>
+        <div class="char-name">${tChar(char)}</div>
         <div class="char-perk-count">${perks.length} perk${perks.length!==1?'s':''}</div>
       </div>
     </div>`;

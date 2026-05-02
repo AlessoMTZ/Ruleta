@@ -1,1 +1,2258 @@
-{"_meta":{"source":"deadbydaylight.wiki.gg","version":"9.4.0","date":"2026-05-02","totalSurvivor":153,"totalKiller":122,"emptySlotCopies":8,"iconsEmbedded":true,"note":"274/275 icons embedded as base64. Hex: Nothing but Misery pending wiki upload."},"emptySlot":{"name":"Slot Vacío","character":"General","icon":"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E","wikiKey":"emptySlot","isEmpty":true},"survivor":[{"name":"A Place For Us","character":"Kwon Tae-young","wikiKey":"aPlaceForUs"},{"name":"Ace in the Hole","character":"Ace Visconti","wikiKey":"aceInTheHole"},{"name":"Adrenaline","character":"Meg Thomas","wikiKey":"adrenaline"},{"name":"Aftercare","character":"Jeff Johansen","wikiKey":"aftercare"},{"name":"Alert","character":"Feng Min","wikiKey":"alert"},{"name":"Any Means Necessary","character":"Yui Kimura","wikiKey":"anyMeansNecessary"},{"name":"Apocalyptic Ingenuity","character":"Rick Grimes","wikiKey":"apocalypticIngenuity"},{"name":"Appraisal","character":"Élodie Rakoto","wikiKey":"appraisal"},{"name":"Autodidact","character":"Adam Francis","wikiKey":"autodidact"},{"name":"Babysitter","character":"Steve Harrington","wikiKey":"babysitter"},{"name":"Background Player","character":"Renato Lyra","wikiKey":"backgroundPlayer"},{"name":"Bada Bada Boom","character":"Dustin Henderson","wikiKey":"badaBadaBoom"},{"name":"Balanced Landing","character":"Nea Karlsson","wikiKey":"balancedLanding"},{"name":"Bardic Inspiration","character":"Aestri Yazar & Baermar Uraz","wikiKey":"bardicInspiration"},{"name":"Better Together","character":"Nancy Wheeler","wikiKey":"betterTogether"},{"name":"Better than New","character":"Rebecca Chambers","wikiKey":"betterThanNew"},{"name":"Bite the Bullet","character":"Leon Scott Kennedy","wikiKey":"biteTheBullet"},{"name":"Blast Mine","character":"Jill Valentine","wikiKey":"blastMine"},{"name":"Blood Pact","character":"Cheryl Mason","wikiKey":"bloodPact"},{"name":"Blood Rush","character":"Renato Lyra","wikiKey":"bloodRush"},{"name":"Boil Over","character":"Kate Denson","wikiKey":"boilOver"},{"name":"Bond","character":"Dwight Fairfield","wikiKey":"bond"},{"name":"Boon: Circle of Healing","character":"Mikaela Reid","wikiKey":"boon:CircleOfHealing"},{"name":"Boon: Dark Theory","character":"Yoichi Asakawa","wikiKey":"boon:DarkTheory"},{"name":"Boon: Exponential","character":"Jonah Vasquez","wikiKey":"boon:Exponential"},{"name":"Boon: Illumination","character":"Alan Wake","wikiKey":"boon:Illumination"},{"name":"Boon: Shadow Step","character":"Mikaela Reid","wikiKey":"boon:ShadowStep"},{"name":"Borrowed Time","character":"Bill Overbeck","wikiKey":"borrowedTime"},{"name":"Botany Knowledge","character":"Claudette Morel","wikiKey":"botanyKnowledge"},{"name":"Breakdown","character":"Jeff Johansen","wikiKey":"breakdown"},{"name":"Breakout","character":"Yui Kimura","wikiKey":"breakout"},{"name":"Buckle Up","character":"Ash Williams","wikiKey":"buckleUp"},{"name":"Built to Last","character":"Felix Richter","wikiKey":"builtToLast"},{"name":"Calm Spirit","character":"Jake Park","wikiKey":"calmSpirit"},{"name":"Camaraderie","character":"Steve Harrington","wikiKey":"camaraderie"},{"name":"Champion of Light","character":"Alan Wake","wikiKey":"championOfLight"},{"name":"Change of Plan","character":"Dustin Henderson","wikiKey":"changeOfPlan"},{"name":"Chemical Trap","character":"Ellen Ripley","wikiKey":"chemicalTrap"},{"name":"Clairvoyance","character":"Mikaela Reid","wikiKey":"clairvoyance"},{"name":"Clean Break","character":"Taurie Cain","wikiKey":"cleanBreak"},{"name":"Come and Get Me!","character":"Rick Grimes","wikiKey":"comeAndGetMe!"},{"name":"Conviction","character":"Michonne Grimes","wikiKey":"conviction"},{"name":"Corrective Action","character":"Jonah Vasquez","wikiKey":"correctiveAction"},{"name":"Counterforce","character":"Jill Valentine","wikiKey":"counterforce"},{"name":"Cut Loose","character":"Thalita Lyra","wikiKey":"cutLoose"},{"name":"Dance With Me","character":"Kate Denson","wikiKey":"danceWithMe"},{"name":"Dead Hard","character":"David King","wikiKey":"deadHard"},{"name":"Deadline","character":"Alan Wake","wikiKey":"deadline"},{"name":"Deception","character":"Élodie Rakoto","wikiKey":"deception"},{"name":"Deliverance","character":"Adam Francis","wikiKey":"deliverance"},{"name":"Desperate Measures","character":"Felix Richter","wikiKey":"desperateMeasures"},{"name":"Detective's Hunch","character":"David Tapp","wikiKey":"detective'sHunch"},{"name":"Distortion","character":"Jeff Johansen","wikiKey":"distortion"},{"name":"Diversion","character":"Adam Francis","wikiKey":"diversion"},{"name":"Do No Harm","character":"Orela Rose","wikiKey":"doNoHarm"},{"name":"Dramaturgy","character":"Nicolas Cage","wikiKey":"dramaturgy"},{"name":"Duty of Care","character":"Orela Rose","wikiKey":"dutyOfCare"},{"name":"Empathic Connection","character":"Yoichi Asakawa","wikiKey":"empathicConnection"},{"name":"Empathy","character":"Claudette Morel","wikiKey":"empathy"},{"name":"Extrasensory Perception","character":"Eleven","wikiKey":"extrasensoryPerception"},{"name":"Exultation","character":"Trevor Belmont","wikiKey":"exultation"},{"name":"Eyes of Belmont","character":"Trevor Belmont","wikiKey":"eyesOfBelmont"},{"name":"Fast Track","character":"Lee Yun-jin","wikiKey":"fastTrack"},{"name":"Finesse","character":"Lara Croft","wikiKey":"finesse"},{"name":"Five Moves Ahead","character":"Kwon Tae-young","wikiKey":"fiveMovesAhead"},{"name":"Fixated","character":"Nancy Wheeler","wikiKey":"fixated"},{"name":"Flashbang","character":"Leon Scott Kennedy","wikiKey":"flashbang"},{"name":"Flip-Flop","character":"Ash Williams","wikiKey":"flip-Flop"},{"name":"Flow State","character":"Kwon Tae-young","wikiKey":"flowState"},{"name":"Fogwise","character":"Vittorio Toscano","wikiKey":"fogwise"},{"name":"For the People","character":"Zarina Kassir","wikiKey":"forThePeople"},{"name":"Friendly Competition","character":"Thalita Lyra","wikiKey":"friendlyCompetition"},{"name":"Ghost Notes","character":"Vee Boonyasak","wikiKey":"ghostNotes"},{"name":"Hardened","character":"Lara Croft","wikiKey":"hardened"},{"name":"Head On","character":"Jane Romero","wikiKey":"headOn"},{"name":"Hyperfocus","character":"Rebecca Chambers","wikiKey":"hyperfocus"},{"name":"Inner Focus","character":"Haddie Kaur","wikiKey":"innerFocus"},{"name":"Inner Strength","character":"Nancy Wheeler","wikiKey":"innerStrength"},{"name":"Invocation: Treacherous Crows","character":"Taurie Cain","wikiKey":"invocation:TreacherousCrows"},{"name":"Invocation: Weaving Spiders","character":"Sable Ward","wikiKey":"invocation:WeavingSpiders"},{"name":"Iron Will","character":"Jake Park","wikiKey":"ironWill"},{"name":"Last Stand","character":"Michonne Grimes","wikiKey":"lastStand"},{"name":"Leader","character":"Dwight Fairfield","wikiKey":"leader"},{"name":"Left Behind","character":"Bill Overbeck","wikiKey":"leftBehind"},{"name":"Light-Footed","character":"Ellen Ripley","wikiKey":"light-Footed"},{"name":"Lithe","character":"Feng Min","wikiKey":"lithe"},{"name":"Low Profile","character":"Ada Wong","wikiKey":"lowProfile"},{"name":"Lucky Break","character":"Yui Kimura","wikiKey":"luckyBreak"},{"name":"Lucky Star","character":"Ellen Ripley","wikiKey":"luckyStar"},{"name":"Made for This","character":"Gabriel Soma","wikiKey":"madeForThis"},{"name":"Mettle of Man","character":"Ash Williams","wikiKey":"mettleOfMan"},{"name":"Mirrored Illusion","character":"Aestri Yazar & Baermar Uraz","wikiKey":"mirroredIllusion"},{"name":"Moment of Glory","character":"Trevor Belmont","wikiKey":"momentOfGlory"},{"name":"No Mither","character":"David King","wikiKey":"noMither"},{"name":"Off the Record","character":"Zarina Kassir","wikiKey":"offTheRecord"},{"name":"One-Two-Three-Four!","character":"Vee Boonyasak","wikiKey":"one-Two-Three-Four!"},{"name":"Open-Handed","character":"Ace Visconti","wikiKey":"open-Handed"},{"name":"Overcome","character":"Jonah Vasquez","wikiKey":"overcome"},{"name":"Overzealous","character":"Haddie Kaur","wikiKey":"overzealous"},{"name":"Parental Guidance","character":"Yoichi Asakawa","wikiKey":"parentalGuidance"},{"name":"Pharmacy","character":"Quentin Smith","wikiKey":"pharmacy"},{"name":"Plot Twist","character":"Nicolas Cage","wikiKey":"plotTwist"},{"name":"Poised","character":"Jane Romero","wikiKey":"poised"},{"name":"Potential Energy","character":"Vittorio Toscano","wikiKey":"potentialEnergy"},{"name":"Power Struggle","character":"Élodie Rakoto","wikiKey":"powerStruggle"},{"name":"Prove Thyself","character":"Dwight Fairfield","wikiKey":"proveThyself"},{"name":"Quick & Quiet","character":"Meg Thomas","wikiKey":"quick&Quiet"},{"name":"Quick Gambit","character":"Vittorio Toscano","wikiKey":"quickGambit"},{"name":"Rapid Response","character":"Orela Rose","wikiKey":"rapidResponse"},{"name":"Reactive Healing","character":"Ada Wong","wikiKey":"reactiveHealing"},{"name":"Reassurance","character":"Rebecca Chambers","wikiKey":"reassurance"},{"name":"Red Herring","character":"Zarina Kassir","wikiKey":"redHerring"},{"name":"Repressed Alliance","character":"Cheryl Mason","wikiKey":"repressedAlliance"},{"name":"Residual Manifest","character":"Haddie Kaur","wikiKey":"residualManifest"},{"name":"Resurgence","character":"Jill Valentine","wikiKey":"resurgence"},{"name":"Road Life","character":"Vee Boonyasak","wikiKey":"roadLife"},{"name":"Rookie Spirit","character":"Leon Scott Kennedy","wikiKey":"rookieSpirit"},{"name":"Saboteur","character":"Jake Park","wikiKey":"saboteur"},{"name":"Scavenger","character":"Gabriel Soma","wikiKey":"scavenger"},{"name":"Scene Partner","character":"Nicolas Cage","wikiKey":"scenePartner"},{"name":"Second Wind","character":"Steve Harrington","wikiKey":"secondWind"},{"name":"Self-Care","character":"Claudette Morel","wikiKey":"self-Care"},{"name":"Self-Preservation","character":"Lee Yun-jin","wikiKey":"self-Preservation"},{"name":"Shoulder the Burden","character":"Taurie Cain","wikiKey":"shoulderTheBurden"},{"name":"Smash Hit","character":"Lee Yun-jin","wikiKey":"smashHit"},{"name":"Solidarity","character":"Jane Romero","wikiKey":"solidarity"},{"name":"Soul Guard","character":"Cheryl Mason","wikiKey":"soulGuard"},{"name":"Specialist","character":"Lara Croft","wikiKey":"specialist"},{"name":"Sprint Burst","character":"Meg Thomas","wikiKey":"sprintBurst"},{"name":"Stake Out","character":"David Tapp","wikiKey":"stakeOut"},{"name":"Still Sight","character":"Aestri Yazar & Baermar Uraz","wikiKey":"stillSight"},{"name":"Streetwise","character":"Nea Karlsson","wikiKey":"streetwise"},{"name":"Strength in Shadows","character":"Sable Ward","wikiKey":"strengthInShadows"},{"name":"Teamwork: Collective Stealth","character":"Renato Lyra","wikiKey":"teamwork:CollectiveStealth"},{"name":"Teamwork: Full Circuit","character":"Dustin Henderson","wikiKey":"teamwork:FullCircuit"},{"name":"Teamwork: Power of Two","character":"Thalita Lyra","wikiKey":"teamwork:PowerOfTwo"},{"name":"Teamwork: Soft-Spoken","character":"Eleven","wikiKey":"teamwork:Soft-Spoken"},{"name":"Teamwork: Throw Down","character":"Michonne Grimes","wikiKey":"teamwork:ThrowDown"},{"name":"Teamwork: Toughen Up","character":"Rick Grimes","wikiKey":"teamwork:ToughenUp"},{"name":"Technician","character":"Feng Min","wikiKey":"technician"},{"name":"Tenacity","character":"David Tapp","wikiKey":"tenacity"},{"name":"Troubleshooter","character":"Gabriel Soma","wikiKey":"troubleshooter"},{"name":"Unbreakable","character":"Bill Overbeck","wikiKey":"unbreakable"},{"name":"Up the Ante","character":"Ace Visconti","wikiKey":"upTheAnte"},{"name":"Urban Evasion","character":"Nea Karlsson","wikiKey":"urbanEvasion"},{"name":"Vigil","character":"Quentin Smith","wikiKey":"vigil"},{"name":"Visionary","character":"Felix Richter","wikiKey":"visionary"},{"name":"Wake Up!","character":"Quentin Smith","wikiKey":"wakeUp!"},{"name":"We See You","character":"Eleven","wikiKey":"weSeeYou"},{"name":"We're Gonna Live Forever","character":"David King","wikiKey":"we'reGonnaLiveForever"},{"name":"Wicked","character":"Sable Ward","wikiKey":"wicked"},{"name":"Windows of Opportunity","character":"Kate Denson","wikiKey":"windowsOfOpportunity"},{"name":"Wiretap","character":"Ada Wong","wikiKey":"wiretap"},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true}],"killer":[{"name":"A Nurse's Calling","character":"The Nurse","wikiKey":"aNurse'sCalling"},{"name":"Agitation","character":"The Trapper","wikiKey":"agitation"},{"name":"Alien Instinct","character":"The Xenomorph","wikiKey":"alienInstinct"},{"name":"All-Shaking Thunder","character":"The Houndmaster","wikiKey":"all-ShakingThunder"},{"name":"Awakened Awareness","character":"The Mastermind","wikiKey":"awakenedAwareness"},{"name":"Bamboozle","character":"The Kenneth Chase","wikiKey":"bamboozle"},{"name":"Barbecue & Chilli","character":"The Cannibal","wikiKey":"barbecue&Chilli"},{"name":"Batteries Included","character":"The Good Guy","wikiKey":"batteriesIncluded"},{"name":"Beast of Prey","character":"The Huntress","wikiKey":"beastOfPrey"},{"name":"Blood Echo","character":"The Oni","wikiKey":"bloodEcho"},{"name":"Blood Warden","character":"The Nightmare","wikiKey":"bloodWarden"},{"name":"Bloodhound","character":"The Wraith","wikiKey":"bloodhound"},{"name":"Brutal Strength","character":"The Trapper","wikiKey":"brutalStrength"},{"name":"Call of Brine","character":"The Onryō","wikiKey":"callOfBrine"},{"name":"Corrupt Intervention","character":"The Plague","wikiKey":"corruptIntervention"},{"name":"Coulrophobia","character":"The Kenneth Chase","wikiKey":"coulrophobia"},{"name":"Coup de Grâce","character":"The Twins","wikiKey":"coupDeGrâce"},{"name":"Cruel Limits","character":"The Demogorgon","wikiKey":"cruelLimits"},{"name":"Dark Arrogance","character":"The Lich","wikiKey":"darkArrogance"},{"name":"Dark Devotion","character":"The Plague","wikiKey":"darkDevotion"},{"name":"Darkness Revealed","character":"The Dredge","wikiKey":"darknessRevealed"},{"name":"Dead Man's Switch","character":"The Deathslinger","wikiKey":"deadMan'sSwitch"},{"name":"Deathbound","character":"The Executioner","wikiKey":"deathbound"},{"name":"Discordance","character":"The Frank, Julie, Susie, Joey","wikiKey":"discordance"},{"name":"Dissolution","character":"The Dredge","wikiKey":"dissolution"},{"name":"Dominance","character":"The Dark Lord","wikiKey":"dominance"},{"name":"Dragon's Grip","character":"The Blight","wikiKey":"dragon'sGrip"},{"name":"Enduring","character":"The Hillbilly","wikiKey":"enduring"},{"name":"Eruption","character":"The Nemesis","wikiKey":"eruption"},{"name":"Fire Up","character":"The Nightmare","wikiKey":"fireUp"},{"name":"Forced Hesitation","character":"The Singularity","wikiKey":"forcedHesitation"},{"name":"Forced Penance","character":"The Executioner","wikiKey":"forcedPenance"},{"name":"Forever Entwined","character":"The Ghoul","wikiKey":"foreverEntwined"},{"name":"Franklin's Demise","character":"The Cannibal","wikiKey":"franklin'sDemise"},{"name":"Friends 'til the End","character":"The Good Guy","wikiKey":"friends'tilTheEnd"},{"name":"Furtive Chase","character":"The Danny Johnson","wikiKey":"furtiveChase"},{"name":"Game Afoot","character":"The Skull Merchant","wikiKey":"gameAfoot"},{"name":"Gearhead","character":"The Deathslinger","wikiKey":"gearhead"},{"name":"Genetic Limits","character":"The Singularity","wikiKey":"geneticLimits"},{"name":"Grim Embrace","character":"The Artist","wikiKey":"grimEmbrace"},{"name":"Haywire","character":"The Animatronic","wikiKey":"haywire"},{"name":"Help Wanted","character":"The Animatronic","wikiKey":"helpWanted"},{"name":"Hex: Blood Favour","character":"The Blight","wikiKey":"hex:BloodFavour"},{"name":"Hex: Crowd Control","character":"The Trickster","wikiKey":"hex:CrowdControl"},{"name":"Hex: Devour Hope","character":"The Hag","wikiKey":"hex:DevourHope"},{"name":"Hex: Face the Darkness","character":"The Knight","wikiKey":"hex:FaceTheDarkness"},{"name":"Hex: Haunted Ground","character":"The Spirit","wikiKey":"hex:HauntedGround"},{"name":"Hex: Hive Mind","character":"The First","wikiKey":"hex:HiveMind"},{"name":"Hex: Huntress Lullaby","character":"The Huntress","wikiKey":"hex:HuntressLullaby"},{"name":"Hex: Nothing but Misery","character":"The Ghoul","wikiKey":"hex:NothingButMisery"},{"name":"Hex: Overture of Doom","character":"The Krasue","wikiKey":"hex:OvertureOfDoom"},{"name":"Hex: Pentimento","character":"The Artist","wikiKey":"hex:Pentimento"},{"name":"Hex: Retribution","character":"The Deathslinger","wikiKey":"hex:Retribution"},{"name":"Hex: Ruin","character":"The Hag","wikiKey":"hex:Ruin"},{"name":"Hex: The Third Seal","character":"The Hag","wikiKey":"hex:TheThirdSeal"},{"name":"Hex: Thrill of the Hunt","character":"General","wikiKey":"hex:ThrillOfTheHunt"},{"name":"Hex: Two Can Play","character":"The Good Guy","wikiKey":"hex:TwoCanPlay"},{"name":"Hex: Undying","character":"The Blight","wikiKey":"hex:Undying"},{"name":"Hex: Wretched Fate","character":"The Dark Lord","wikiKey":"hex:WretchedFate"},{"name":"Hoarder","character":"The Twins","wikiKey":"hoarder"},{"name":"Hubris","character":"The Knight","wikiKey":"hubris"},{"name":"Human Greed","character":"The Dark Lord","wikiKey":"humanGreed"},{"name":"Hysteria","character":"The Nemesis","wikiKey":"hysteria"},{"name":"I'm All Ears","character":"The Danny Johnson","wikiKey":"i'mAllEars"},{"name":"Infectious Fright","character":"The Plague","wikiKey":"infectiousFright"},{"name":"Iron Maiden","character":"The Frank, Julie, Susie, Joey","wikiKey":"ironMaiden"},{"name":"Knock Out","character":"The Cannibal","wikiKey":"knockOut"},{"name":"Languid Touch","character":"The Lich","wikiKey":"languidTouch"},{"name":"Lethal Pursuer","character":"The Nemesis","wikiKey":"lethalPursuer"},{"name":"Leverage","character":"The Skull Merchant","wikiKey":"leverage"},{"name":"Lightborn","character":"The Hillbilly","wikiKey":"lightborn"},{"name":"Machine Learning","character":"The Singularity","wikiKey":"machineLearning"},{"name":"Mad Grit","character":"The Frank, Julie, Susie, Joey","wikiKey":"madGrit"},{"name":"Make Your Choice","character":"The Pig","wikiKey":"makeYourChoice"},{"name":"Merciless Storm","character":"The Onryō","wikiKey":"mercilessStorm"},{"name":"Mindbreaker","character":"The Demogorgon","wikiKey":"mindbreaker"},{"name":"Monitor & Abuse","character":"The Doctor","wikiKey":"monitor&Abuse"},{"name":"Nemesis","character":"The Oni","wikiKey":"nemesis"},{"name":"No Quarter","character":"The Houndmaster","wikiKey":"noQuarter"},{"name":"No Way Out","character":"The Trickster","wikiKey":"noWayOut"},{"name":"None Are Free","character":"The Ghoul","wikiKey":"noneAreFree"},{"name":"Nowhere to Hide","character":"The Knight","wikiKey":"nowhereToHide"},{"name":"Oppression","character":"The Twins","wikiKey":"oppression"},{"name":"Overcharge","character":"The Doctor","wikiKey":"overcharge"},{"name":"Overwhelming Presence","character":"The Doctor","wikiKey":"overwhelmingPresence"},{"name":"Phantom Fear","character":"The Animatronic","wikiKey":"phantomFear"},{"name":"Pop Goes the Weasel","character":"The Kenneth Chase","wikiKey":"popGoesTheWeasel"},{"name":"Predator","character":"The Wraith","wikiKey":"predator"},{"name":"Rancor","character":"The Spirit","wikiKey":"rancor"},{"name":"Rapid Brutality","character":"The Xenomorph","wikiKey":"rapidBrutality"},{"name":"Ravenous","character":"The Krasue","wikiKey":"ravenous"},{"name":"Remember Me","character":"The Nightmare","wikiKey":"rememberMe"},{"name":"Scourge Hook: Floods of Rage","character":"The Onryō","wikiKey":"scourgeHook:FloodsOfRage"},{"name":"Scourge Hook: Hangman's Trick","character":"The Pig","wikiKey":"scourgeHook:Hangman'sTrick"},{"name":"Scourge Hook: Jagged Compass","character":"The Houndmaster","wikiKey":"scourgeHook:JaggedCompass"},{"name":"Scourge Hook: Pain Resonance","character":"The Artist","wikiKey":"scourgeHook:PainResonance"},{"name":"Secret Project","character":"The First","wikiKey":"secretProject"},{"name":"Septic Touch","character":"The Dredge","wikiKey":"septicTouch"},{"name":"Shadowborn","character":"The Wraith","wikiKey":"shadowborn"},{"name":"Spies from the Shadows","character":"General","wikiKey":"spiesFromTheShadows"},{"name":"Spirit Fury","character":"The Spirit","wikiKey":"spiritFury"},{"name":"Starstruck","character":"The Trickster","wikiKey":"starstruck"},{"name":"Stridor","character":"The Nurse","wikiKey":"stridor"},{"name":"Superior Anatomy","character":"The Mastermind","wikiKey":"superiorAnatomy"},{"name":"Surge","character":"The Demogorgon","wikiKey":"surge"},{"name":"Surveillance","character":"The Pig","wikiKey":"surveillance"},{"name":"THWACK!","character":"The Skull Merchant","wikiKey":"tHWACK!"},{"name":"Terminus","character":"The Mastermind","wikiKey":"terminus"},{"name":"Territorial Imperative","character":"The Huntress","wikiKey":"territorialImperative"},{"name":"Thanatophobia","character":"The Nurse","wikiKey":"thanatophobia"},{"name":"Thrilling Tremors","character":"The Danny Johnson","wikiKey":"thrillingTremors"},{"name":"Tinkerer","character":"The Hillbilly","wikiKey":"tinkerer"},{"name":"Trail of Torment","character":"The Executioner","wikiKey":"trailOfTorment"},{"name":"Turn Back the Clock","character":"The First","wikiKey":"turnBackTheClock"},{"name":"Ultimate Weapon","character":"The Xenomorph","wikiKey":"ultimateWeapon"},{"name":"Unbound","character":"The Unknown","wikiKey":"unbound"},{"name":"Undone","character":"The Unknown","wikiKey":"undone"},{"name":"Unforeseen","character":"The Unknown","wikiKey":"unforeseen"},{"name":"Unnerving Presence","character":"The Trapper","wikiKey":"unnervingPresence"},{"name":"Wandering Eye","character":"The Krasue","wikiKey":"wanderingEye"},{"name":"Weave Attunement","character":"The Lich","wikiKey":"weaveAttunement"},{"name":"Zanshin Tactics","character":"The Oni","wikiKey":"zanshinTactics"},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true},{"name":"Slot Vacío","character":"General","wikiKey":"emptySlot","isEmpty":true}]}
+{
+  "_meta": {
+    "source": "deadbydaylight.wiki.gg",
+    "version": "9.4.0",
+    "date": "2026-05-02",
+    "totalSurvivor": 167,
+    "totalKiller": 133,
+    "emptySlotCopies": 8,
+    "iconsEmbedded": true,
+    "note": "274/275 icons embedded as base64. Hex: Nothing but Misery pending wiki upload. General perks fully embedded with icons.",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "defaultLang": "es"
+  },
+  "emptySlot": {
+    "name": "Slot Vacío",
+    "character": "General",
+    "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23100c18' stroke='%239b5de530' stroke-width='3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='36' fill='%239b5de540'%3E✦%3C/text%3E%3C/svg%3E",
+    "wikiKey": "emptySlot",
+    "isEmpty": true,
+    "nameEs": "Slot Vacío",
+    "characterEs": "General"
+  },
+  "survivor": [
+    {
+      "name": "A Place For Us",
+      "character": "Kwon Tae-young",
+      "wikiKey": "aPlaceForUs",
+      "nameEs": "un lugar para nosotros",
+      "characterEs": "Kwon Tae-young"
+    },
+    {
+      "name": "Ace in the Hole",
+      "character": "Ace Visconti",
+      "wikiKey": "aceInTheHole",
+      "nameEs": "as en la manga",
+      "characterEs": "Ace Visconti"
+    },
+    {
+      "name": "Adrenaline",
+      "character": "Meg Thomas",
+      "wikiKey": "adrenaline",
+      "nameEs": "adrenalina",
+      "characterEs": "Meg Thomas"
+    },
+    {
+      "name": "Aftercare",
+      "character": "Jeff Johansen",
+      "wikiKey": "aftercare",
+      "nameEs": "postratamiento",
+      "characterEs": "Jeff Johansen"
+    },
+    {
+      "name": "Alert",
+      "character": "Feng Min",
+      "wikiKey": "alert",
+      "nameEs": "alerta",
+      "characterEs": "Feng Min"
+    },
+    {
+      "name": "Any Means Necessary",
+      "character": "Yui Kimura",
+      "wikiKey": "anyMeansNecessary",
+      "nameEs": "por cualquier medio",
+      "characterEs": "Yui Kimura"
+    },
+    {
+      "name": "Apocalyptic Ingenuity",
+      "character": "Rick Grimes",
+      "wikiKey": "apocalypticIngenuity",
+      "nameEs": "ingenio apocalíptico",
+      "characterEs": "Rick Grimes"
+    },
+    {
+      "name": "Appraisal",
+      "character": "Élodie Rakoto",
+      "wikiKey": "appraisal",
+      "nameEs": "detallista",
+      "characterEs": "Élodie Rakoto"
+    },
+    {
+      "name": "Autodidact",
+      "character": "Adam Francis",
+      "wikiKey": "autodidact",
+      "nameEs": "autodidacta",
+      "characterEs": "Adam Francis"
+    },
+    {
+      "name": "Babysitter",
+      "character": "Steve Harrington",
+      "wikiKey": "babysitter",
+      "nameEs": "niñero",
+      "characterEs": "Steve Harrington"
+    },
+    {
+      "name": "Background Player",
+      "character": "Renato Lyra",
+      "wikiKey": "backgroundPlayer",
+      "nameEs": "personaje secundario",
+      "characterEs": "Renato Lyra"
+    },
+    {
+      "name": "Bada Bada Boom",
+      "character": "Dustin Henderson",
+      "wikiKey": "badaBadaBoom",
+      "nameEs": "bada, bada, bum",
+      "characterEs": "Dustin Henderson"
+    },
+    {
+      "name": "Balanced Landing",
+      "character": "Nea Karlsson",
+      "wikiKey": "balancedLanding",
+      "nameEs": "caída equilibrada",
+      "characterEs": "Nea Karlsson"
+    },
+    {
+      "name": "Bardic Inspiration",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "wikiKey": "bardicInspiration",
+      "nameEs": "inspiración bárdica",
+      "characterEs": "Aestri Yazar"
+    },
+    {
+      "name": "Better Together",
+      "character": "Nancy Wheeler",
+      "wikiKey": "betterTogether",
+      "nameEs": "mejor juntos",
+      "characterEs": "Nancy Wheeler"
+    },
+    {
+      "name": "Better than New",
+      "character": "Rebecca Chambers",
+      "wikiKey": "betterThanNew",
+      "nameEs": "mejor que nuevo",
+      "characterEs": "Rebecca Chambers"
+    },
+    {
+      "name": "Bite the Bullet",
+      "character": "Leon Scott Kennedy",
+      "wikiKey": "biteTheBullet",
+      "nameEs": "aguante el dolor",
+      "characterEs": "Leon Scott Kennedy"
+    },
+    {
+      "name": "Blast Mine",
+      "character": "Jill Valentine",
+      "wikiKey": "blastMine",
+      "nameEs": "mina cegadora",
+      "characterEs": "Jill Valentine"
+    },
+    {
+      "name": "Blood Pact",
+      "character": "Cheryl Mason",
+      "wikiKey": "bloodPact",
+      "nameEs": "pacto de sangre",
+      "characterEs": "Cheryl Mason"
+    },
+    {
+      "name": "Blood Rush",
+      "character": "Renato Lyra",
+      "wikiKey": "bloodRush",
+      "nameEs": "impulso sangriento",
+      "characterEs": "Renato Lyra"
+    },
+    {
+      "name": "Boil Over",
+      "character": "Kate Denson",
+      "wikiKey": "boilOver",
+      "nameEs": "arrebato",
+      "characterEs": "Kate Denson"
+    },
+    {
+      "name": "Bond",
+      "character": "Dwight Fairfield",
+      "wikiKey": "bond",
+      "nameEs": "vínculo",
+      "characterEs": "Dwight Fairfield"
+    },
+    {
+      "name": "Boon: Circle of Healing",
+      "character": "Mikaela Reid",
+      "wikiKey": "boon:CircleOfHealing",
+      "nameEs": "bendición: círculo de curación",
+      "characterEs": "Mikaela Reid"
+    },
+    {
+      "name": "Boon: Dark Theory",
+      "character": "Yoichi Asakawa",
+      "wikiKey": "boon:DarkTheory",
+      "nameEs": "bendición: teoría oscura",
+      "characterEs": "Yoichi Asakawa"
+    },
+    {
+      "name": "Boon: Exponential",
+      "character": "Jonah Vasquez",
+      "wikiKey": "boon:Exponential",
+      "nameEs": "bendición: exponencial",
+      "characterEs": "Jonah Vasquez"
+    },
+    {
+      "name": "Boon: Illumination",
+      "character": "Alan Wake",
+      "wikiKey": "boon:Illumination",
+      "nameEs": "bendición: iluminación",
+      "characterEs": "Alan Wake"
+    },
+    {
+      "name": "Boon: Shadow Step",
+      "character": "Mikaela Reid",
+      "wikiKey": "boon:ShadowStep",
+      "nameEs": "bendición: paso de las sombras",
+      "characterEs": "Mikaela Reid"
+    },
+    {
+      "name": "Borrowed Time",
+      "character": "Bill Overbeck",
+      "wikiKey": "borrowedTime",
+      "nameEs": "tiempo prestado",
+      "characterEs": "Bill Overbeck"
+    },
+    {
+      "name": "Botany Knowledge",
+      "character": "Claudette Morel",
+      "wikiKey": "botanyKnowledge",
+      "nameEs": "conocimientos de botánica",
+      "characterEs": "Claudette Morel"
+    },
+    {
+      "name": "Breakdown",
+      "character": "Jeff Johansen",
+      "wikiKey": "breakdown",
+      "nameEs": "ruptura",
+      "characterEs": "Jeff Johansen"
+    },
+    {
+      "name": "Breakout",
+      "character": "Yui Kimura",
+      "wikiKey": "breakout",
+      "nameEs": "fuga",
+      "characterEs": "Yui Kimura"
+    },
+    {
+      "name": "Buckle Up",
+      "character": "Ash Williams",
+      "wikiKey": "buckleUp",
+      "nameEs": "sujetate",
+      "characterEs": "Ash Williams"
+    },
+    {
+      "name": "Built to Last",
+      "character": "Felix Richter",
+      "wikiKey": "builtToLast",
+      "nameEs": "diseñado para durar",
+      "characterEs": "Felix Richter"
+    },
+    {
+      "name": "Calm Spirit",
+      "character": "Jake Park",
+      "wikiKey": "calmSpirit",
+      "nameEs": "espíritu calmado",
+      "characterEs": "Jake Park"
+    },
+    {
+      "name": "Camaraderie",
+      "character": "Steve Harrington",
+      "wikiKey": "camaraderie",
+      "nameEs": "camaradería",
+      "characterEs": "Steve Harrington"
+    },
+    {
+      "name": "Champion of Light",
+      "character": "Alan Wake",
+      "wikiKey": "championOfLight",
+      "nameEs": "campeón de la luz",
+      "characterEs": "Alan Wake"
+    },
+    {
+      "name": "Change of Plan",
+      "character": "Dustin Henderson",
+      "wikiKey": "changeOfPlan",
+      "nameEs": "cambio de planes",
+      "characterEs": "Dustin Henderson"
+    },
+    {
+      "name": "Chemical Trap",
+      "character": "Ellen Ripley",
+      "wikiKey": "chemicalTrap",
+      "nameEs": "trampa química",
+      "characterEs": "Ellen Ripley"
+    },
+    {
+      "name": "Clairvoyance",
+      "character": "Mikaela Reid",
+      "wikiKey": "clairvoyance",
+      "nameEs": "clarividencia",
+      "characterEs": "Mikaela Reid"
+    },
+    {
+      "name": "Clean Break",
+      "character": "Taurie Cain",
+      "wikiKey": "cleanBreak",
+      "nameEs": "punto y aparte",
+      "characterEs": "Taurie Cain"
+    },
+    {
+      "name": "Come and Get Me!",
+      "character": "Rick Grimes",
+      "wikiKey": "comeAndGetMe!",
+      "nameEs": "¡ven por mí!",
+      "characterEs": "Rick Grimes"
+    },
+    {
+      "name": "Conviction",
+      "character": "Michonne Grimes",
+      "wikiKey": "conviction",
+      "nameEs": "convicción",
+      "characterEs": "Michonne Grimes"
+    },
+    {
+      "name": "Corrective Action",
+      "character": "Jonah Vasquez",
+      "wikiKey": "correctiveAction",
+      "nameEs": "corrección",
+      "characterEs": "Jonah Vasquez"
+    },
+    {
+      "name": "Counterforce",
+      "character": "Jill Valentine",
+      "wikiKey": "counterforce",
+      "nameEs": "contramedida",
+      "characterEs": "Jill Valentine"
+    },
+    {
+      "name": "Cut Loose",
+      "character": "Thalita Lyra",
+      "wikiKey": "cutLoose",
+      "nameEs": "suéltate",
+      "characterEs": "Thalita Lyra"
+    },
+    {
+      "name": "Dance With Me",
+      "character": "Kate Denson",
+      "wikiKey": "danceWithMe",
+      "nameEs": "baila conmigo",
+      "characterEs": "Kate Denson"
+    },
+    {
+      "name": "Dead Hard",
+      "character": "David King",
+      "wikiKey": "deadHard",
+      "nameEs": "fajador",
+      "characterEs": "David King"
+    },
+    {
+      "name": "Deadline",
+      "character": "Alan Wake",
+      "wikiKey": "deadline",
+      "nameEs": "fecha límite",
+      "characterEs": "Alan Wake"
+    },
+    {
+      "name": "Deception",
+      "character": "Élodie Rakoto",
+      "wikiKey": "deception",
+      "nameEs": "engaño",
+      "characterEs": "Élodie Rakoto"
+    },
+    {
+      "name": "Deliverance",
+      "character": "Adam Francis",
+      "wikiKey": "deliverance",
+      "nameEs": "liberación",
+      "characterEs": "Adam Francis"
+    },
+    {
+      "name": "Desperate Measures",
+      "character": "Felix Richter",
+      "wikiKey": "desperateMeasures",
+      "nameEs": "medidas desesperadas",
+      "characterEs": "Felix Richter"
+    },
+    {
+      "name": "Detective's Hunch",
+      "character": "David Tapp",
+      "wikiKey": "detective'sHunch",
+      "nameEs": "corazonada",
+      "characterEs": "David Tapp"
+    },
+    {
+      "name": "Distortion",
+      "character": "Jeff Johansen",
+      "wikiKey": "distortion",
+      "nameEs": "distorsión",
+      "characterEs": "Jeff Johansen"
+    },
+    {
+      "name": "Diversion",
+      "character": "Adam Francis",
+      "wikiKey": "diversion",
+      "nameEs": "distracción",
+      "characterEs": "Adam Francis"
+    },
+    {
+      "name": "Do No Harm",
+      "character": "Orela Rose",
+      "wikiKey": "doNoHarm",
+      "nameEs": "no hagas daño",
+      "characterEs": "Orela Rose"
+    },
+    {
+      "name": "Dramaturgy",
+      "character": "Nicolas Cage",
+      "wikiKey": "dramaturgy",
+      "nameEs": "dramaturgia",
+      "characterEs": "Nicolas Cage"
+    },
+    {
+      "name": "Duty of Care",
+      "character": "Orela Rose",
+      "wikiKey": "dutyOfCare",
+      "nameEs": "el deber de cuidar",
+      "characterEs": "Orela Rose"
+    },
+    {
+      "name": "Empathic Connection",
+      "character": "Yoichi Asakawa",
+      "wikiKey": "empathicConnection",
+      "nameEs": "conexión empática",
+      "characterEs": "Yoichi Asakawa"
+    },
+    {
+      "name": "Empathy",
+      "character": "Claudette Morel",
+      "wikiKey": "empathy",
+      "nameEs": "empatía",
+      "characterEs": "Claudette Morel"
+    },
+    {
+      "name": "Extrasensory Perception",
+      "character": "Eleven",
+      "wikiKey": "extrasensoryPerception",
+      "nameEs": "percepción extrasensorial",
+      "characterEs": "Eleven"
+    },
+    {
+      "name": "Exultation",
+      "character": "Trevor Belmont",
+      "wikiKey": "exultation",
+      "nameEs": "exultación",
+      "characterEs": "Trevor Belmont"
+    },
+    {
+      "name": "Eyes of Belmont",
+      "character": "Trevor Belmont",
+      "wikiKey": "eyesOfBelmont",
+      "nameEs": "ojos de Belmont",
+      "characterEs": "Trevor Belmont"
+    },
+    {
+      "name": "Fast Track",
+      "character": "Lee Yun-jin",
+      "wikiKey": "fastTrack",
+      "nameEs": "vía rápida",
+      "characterEs": "Lee Yun-jin"
+    },
+    {
+      "name": "Finesse",
+      "character": "Lara Croft",
+      "wikiKey": "finesse",
+      "nameEs": "elegancia",
+      "characterEs": "Lara Croft"
+    },
+    {
+      "name": "Five Moves Ahead",
+      "character": "Kwon Tae-young",
+      "wikiKey": "fiveMovesAhead",
+      "nameEs": "cinco movimientos adelante",
+      "characterEs": "Kwon Tae-young"
+    },
+    {
+      "name": "Fixated",
+      "character": "Nancy Wheeler",
+      "wikiKey": "fixated",
+      "nameEs": "fijación",
+      "characterEs": "Nancy Wheeler"
+    },
+    {
+      "name": "Flashbang",
+      "character": "Leon Scott Kennedy",
+      "wikiKey": "flashbang",
+      "nameEs": "granada aturdidora",
+      "characterEs": "Leon Scott Kennedy"
+    },
+    {
+      "name": "Flip-Flop",
+      "character": "Ash Williams",
+      "wikiKey": "flip-Flop",
+      "nameEs": "nos vemos",
+      "characterEs": "Ash Williams"
+    },
+    {
+      "name": "Flow State",
+      "character": "Kwon Tae-young",
+      "wikiKey": "flowState",
+      "nameEs": "estado fluido",
+      "characterEs": "Kwon Tae-young"
+    },
+    {
+      "name": "Fogwise",
+      "character": "Vittorio Toscano",
+      "wikiKey": "fogwise",
+      "nameEs": "conocimiento de la niebla",
+      "characterEs": "Vittorio Toscano"
+    },
+    {
+      "name": "For the People",
+      "character": "Zarina Kassir",
+      "wikiKey": "forThePeople",
+      "nameEs": "por la gente",
+      "characterEs": "Zarina Kassir"
+    },
+    {
+      "name": "Friendly Competition",
+      "character": "Thalita Lyra",
+      "wikiKey": "friendlyCompetition",
+      "nameEs": "competencia amistosa",
+      "characterEs": "Thalita Lyra"
+    },
+    {
+      "name": "Ghost Notes",
+      "character": "Vee Boonyasak",
+      "wikiKey": "ghostNotes",
+      "nameEs": "notas fantasmas",
+      "characterEs": "Vee Boonyasak"
+    },
+    {
+      "name": "Hardened",
+      "character": "Lara Croft",
+      "wikiKey": "hardened",
+      "nameEs": "endurecida",
+      "characterEs": "Lara Croft"
+    },
+    {
+      "name": "Head On",
+      "character": "Jane Romero",
+      "wikiKey": "headOn",
+      "nameEs": "de frente",
+      "characterEs": "Jane Romero"
+    },
+    {
+      "name": "Hyperfocus",
+      "character": "Rebecca Chambers",
+      "wikiKey": "hyperfocus",
+      "nameEs": "hiperconcentración",
+      "characterEs": "Rebecca Chambers"
+    },
+    {
+      "name": "Inner Focus",
+      "character": "Haddie Kaur",
+      "wikiKey": "innerFocus",
+      "nameEs": "enfoque interno",
+      "characterEs": "Haddie Kaur"
+    },
+    {
+      "name": "Inner Strength",
+      "character": "Nancy Wheeler",
+      "wikiKey": "innerStrength",
+      "nameEs": "fuerza interior",
+      "characterEs": "Nancy Wheeler"
+    },
+    {
+      "name": "Invocation: Treacherous Crows",
+      "character": "Taurie Cain",
+      "wikiKey": "invocation:TreacherousCrows",
+      "nameEs": "invocación: cuervos traicioneros",
+      "characterEs": "Taurie Cain"
+    },
+    {
+      "name": "Invocation: Weaving Spiders",
+      "character": "Sable Ward",
+      "wikiKey": "invocation:WeavingSpiders",
+      "nameEs": "invocación: arañas tejedoras",
+      "characterEs": "Sable Ward"
+    },
+    {
+      "name": "Iron Will",
+      "character": "Jake Park",
+      "wikiKey": "ironWill",
+      "nameEs": "voluntad de hierro",
+      "characterEs": "Jake Park"
+    },
+    {
+      "name": "Last Stand",
+      "character": "Michonne Grimes",
+      "wikiKey": "lastStand",
+      "nameEs": "último enfrentamiento",
+      "characterEs": "Michonne Grimes"
+    },
+    {
+      "name": "Leader",
+      "character": "Dwight Fairfield",
+      "wikiKey": "leader",
+      "nameEs": "líder",
+      "characterEs": "Dwight Fairfield"
+    },
+    {
+      "name": "Left Behind",
+      "character": "Bill Overbeck",
+      "wikiKey": "leftBehind",
+      "nameEs": "abandonado a tu suerte",
+      "characterEs": "Bill Overbeck"
+    },
+    {
+      "name": "Light-Footed",
+      "character": "Ellen Ripley",
+      "wikiKey": "light-Footed",
+      "nameEs": "ágil",
+      "characterEs": "Ellen Ripley"
+    },
+    {
+      "name": "Lithe",
+      "character": "Feng Min",
+      "wikiKey": "lithe",
+      "nameEs": "agilidad",
+      "characterEs": "Feng Min"
+    },
+    {
+      "name": "Low Profile",
+      "character": "Ada Wong",
+      "wikiKey": "lowProfile",
+      "nameEs": "perfil bajo",
+      "characterEs": "Ada Wong"
+    },
+    {
+      "name": "Lucky Break",
+      "character": "Yui Kimura",
+      "wikiKey": "luckyBreak",
+      "nameEs": "golpe de suerte",
+      "characterEs": "Yui Kimura"
+    },
+    {
+      "name": "Lucky Star",
+      "character": "Ellen Ripley",
+      "wikiKey": "luckyStar",
+      "nameEs": "estrella de la suerte",
+      "characterEs": "Ellen Ripley"
+    },
+    {
+      "name": "Made for This",
+      "character": "Gabriel Soma",
+      "wikiKey": "madeForThis",
+      "nameEs": "nacido para esto",
+      "characterEs": "Gabriel Soma"
+    },
+    {
+      "name": "Mettle of Man",
+      "character": "Ash Williams",
+      "wikiKey": "mettleOfMan",
+      "nameEs": "el temple del hombre",
+      "characterEs": "Ash Williams"
+    },
+    {
+      "name": "Mirrored Illusion",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "wikiKey": "mirroredIllusion",
+      "nameEs": "ilusión reflejada",
+      "characterEs": "Aestri Yazar"
+    },
+    {
+      "name": "Moment of Glory",
+      "character": "Trevor Belmont",
+      "wikiKey": "momentOfGlory",
+      "nameEs": "momento de gloria",
+      "characterEs": "Trevor Belmont"
+    },
+    {
+      "name": "No Mither",
+      "character": "David King",
+      "wikiKey": "noMither",
+      "nameEs": "me da igual",
+      "characterEs": "David King"
+    },
+    {
+      "name": "Off the Record",
+      "character": "Zarina Kassir",
+      "wikiKey": "offTheRecord",
+      "nameEs": "extraoficialmente",
+      "characterEs": "Zarina Kassir"
+    },
+    {
+      "name": "One-Two-Three-Four!",
+      "character": "Vee Boonyasak",
+      "wikiKey": "one-Two-Three-Four!",
+      "nameEs": "¡uno, dos, tres, cuatro!",
+      "characterEs": "Vee Boonyasak"
+    },
+    {
+      "name": "Open-Handed",
+      "character": "Ace Visconti",
+      "wikiKey": "open-Handed",
+      "nameEs": "a mano descubierta",
+      "characterEs": "Ace Visconti"
+    },
+    {
+      "name": "Overcome",
+      "character": "Jonah Vasquez",
+      "wikiKey": "overcome",
+      "nameEs": "superar",
+      "characterEs": "Jonah Vasquez"
+    },
+    {
+      "name": "Overzealous",
+      "character": "Haddie Kaur",
+      "wikiKey": "overzealous",
+      "nameEs": "demasiado entusiasta",
+      "characterEs": "Haddie Kaur"
+    },
+    {
+      "name": "Parental Guidance",
+      "character": "Yoichi Asakawa",
+      "wikiKey": "parentalGuidance",
+      "nameEs": "consejos de papá",
+      "characterEs": "Yoichi Asakawa"
+    },
+    {
+      "name": "Pharmacy",
+      "character": "Quentin Smith",
+      "wikiKey": "pharmacy",
+      "nameEs": "farmacia",
+      "characterEs": "Quentin Smith"
+    },
+    {
+      "name": "Plot Twist",
+      "character": "Nicolas Cage",
+      "wikiKey": "plotTwist",
+      "nameEs": "giro argumental",
+      "characterEs": "Nicolas Cage"
+    },
+    {
+      "name": "Poised",
+      "character": "Jane Romero",
+      "wikiKey": "poised",
+      "nameEs": "serenidad",
+      "characterEs": "Jane Romero"
+    },
+    {
+      "name": "Potential Energy",
+      "character": "Vittorio Toscano",
+      "wikiKey": "potentialEnergy",
+      "nameEs": "energía potencial",
+      "characterEs": "Vittorio Toscano"
+    },
+    {
+      "name": "Power Struggle",
+      "character": "Élodie Rakoto",
+      "wikiKey": "powerStruggle",
+      "nameEs": "lucha de poderes",
+      "characterEs": "Élodie Rakoto"
+    },
+    {
+      "name": "Prove Thyself",
+      "character": "Dwight Fairfield",
+      "wikiKey": "proveThyself",
+      "nameEs": "demuestra lo que vales",
+      "characterEs": "Dwight Fairfield"
+    },
+    {
+      "name": "Quick & Quiet",
+      "character": "Meg Thomas",
+      "wikiKey": "quick&Quiet",
+      "nameEs": "velocidad silenciosa",
+      "characterEs": "Meg Thomas"
+    },
+    {
+      "name": "Quick Gambit",
+      "character": "Vittorio Toscano",
+      "wikiKey": "quickGambit",
+      "nameEs": "táctica rápida",
+      "characterEs": "Vittorio Toscano"
+    },
+    {
+      "name": "Rapid Response",
+      "character": "Orela Rose",
+      "wikiKey": "rapidResponse",
+      "nameEs": "respuesta rápida",
+      "characterEs": "Orela Rose"
+    },
+    {
+      "name": "Reactive Healing",
+      "character": "Ada Wong",
+      "wikiKey": "reactiveHealing",
+      "nameEs": "curación reactiva",
+      "characterEs": "Ada Wong"
+    },
+    {
+      "name": "Reassurance",
+      "character": "Rebecca Chambers",
+      "wikiKey": "reassurance",
+      "nameEs": "consuelo",
+      "characterEs": "Rebecca Chambers"
+    },
+    {
+      "name": "Red Herring",
+      "character": "Zarina Kassir",
+      "wikiKey": "redHerring",
+      "nameEs": "arenque rojo",
+      "characterEs": "Zarina Kassir"
+    },
+    {
+      "name": "Repressed Alliance",
+      "character": "Cheryl Mason",
+      "wikiKey": "repressedAlliance",
+      "nameEs": "alianza reprimida",
+      "characterEs": "Cheryl Mason"
+    },
+    {
+      "name": "Residual Manifest",
+      "character": "Haddie Kaur",
+      "wikiKey": "residualManifest",
+      "nameEs": "manifiesto residual",
+      "characterEs": "Haddie Kaur"
+    },
+    {
+      "name": "Resurgence",
+      "character": "Jill Valentine",
+      "wikiKey": "resurgence",
+      "nameEs": "resurgimiento",
+      "characterEs": "Jill Valentine"
+    },
+    {
+      "name": "Road Life",
+      "character": "Vee Boonyasak",
+      "wikiKey": "roadLife",
+      "nameEs": "vida itinerante",
+      "characterEs": "Vee Boonyasak"
+    },
+    {
+      "name": "Rookie Spirit",
+      "character": "Leon Scott Kennedy",
+      "wikiKey": "rookieSpirit",
+      "nameEs": "espíritu de novato",
+      "characterEs": "Leon Scott Kennedy"
+    },
+    {
+      "name": "Saboteur",
+      "character": "Jake Park",
+      "wikiKey": "saboteur",
+      "nameEs": "sabotear",
+      "characterEs": "Jake Park"
+    },
+    {
+      "name": "Scavenger",
+      "character": "Gabriel Soma",
+      "wikiKey": "scavenger",
+      "nameEs": "chatarrero",
+      "characterEs": "Gabriel Soma"
+    },
+    {
+      "name": "Scene Partner",
+      "character": "Nicolas Cage",
+      "wikiKey": "scenePartner",
+      "nameEs": "compañero de escena",
+      "characterEs": "Nicolas Cage"
+    },
+    {
+      "name": "Second Wind",
+      "character": "Steve Harrington",
+      "wikiKey": "secondWind",
+      "nameEs": "segundo aliento",
+      "characterEs": "Steve Harrington"
+    },
+    {
+      "name": "Self-Care",
+      "character": "Claudette Morel",
+      "wikiKey": "self-Care",
+      "nameEs": "autocuración",
+      "characterEs": "Claudette Morel"
+    },
+    {
+      "name": "Self-Preservation",
+      "character": "Lee Yun-jin",
+      "wikiKey": "self-Preservation",
+      "nameEs": "autopreservación",
+      "characterEs": "Lee Yun-jin"
+    },
+    {
+      "name": "Shoulder the Burden",
+      "character": "Taurie Cain",
+      "wikiKey": "shoulderTheBurden",
+      "nameEs": "cargar a cuestas",
+      "characterEs": "Taurie Cain"
+    },
+    {
+      "name": "Smash Hit",
+      "character": "Lee Yun-jin",
+      "wikiKey": "smashHit",
+      "nameEs": "éxito arrollador",
+      "characterEs": "Lee Yun-jin"
+    },
+    {
+      "name": "Solidarity",
+      "character": "Jane Romero",
+      "wikiKey": "solidarity",
+      "nameEs": "solidaridad",
+      "characterEs": "Jane Romero"
+    },
+    {
+      "name": "Soul Guard",
+      "character": "Cheryl Mason",
+      "wikiKey": "soulGuard",
+      "nameEs": "defensa de alma",
+      "characterEs": "Cheryl Mason"
+    },
+    {
+      "name": "Specialist",
+      "character": "Lara Croft",
+      "wikiKey": "specialist",
+      "nameEs": "especialista",
+      "characterEs": "Lara Croft"
+    },
+    {
+      "name": "Sprint Burst",
+      "character": "Meg Thomas",
+      "wikiKey": "sprintBurst",
+      "nameEs": "esprint",
+      "characterEs": "Meg Thomas"
+    },
+    {
+      "name": "Stake Out",
+      "character": "David Tapp",
+      "wikiKey": "stakeOut",
+      "nameEs": "bajo vigilancia",
+      "characterEs": "David Tapp"
+    },
+    {
+      "name": "Still Sight",
+      "character": "Aestri Yazar & Baermar Uraz",
+      "wikiKey": "stillSight",
+      "nameEs": "mirada fija",
+      "characterEs": "Aestri Yazar"
+    },
+    {
+      "name": "Streetwise",
+      "character": "Nea Karlsson",
+      "wikiKey": "streetwise",
+      "nameEs": "de la calle",
+      "characterEs": "Nea Karlsson"
+    },
+    {
+      "name": "Strength in Shadows",
+      "character": "Sable Ward",
+      "wikiKey": "strengthInShadows",
+      "nameEs": "fortaleza de las sombras",
+      "characterEs": "Sable Ward"
+    },
+    {
+      "name": "Teamwork: Collective Stealth",
+      "character": "Renato Lyra",
+      "wikiKey": "teamwork:CollectiveStealth",
+      "nameEs": "trabajo en equipo: sigilo colectivo",
+      "characterEs": "Renato Lyra"
+    },
+    {
+      "name": "Teamwork: Full Circuit",
+      "character": "Dustin Henderson",
+      "wikiKey": "teamwork:FullCircuit",
+      "nameEs": "trabajo en equipo: circuito completo",
+      "characterEs": "Dustin Henderson"
+    },
+    {
+      "name": "Teamwork: Power of Two",
+      "character": "Thalita Lyra",
+      "wikiKey": "teamwork:PowerOfTwo",
+      "nameEs": "trabajo en equipo: el poder de dos",
+      "characterEs": "Thalita Lyra"
+    },
+    {
+      "name": "Teamwork: Soft-Spoken",
+      "character": "Eleven",
+      "wikiKey": "teamwork:Soft-Spoken",
+      "nameEs": "trabajo en equipo: tono gentil",
+      "characterEs": "Eleven"
+    },
+    {
+      "name": "Teamwork: Throw Down",
+      "character": "Michonne Grimes",
+      "wikiKey": "teamwork:ThrowDown",
+      "nameEs": "trabajo en equipo: lanzamiento",
+      "characterEs": "Michonne Grimes"
+    },
+    {
+      "name": "Teamwork: Toughen Up",
+      "character": "Rick Grimes",
+      "wikiKey": "teamwork:ToughenUp",
+      "nameEs": "trabajo en equipo: entereza",
+      "characterEs": "Rick Grimes"
+    },
+    {
+      "name": "Technician",
+      "character": "Feng Min",
+      "wikiKey": "technician",
+      "nameEs": "pericia técnica",
+      "characterEs": "Feng Min"
+    },
+    {
+      "name": "Tenacity",
+      "character": "David Tapp",
+      "wikiKey": "tenacity",
+      "nameEs": "tenacidad",
+      "characterEs": "David Tapp"
+    },
+    {
+      "name": "Troubleshooter",
+      "character": "Gabriel Soma",
+      "wikiKey": "troubleshooter",
+      "nameEs": "solucionador de problemas",
+      "characterEs": "Gabriel Soma"
+    },
+    {
+      "name": "Unbreakable",
+      "character": "Bill Overbeck",
+      "wikiKey": "unbreakable",
+      "nameEs": "inquebrantable",
+      "characterEs": "Bill Overbeck"
+    },
+    {
+      "name": "Up the Ante",
+      "character": "Ace Visconti",
+      "wikiKey": "upTheAnte",
+      "nameEs": "subir las apuestas",
+      "characterEs": "Ace Visconti"
+    },
+    {
+      "name": "Urban Evasion",
+      "character": "Nea Karlsson",
+      "wikiKey": "urbanEvasion",
+      "nameEs": "evasión urbana",
+      "characterEs": "Nea Karlsson"
+    },
+    {
+      "name": "Vigil",
+      "character": "Quentin Smith",
+      "wikiKey": "vigil",
+      "nameEs": "vigilia",
+      "characterEs": "Quentin Smith"
+    },
+    {
+      "name": "Visionary",
+      "character": "Felix Richter",
+      "wikiKey": "visionary",
+      "nameEs": "visionario",
+      "characterEs": "Felix Richter"
+    },
+    {
+      "name": "Wake Up!",
+      "character": "Quentin Smith",
+      "wikiKey": "wakeUp!",
+      "nameEs": "¡despierta!",
+      "characterEs": "Quentin Smith"
+    },
+    {
+      "name": "We See You",
+      "character": "Eleven",
+      "wikiKey": "weSeeYou",
+      "nameEs": "te vemos",
+      "characterEs": "Eleven"
+    },
+    {
+      "name": "We're Gonna Live Forever",
+      "character": "David King",
+      "wikiKey": "we'reGonnaLiveForever",
+      "nameEs": "vamos a vivir para siempre",
+      "characterEs": "David King"
+    },
+    {
+      "name": "Wicked",
+      "character": "Sable Ward",
+      "wikiKey": "wicked",
+      "nameEs": "malicia",
+      "characterEs": "Sable Ward"
+    },
+    {
+      "name": "Windows of Opportunity",
+      "character": "Kate Denson",
+      "wikiKey": "windowsOfOpportunity",
+      "nameEs": "oportunidades",
+      "characterEs": "Kate Denson"
+    },
+    {
+      "name": "Wiretap",
+      "character": "Ada Wong",
+      "wikiKey": "wiretap",
+      "nameEs": "sistema de espionaje",
+      "characterEs": "Ada Wong"
+    },
+    {
+      "name": "Dark Sense",
+      "character": "General",
+      "wikiKey": "darkSense",
+      "nameEs": "Sentido oscuro",
+      "characterEs": "General"
+    },
+    {
+      "name": "Déjà Vu",
+      "character": "General",
+      "wikiKey": "déjàVu",
+      "nameEs": "Déjà vu",
+      "characterEs": "General"
+    },
+    {
+      "name": "Hope",
+      "character": "General",
+      "wikiKey": "hope",
+      "nameEs": "Esperanza",
+      "characterEs": "General"
+    },
+    {
+      "name": "Kindred",
+      "character": "General",
+      "wikiKey": "kindred",
+      "nameEs": "Parentesco",
+      "characterEs": "General"
+    },
+    {
+      "name": "Lightweight",
+      "character": "General",
+      "wikiKey": "lightweight",
+      "nameEs": "Ligero",
+      "characterEs": "General"
+    },
+    {
+      "name": "No One Left Behind",
+      "character": "General",
+      "wikiKey": "noOneLeftBehind",
+      "nameEs": "No dejes a nadie atrás",
+      "characterEs": "General"
+    },
+    {
+      "name": "Plunderer's Instinct",
+      "character": "General",
+      "wikiKey": "plunderer'sInstinct",
+      "nameEs": "Instinto del saqueador",
+      "characterEs": "General"
+    },
+    {
+      "name": "Premonition",
+      "character": "General",
+      "wikiKey": "premonition",
+      "nameEs": "Premonición",
+      "characterEs": "General"
+    },
+    {
+      "name": "Resilience",
+      "character": "General",
+      "wikiKey": "resilience",
+      "nameEs": "Resiliencia",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slippery Meat",
+      "character": "General",
+      "wikiKey": "slipperyMeat",
+      "nameEs": "Carne escurridiza",
+      "characterEs": "General"
+    },
+    {
+      "name": "Small Game",
+      "character": "General",
+      "wikiKey": "smallGame",
+      "nameEs": "Caza menor",
+      "characterEs": "General"
+    },
+    {
+      "name": "Spine Chill",
+      "character": "General",
+      "wikiKey": "spineChill",
+      "nameEs": "Escalofrío",
+      "characterEs": "General"
+    },
+    {
+      "name": "This Is Not Happening",
+      "character": "General",
+      "wikiKey": "thisIsNotHappening",
+      "nameEs": "Esto no está pasando",
+      "characterEs": "General"
+    },
+    {
+      "name": "We'll Make It",
+      "character": "General",
+      "wikiKey": "we'llMakeIt",
+      "nameEs": "Lo lograremos",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    }
+  ],
+  "killer": [
+    {
+      "name": "A Nurse's Calling",
+      "character": "The Nurse",
+      "wikiKey": "aNurse'sCalling",
+      "nameEs": "vocación de enfermera",
+      "characterEs": "La Enfermera"
+    },
+    {
+      "name": "Agitation",
+      "character": "The Trapper",
+      "wikiKey": "agitation",
+      "nameEs": "agitación",
+      "characterEs": "El Trampero"
+    },
+    {
+      "name": "Alien Instinct",
+      "character": "The Xenomorph",
+      "wikiKey": "alienInstinct",
+      "nameEs": "instinto alienígena",
+      "characterEs": "El Xenomorfo"
+    },
+    {
+      "name": "All-Shaking Thunder",
+      "character": "The Houndmaster",
+      "wikiKey": "all-ShakingThunder",
+      "nameEs": "trueno sísmico",
+      "characterEs": "La Señora de los Sabuesos"
+    },
+    {
+      "name": "Awakened Awareness",
+      "character": "The Mastermind",
+      "wikiKey": "awakenedAwareness",
+      "nameEs": "conciencia de estar despiertos",
+      "characterEs": "La Mente Maestra"
+    },
+    {
+      "name": "Bamboozle",
+      "character": "The Kenneth Chase",
+      "wikiKey": "bamboozle",
+      "nameEs": "desconcierto",
+      "characterEs": "El Payaso"
+    },
+    {
+      "name": "Barbecue & Chilli",
+      "character": "The Cannibal",
+      "wikiKey": "barbecue&Chilli",
+      "nameEs": "barbacoa y chile",
+      "characterEs": "El Caníbal"
+    },
+    {
+      "name": "Batteries Included",
+      "character": "The Good Guy",
+      "wikiKey": "batteriesIncluded",
+      "nameEs": "baterías incluidas",
+      "characterEs": "El Chico Bueno"
+    },
+    {
+      "name": "Beast of Prey",
+      "character": "The Huntress",
+      "wikiKey": "beastOfPrey",
+      "nameEs": "bestia de presa",
+      "characterEs": "La Cazadora"
+    },
+    {
+      "name": "Blood Echo",
+      "character": "The Oni",
+      "wikiKey": "bloodEcho",
+      "nameEs": "eco sangriento",
+      "characterEs": "El Oni"
+    },
+    {
+      "name": "Blood Warden",
+      "character": "The Nightmare",
+      "wikiKey": "bloodWarden",
+      "nameEs": "guardián de sangre",
+      "characterEs": "La Pesadilla"
+    },
+    {
+      "name": "Bloodhound",
+      "character": "The Wraith",
+      "wikiKey": "bloodhound",
+      "nameEs": "sabueso de sangre",
+      "characterEs": "El Espectro"
+    },
+    {
+      "name": "Brutal Strength",
+      "character": "The Trapper",
+      "wikiKey": "brutalStrength",
+      "nameEs": "fuerza brutal",
+      "characterEs": "El Trampero"
+    },
+    {
+      "name": "Call of Brine",
+      "character": "The Onryō",
+      "wikiKey": "callOfBrine",
+      "nameEs": "anuncio de salmuera",
+      "characterEs": "La Onryō"
+    },
+    {
+      "name": "Corrupt Intervention",
+      "character": "The Plague",
+      "wikiKey": "corruptIntervention",
+      "nameEs": "intervención corrupta",
+      "characterEs": "La Plaga"
+    },
+    {
+      "name": "Coulrophobia",
+      "character": "The Kenneth Chase",
+      "wikiKey": "coulrophobia",
+      "nameEs": "coulrofobia",
+      "characterEs": "El Payaso"
+    },
+    {
+      "name": "Coup de Grâce",
+      "character": "The Twins",
+      "wikiKey": "coupDeGrâce",
+      "nameEs": "golpe de gracia",
+      "characterEs": "Los Mellizos"
+    },
+    {
+      "name": "Cruel Limits",
+      "character": "The Demogorgon",
+      "wikiKey": "cruelLimits",
+      "nameEs": "restricción cruel",
+      "characterEs": "El Demogorgon"
+    },
+    {
+      "name": "Dark Arrogance",
+      "character": "The Lich",
+      "wikiKey": "darkArrogance",
+      "nameEs": "arrogancia oscura",
+      "characterEs": "El Liche"
+    },
+    {
+      "name": "Dark Devotion",
+      "character": "The Plague",
+      "wikiKey": "darkDevotion",
+      "nameEs": "devoción oscura",
+      "characterEs": "La Plaga"
+    },
+    {
+      "name": "Darkness Revealed",
+      "character": "The Dredge",
+      "wikiKey": "darknessRevealed",
+      "nameEs": "oscuridad revelada",
+      "characterEs": "La Draga"
+    },
+    {
+      "name": "Dead Man's Switch",
+      "character": "The Deathslinger",
+      "wikiKey": "deadMan'sSwitch",
+      "nameEs": "interruptor del hombre muerto",
+      "characterEs": "El Arponero"
+    },
+    {
+      "name": "Deathbound",
+      "character": "The Executioner",
+      "wikiKey": "deathbound",
+      "nameEs": "vínculo inmortal",
+      "characterEs": "El Verdugo"
+    },
+    {
+      "name": "Discordance",
+      "character": "The Frank, Julie, Susie, Joey",
+      "wikiKey": "discordance",
+      "nameEs": "discordancia",
+      "characterEs": "La Legión"
+    },
+    {
+      "name": "Dissolution",
+      "character": "The Dredge",
+      "wikiKey": "dissolution",
+      "nameEs": "disolución",
+      "characterEs": "La Draga"
+    },
+    {
+      "name": "Dominance",
+      "character": "The Dark Lord",
+      "wikiKey": "dominance",
+      "nameEs": "dominancia",
+      "characterEs": "El Señor Oscuro"
+    },
+    {
+      "name": "Dragon's Grip",
+      "character": "The Blight",
+      "wikiKey": "dragon'sGrip",
+      "nameEs": "agarre del dragón",
+      "characterEs": "El Deterioro"
+    },
+    {
+      "name": "Enduring",
+      "character": "The Hillbilly",
+      "wikiKey": "enduring",
+      "nameEs": "resistente",
+      "characterEs": "El Pueblerino"
+    },
+    {
+      "name": "Eruption",
+      "character": "The Nemesis",
+      "wikiKey": "eruption",
+      "nameEs": "erupción",
+      "characterEs": "El Némesis"
+    },
+    {
+      "name": "Fire Up",
+      "character": "The Nightmare",
+      "wikiKey": "fireUp",
+      "nameEs": "enfurecimiento",
+      "characterEs": "La Pesadilla"
+    },
+    {
+      "name": "Forced Hesitation",
+      "character": "The Singularity",
+      "wikiKey": "forcedHesitation",
+      "nameEs": "duda forzada",
+      "characterEs": "La Singularidad"
+    },
+    {
+      "name": "Forced Penance",
+      "character": "The Executioner",
+      "wikiKey": "forcedPenance",
+      "nameEs": "imposición de penitencia",
+      "characterEs": "El Verdugo"
+    },
+    {
+      "name": "Forever Entwined",
+      "character": "The Ghoul",
+      "wikiKey": "foreverEntwined",
+      "nameEs": "unidos por siempre",
+      "characterEs": "El Ghoul"
+    },
+    {
+      "name": "Franklin's Demise",
+      "character": "The Cannibal",
+      "wikiKey": "franklin'sDemise",
+      "nameEs": "muerte de Franklin",
+      "characterEs": "El Caníbal"
+    },
+    {
+      "name": "Friends 'til the End",
+      "character": "The Good Guy",
+      "wikiKey": "friends'tilTheEnd",
+      "nameEs": "amigos hasta el fin",
+      "characterEs": "El Chico Bueno"
+    },
+    {
+      "name": "Furtive Chase",
+      "character": "The Danny Johnson",
+      "wikiKey": "furtiveChase",
+      "nameEs": "persecución furtiva",
+      "characterEs": "Ghost Face"
+    },
+    {
+      "name": "Game Afoot",
+      "character": "The Skull Merchant",
+      "wikiKey": "gameAfoot",
+      "nameEs": "hora de la cacería",
+      "characterEs": "La Comerciante de Calaveras"
+    },
+    {
+      "name": "Gearhead",
+      "character": "The Deathslinger",
+      "wikiKey": "gearhead",
+      "nameEs": "oído para la maquinaria",
+      "characterEs": "El Arponero"
+    },
+    {
+      "name": "Genetic Limits",
+      "character": "The Singularity",
+      "wikiKey": "geneticLimits",
+      "nameEs": "límites genéticos",
+      "characterEs": "La Singularidad"
+    },
+    {
+      "name": "Grim Embrace",
+      "character": "The Artist",
+      "wikiKey": "grimEmbrace",
+      "nameEs": "acogida nefasta",
+      "characterEs": "La Artista"
+    },
+    {
+      "name": "Haywire",
+      "character": "The Animatronic",
+      "wikiKey": "haywire",
+      "nameEs": "caos",
+      "characterEs": "El Animatrónico"
+    },
+    {
+      "name": "Help Wanted",
+      "character": "The Animatronic",
+      "wikiKey": "helpWanted",
+      "nameEs": "pedido de ayuda",
+      "characterEs": "El Animatrónico"
+    },
+    {
+      "name": "Hex: Blood Favour",
+      "character": "The Blight",
+      "wikiKey": "hex:BloodFavour",
+      "nameEs": "maleficio: favor de sangre",
+      "characterEs": "El Deterioro"
+    },
+    {
+      "name": "Hex: Crowd Control",
+      "character": "The Trickster",
+      "wikiKey": "hex:CrowdControl",
+      "nameEs": "maleficio: control de masas",
+      "characterEs": "El Tramposo"
+    },
+    {
+      "name": "Hex: Devour Hope",
+      "character": "The Hag",
+      "wikiKey": "hex:DevourHope",
+      "nameEs": "maleficio: devorador de esperanza",
+      "characterEs": "La Bruja"
+    },
+    {
+      "name": "Hex: Face the Darkness",
+      "character": "The Knight",
+      "wikiKey": "hex:FaceTheDarkness",
+      "nameEs": "maleficio: enfrentar la oscuridad",
+      "characterEs": "El Caballero"
+    },
+    {
+      "name": "Hex: Haunted Ground",
+      "character": "The Spirit",
+      "wikiKey": "hex:HauntedGround",
+      "nameEs": "maleficio: tierra embrujada",
+      "characterEs": "El Espíritu"
+    },
+    {
+      "name": "Hex: Hive Mind",
+      "character": "The First",
+      "wikiKey": "hex:HiveMind",
+      "nameEs": "maleficio: mente colmena",
+      "characterEs": "El Primero"
+    },
+    {
+      "name": "Hex: Huntress Lullaby",
+      "character": "The Huntress",
+      "wikiKey": "hex:HuntressLullaby",
+      "nameEs": "maleficio: nana de cazadora",
+      "characterEs": "La Cazadora"
+    },
+    {
+      "name": "Hex: Nothing but Misery",
+      "character": "The Ghoul",
+      "wikiKey": "hex:NothingButMisery",
+      "nameEs": "maleficio: pura miseria",
+      "characterEs": "El Ghoul"
+    },
+    {
+      "name": "Hex: Overture of Doom",
+      "character": "The Krasue",
+      "wikiKey": "hex:OvertureOfDoom",
+      "nameEs": "maleficio: obertura de la perdición",
+      "characterEs": "La Krasue"
+    },
+    {
+      "name": "Hex: Pentimento",
+      "character": "The Artist",
+      "wikiKey": "hex:Pentimento",
+      "nameEs": "maleficio: arrepentimiento",
+      "characterEs": "La Artista"
+    },
+    {
+      "name": "Hex: Retribution",
+      "character": "The Deathslinger",
+      "wikiKey": "hex:Retribution",
+      "nameEs": "maleficio: represalias",
+      "characterEs": "El Arponero"
+    },
+    {
+      "name": "Hex: Ruin",
+      "character": "The Hag",
+      "wikiKey": "hex:Ruin",
+      "nameEs": "maleficio: ruina",
+      "characterEs": "La Bruja"
+    },
+    {
+      "name": "Hex: The Third Seal",
+      "character": "The Hag",
+      "wikiKey": "hex:TheThirdSeal",
+      "nameEs": "maleficio: el tercer sello",
+      "characterEs": "La Bruja"
+    },
+    {
+      "name": "Hex: Two Can Play",
+      "character": "The Good Guy",
+      "wikiKey": "hex:TwoCanPlay",
+      "nameEs": "maleficio: yo también puedo jugar",
+      "characterEs": "El Chico Bueno"
+    },
+    {
+      "name": "Hex: Undying",
+      "character": "The Blight",
+      "wikiKey": "hex:Undying",
+      "nameEs": "maleficio: inmortal",
+      "characterEs": "El Deterioro"
+    },
+    {
+      "name": "Hex: Wretched Fate",
+      "character": "The Dark Lord",
+      "wikiKey": "hex:WretchedFate",
+      "nameEs": "maleficio: destino miserable",
+      "characterEs": "El Señor Oscuro"
+    },
+    {
+      "name": "Hoarder",
+      "character": "The Twins",
+      "wikiKey": "hoarder",
+      "nameEs": "acaparadora",
+      "characterEs": "Los Mellizos"
+    },
+    {
+      "name": "Hubris",
+      "character": "The Knight",
+      "wikiKey": "hubris",
+      "nameEs": "soberbia",
+      "characterEs": "El Caballero"
+    },
+    {
+      "name": "Human Greed",
+      "character": "The Dark Lord",
+      "wikiKey": "humanGreed",
+      "nameEs": "codicia humana",
+      "characterEs": "El Señor Oscuro"
+    },
+    {
+      "name": "Hysteria",
+      "character": "The Nemesis",
+      "wikiKey": "hysteria",
+      "nameEs": "histeria",
+      "characterEs": "El Némesis"
+    },
+    {
+      "name": "I'm All Ears",
+      "character": "The Danny Johnson",
+      "wikiKey": "i'mAllEars",
+      "nameEs": "soy todo oídos",
+      "characterEs": "Ghost Face"
+    },
+    {
+      "name": "Infectious Fright",
+      "character": "The Plague",
+      "wikiKey": "infectiousFright",
+      "nameEs": "terror contagioso",
+      "characterEs": "La Plaga"
+    },
+    {
+      "name": "Iron Maiden",
+      "character": "The Frank, Julie, Susie, Joey",
+      "wikiKey": "ironMaiden",
+      "nameEs": "doncella de hierro",
+      "characterEs": "La Legión"
+    },
+    {
+      "name": "Knock Out",
+      "character": "The Cannibal",
+      "wikiKey": "knockOut",
+      "nameEs": "noqueo",
+      "characterEs": "El Caníbal"
+    },
+    {
+      "name": "Languid Touch",
+      "character": "The Lich",
+      "wikiKey": "languidTouch",
+      "nameEs": "toque lánguido",
+      "characterEs": "El Liche"
+    },
+    {
+      "name": "Lethal Pursuer",
+      "character": "The Nemesis",
+      "wikiKey": "lethalPursuer",
+      "nameEs": "acecho letal",
+      "characterEs": "El Némesis"
+    },
+    {
+      "name": "Leverage",
+      "character": "The Skull Merchant",
+      "wikiKey": "leverage",
+      "nameEs": "influencia",
+      "characterEs": "La Comerciante de Calaveras"
+    },
+    {
+      "name": "Lightborn",
+      "character": "The Hillbilly",
+      "wikiKey": "lightborn",
+      "nameEs": "hijo de la luz",
+      "characterEs": "El Pueblerino"
+    },
+    {
+      "name": "Machine Learning",
+      "character": "The Singularity",
+      "wikiKey": "machineLearning",
+      "nameEs": "aprendizaje automatizado",
+      "characterEs": "La Singularidad"
+    },
+    {
+      "name": "Mad Grit",
+      "character": "The Frank, Julie, Susie, Joey",
+      "wikiKey": "madGrit",
+      "nameEs": "furia ciega",
+      "characterEs": "La Legión"
+    },
+    {
+      "name": "Make Your Choice",
+      "character": "The Pig",
+      "wikiKey": "makeYourChoice",
+      "nameEs": "toma una decisión",
+      "characterEs": "La Cerda"
+    },
+    {
+      "name": "Merciless Storm",
+      "character": "The Onryō",
+      "wikiKey": "mercilessStorm",
+      "nameEs": "tormenta despiadada",
+      "characterEs": "La Onryō"
+    },
+    {
+      "name": "Mindbreaker",
+      "character": "The Demogorgon",
+      "wikiKey": "mindbreaker",
+      "nameEs": "quebrantamentes",
+      "characterEs": "El Demogorgon"
+    },
+    {
+      "name": "Monitor & Abuse",
+      "character": "The Doctor",
+      "wikiKey": "monitor&Abuse",
+      "nameEs": "monitorización",
+      "characterEs": "El Doctor"
+    },
+    {
+      "name": "Nemesis",
+      "character": "The Oni",
+      "wikiKey": "nemesis",
+      "nameEs": "némesis",
+      "characterEs": "El Oni"
+    },
+    {
+      "name": "No Quarter",
+      "character": "The Houndmaster",
+      "wikiKey": "noQuarter",
+      "nameEs": "sin piedad",
+      "characterEs": "La Señora de los Sabuesos"
+    },
+    {
+      "name": "No Way Out",
+      "character": "The Trickster",
+      "wikiKey": "noWayOut",
+      "nameEs": "sin escapatoria",
+      "characterEs": "El Tramposo"
+    },
+    {
+      "name": "None Are Free",
+      "character": "The Ghoul",
+      "wikiKey": "noneAreFree",
+      "nameEs": "nadie es libre",
+      "characterEs": "El Ghoul"
+    },
+    {
+      "name": "Nowhere to Hide",
+      "character": "The Knight",
+      "wikiKey": "nowhereToHide",
+      "nameEs": "no hay donde esconderse",
+      "characterEs": "El Caballero"
+    },
+    {
+      "name": "Oppression",
+      "character": "The Twins",
+      "wikiKey": "oppression",
+      "nameEs": "opresión",
+      "characterEs": "Los Mellizos"
+    },
+    {
+      "name": "Overcharge",
+      "character": "The Doctor",
+      "wikiKey": "overcharge",
+      "nameEs": "sobrecarga",
+      "characterEs": "El Doctor"
+    },
+    {
+      "name": "Overwhelming Presence",
+      "character": "The Doctor",
+      "wikiKey": "overwhelmingPresence",
+      "nameEs": "presencia abrumadora",
+      "characterEs": "El Doctor"
+    },
+    {
+      "name": "Phantom Fear",
+      "character": "The Animatronic",
+      "wikiKey": "phantomFear",
+      "nameEs": "miedo fantasmal",
+      "characterEs": "El Animatrónico"
+    },
+    {
+      "name": "Pop Goes the Weasel",
+      "character": "The Kenneth Chase",
+      "wikiKey": "popGoesTheWeasel",
+      "nameEs": "pim, pam, pum",
+      "characterEs": "El Payaso"
+    },
+    {
+      "name": "Predator",
+      "character": "The Wraith",
+      "wikiKey": "predator",
+      "nameEs": "depredación",
+      "characterEs": "El Espectro"
+    },
+    {
+      "name": "Rancor",
+      "character": "The Spirit",
+      "wikiKey": "rancor",
+      "nameEs": "rencor",
+      "characterEs": "El Espíritu"
+    },
+    {
+      "name": "Rapid Brutality",
+      "character": "The Xenomorph",
+      "wikiKey": "rapidBrutality",
+      "nameEs": "brutalidad veloz",
+      "characterEs": "El Xenomorfo"
+    },
+    {
+      "name": "Ravenous",
+      "character": "The Krasue",
+      "wikiKey": "ravenous",
+      "nameEs": "voracidad",
+      "characterEs": "La Krasue"
+    },
+    {
+      "name": "Remember Me",
+      "character": "The Nightmare",
+      "wikiKey": "rememberMe",
+      "nameEs": "recuérdame",
+      "characterEs": "La Pesadilla"
+    },
+    {
+      "name": "Scourge Hook: Floods of Rage",
+      "character": "The Onryō",
+      "wikiKey": "scourgeHook:FloodsOfRage",
+      "nameEs": "gancho flagelante: torrente de ira",
+      "characterEs": "La Onryō"
+    },
+    {
+      "name": "Scourge Hook: Hangman's Trick",
+      "character": "The Pig",
+      "wikiKey": "scourgeHook:Hangman'sTrick",
+      "nameEs": "gancho flagelante: truco del verdugo",
+      "characterEs": "La Cerda"
+    },
+    {
+      "name": "Scourge Hook: Jagged Compass",
+      "character": "The Houndmaster",
+      "wikiKey": "scourgeHook:JaggedCompass",
+      "nameEs": "gancho flagelante: brújula irregular",
+      "characterEs": "La Señora de los Sabuesos"
+    },
+    {
+      "name": "Scourge Hook: Pain Resonance",
+      "character": "The Artist",
+      "wikiKey": "scourgeHook:PainResonance",
+      "nameEs": "gancho flagelante",
+      "characterEs": "La Artista"
+    },
+    {
+      "name": "Secret Project",
+      "character": "The First",
+      "wikiKey": "secretProject",
+      "nameEs": "proyecto secreto",
+      "characterEs": "El Primero"
+    },
+    {
+      "name": "Septic Touch",
+      "character": "The Dredge",
+      "wikiKey": "septicTouch",
+      "nameEs": "contacto séptico",
+      "characterEs": "La Draga"
+    },
+    {
+      "name": "Shadowborn",
+      "character": "The Wraith",
+      "wikiKey": "shadowborn",
+      "nameEs": "hijo de las sombras",
+      "characterEs": "El Espectro"
+    },
+    {
+      "name": "Spirit Fury",
+      "character": "The Spirit",
+      "wikiKey": "spiritFury",
+      "nameEs": "furia espiritual",
+      "characterEs": "El Espíritu"
+    },
+    {
+      "name": "Starstruck",
+      "character": "The Trickster",
+      "wikiKey": "starstruck",
+      "nameEs": "deslumbrado",
+      "characterEs": "El Tramposo"
+    },
+    {
+      "name": "Stridor",
+      "character": "The Nurse",
+      "wikiKey": "stridor",
+      "nameEs": "aliento",
+      "characterEs": "La Enfermera"
+    },
+    {
+      "name": "Superior Anatomy",
+      "character": "The Mastermind",
+      "wikiKey": "superiorAnatomy",
+      "nameEs": "anatomía superior",
+      "characterEs": "La Mente Maestra"
+    },
+    {
+      "name": "Surge",
+      "character": "The Demogorgon",
+      "wikiKey": "surge",
+      "nameEs": "sobretensión",
+      "characterEs": "El Demogorgon"
+    },
+    {
+      "name": "Surveillance",
+      "character": "The Pig",
+      "wikiKey": "surveillance",
+      "nameEs": "supervisión",
+      "characterEs": "La Cerda"
+    },
+    {
+      "name": "THWACK!",
+      "character": "The Skull Merchant",
+      "wikiKey": "tHWACK!",
+      "nameEs": "¡plaf!",
+      "characterEs": "La Comerciante de Calaveras"
+    },
+    {
+      "name": "Terminus",
+      "character": "The Mastermind",
+      "wikiKey": "terminus",
+      "nameEs": "terminal",
+      "characterEs": "La Mente Maestra"
+    },
+    {
+      "name": "Territorial Imperative",
+      "character": "The Huntress",
+      "wikiKey": "territorialImperative",
+      "nameEs": "imperativo territorial",
+      "characterEs": "La Cazadora"
+    },
+    {
+      "name": "Thanatophobia",
+      "character": "The Nurse",
+      "wikiKey": "thanatophobia",
+      "nameEs": "tanatofobia",
+      "characterEs": "La Enfermera"
+    },
+    {
+      "name": "Thrilling Tremors",
+      "character": "The Danny Johnson",
+      "wikiKey": "thrillingTremors",
+      "nameEs": "temblores trepidantes",
+      "characterEs": "Ghost Face"
+    },
+    {
+      "name": "Tinkerer",
+      "character": "The Hillbilly",
+      "wikiKey": "tinkerer",
+      "nameEs": "manitas",
+      "characterEs": "El Pueblerino"
+    },
+    {
+      "name": "Trail of Torment",
+      "character": "The Executioner",
+      "wikiKey": "trailOfTorment",
+      "nameEs": "rastro de tormento",
+      "characterEs": "El Verdugo"
+    },
+    {
+      "name": "Turn Back the Clock",
+      "character": "The First",
+      "wikiKey": "turnBackTheClock",
+      "nameEs": "atrás en el tiempo",
+      "characterEs": "El Primero"
+    },
+    {
+      "name": "Ultimate Weapon",
+      "character": "The Xenomorph",
+      "wikiKey": "ultimateWeapon",
+      "nameEs": "arma definitiva",
+      "characterEs": "El Xenomorfo"
+    },
+    {
+      "name": "Unbound",
+      "character": "The Unknown",
+      "wikiKey": "unbound",
+      "nameEs": "desatado",
+      "characterEs": "Lo Desconocido"
+    },
+    {
+      "name": "Undone",
+      "character": "The Unknown",
+      "wikiKey": "undone",
+      "nameEs": "inacabado",
+      "characterEs": "Lo Desconocido"
+    },
+    {
+      "name": "Unforeseen",
+      "character": "The Unknown",
+      "wikiKey": "unforeseen",
+      "nameEs": "imprevisto",
+      "characterEs": "Lo Desconocido"
+    },
+    {
+      "name": "Unnerving Presence",
+      "character": "The Trapper",
+      "wikiKey": "unnervingPresence",
+      "nameEs": "presencia perturbadora",
+      "characterEs": "El Trampero"
+    },
+    {
+      "name": "Wandering Eye",
+      "character": "The Krasue",
+      "wikiKey": "wanderingEye",
+      "nameEs": "ojo errante",
+      "characterEs": "La Krasue"
+    },
+    {
+      "name": "Weave Attunement",
+      "character": "The Lich",
+      "wikiKey": "weaveAttunement",
+      "nameEs": "armonización de tejido",
+      "characterEs": "El Liche"
+    },
+    {
+      "name": "Zanshin Tactics",
+      "character": "The Oni",
+      "wikiKey": "zanshinTactics",
+      "nameEs": "tácticas zanshin",
+      "characterEs": "El Oni"
+    },
+    {
+      "name": "Bitter Murmur",
+      "character": "General",
+      "wikiKey": "bitterMurmur",
+      "nameEs": "Murmullo amargo",
+      "characterEs": "General"
+    },
+    {
+      "name": "Deerstalker",
+      "character": "General",
+      "wikiKey": "deerstalker",
+      "nameEs": "Rastreador de ciervos",
+      "characterEs": "General"
+    },
+    {
+      "name": "Distressing",
+      "character": "General",
+      "wikiKey": "distressing",
+      "nameEs": "Perturbador",
+      "characterEs": "General"
+    },
+    {
+      "name": "Hex: No One Escapes Death",
+      "character": "General",
+      "wikiKey": "hex:NoOneEscapesDeath",
+      "nameEs": "Maleficio: Nadie escapa a la muerte",
+      "characterEs": "General"
+    },
+    {
+      "name": "Hex: Thrill of the Hunt",
+      "character": "General",
+      "wikiKey": "hex:ThrillOfTheHunt",
+      "nameEs": "Maleficio: El placer de la caza",
+      "characterEs": "General"
+    },
+    {
+      "name": "Insidious",
+      "character": "General",
+      "wikiKey": "insidious",
+      "nameEs": "Insidioso",
+      "characterEs": "General"
+    },
+    {
+      "name": "Iron Grasp",
+      "character": "General",
+      "wikiKey": "ironGrasp",
+      "nameEs": "Agarre de hierro",
+      "characterEs": "General"
+    },
+    {
+      "name": "Scourge Hook: Monstrous Shrine",
+      "character": "General",
+      "wikiKey": "scourgeHook:MonstrousShrine",
+      "nameEs": "Gancho de azote: Santuario monstruoso",
+      "characterEs": "General"
+    },
+    {
+      "name": "Shattered Hope",
+      "character": "General",
+      "wikiKey": "shatteredHope",
+      "nameEs": "Esperanza destrozada",
+      "characterEs": "General"
+    },
+    {
+      "name": "Sloppy Butcher",
+      "character": "General",
+      "wikiKey": "sloppyButcher",
+      "nameEs": "Carnicero chapucero",
+      "characterEs": "General"
+    },
+    {
+      "name": "Spies from the Shadows",
+      "character": "General",
+      "wikiKey": "spiesFromTheShadows",
+      "nameEs": "Espías desde las sombras",
+      "characterEs": "General"
+    },
+    {
+      "name": "Unrelenting",
+      "character": "General",
+      "wikiKey": "unrelenting",
+      "nameEs": "Implacable",
+      "characterEs": "General"
+    },
+    {
+      "name": "Whispers",
+      "character": "General",
+      "wikiKey": "whispers",
+      "nameEs": "Susurros",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    },
+    {
+      "name": "Slot Vacío",
+      "character": "General",
+      "wikiKey": "emptySlot",
+      "isEmpty": true,
+      "nameEs": "Slot Vacío",
+      "characterEs": "General"
+    }
+  ]
+}
