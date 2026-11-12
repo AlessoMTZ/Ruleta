@@ -594,6 +594,17 @@ body{
   text-align:center;line-height:1.5;
 }
 .general-note strong{color:var(--accent)}
+
+/* Ajustes de ejecución sin sustituir la estética original. */
+.card{touch-action:manipulation}
+.card-wrapper.dealing{will-change:transform,opacity}
+.killer-result-img{width:85%;height:65%;object-fit:contain;display:block;margin:0 auto .5rem}
+.perk-img{object-fit:contain}
+#nmOptions select{background:#1e1128;color:#eee;border:1px solid #76518e;border-radius:6px;padding:.5rem;margin-left:.6rem;max-width:100%}
+#nmChance{accent-color:#9b5de5;flex:1;min-width:80px}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){.card-wrapper.dealing{animation-duration:1ms!important}.card{transition-duration:1ms!important}.particle,.rune-orbit,.sym{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -644,7 +655,7 @@ body{
         <div class="rune-dot" style="--ra:180deg;--rx:clamp(40px,6.5vw,56px);--rc:rgba(247,37,133,.75)"></div>
         <div class="rune-dot" style="--ra:300deg;--rx:clamp(40px,6.5vw,56px);--rc:rgba(6,214,160,.75)"></div>
       </div>
-      <img src="./assets/img/dbd-logo.png" alt="Dead by Daylight" class="dbd-logo">
+      <img src="https://lupdwslzitamvvisdsma.supabase.co/storage/v1/object/public/portraits/interface/dbd-logo.png" alt="Dead by Daylight" class="dbd-logo">
     </div>
     <div class="ph-role" id="phRole">Survivor</div>
     <p class="dbd-hint">Tira las cartas para comenzar</p>
@@ -669,8 +680,8 @@ body{
 <div class="config-wrap">
 
   <div class="config-header">
-    <h2>&#9881;&#65039; Configuración de Perks</h2>
-    <p>Desactiva los personajes que aún no has comprado. La ruleta solo usará sus perks si están activos.</p>
+    <h2>&#9881;&#65039; Configuración de personajes</h2>
+    <p>Activa los survivors cuyas perks quieres usar y los killers que pueden salir en su ruleta.</p>
   </div>
 
   <!-- Role tabs -->
@@ -701,10 +712,15 @@ body{
     <button class="btn-sm btn-sm-red"   onclick="deselectAll()">&#10005; Desactivar todos</button>
   </div>
 
+<div id="nmOptions" class="general-note" style="margin-bottom:1rem">
+<label for="nmMode">Probabilidad de No Mither</label>
+<select id="nmMode" onchange="saveNoMither()"><option value="normal">Normal · igual que las demás</option><option value="custom">Porcentaje por build</option></select>
+<div style="display:flex;gap:1rem;align-items:center;margin-top:.7rem"><input id="nmChance" aria-label="Probabilidad de No Mither" type="range" min="0" max="100" step="1" value="25" oninput="saveNoMither()"><output id="nmValue">25 %</output></div>
+<p id="nmEligibility" style="margin-top:.6rem"></p></div>
   <!-- Character grid -->
   <div class="char-grid" id="charGrid"></div>
 
-  <div class="general-note">
+  <div class="general-note" id="generalPerksNote">
     <strong>&#9432; Perks generales</strong> (sin personaje: Spine Chill, Kindred, etc.)
     siempre están disponibles en la ruleta, independientemente de la configuración.
   </div>
@@ -816,322 +832,6 @@ function loadPrefs(){
 
 
 /* ════════════════ i18n ════════════════ */
-const PERK_NAMES_ES = {
-  "Ace in the Hole": "A mano descubierta",
-  "Open-Handed": "As en la manga",
-  "Up the Ante": "Subir las apuestas",
-  "Low Profile": "Perfil bajo",
-  "Reactive Healing": "Curación reactiva",
-  "Wiretap": "Sitema de espionaje",
-  "Autodidact": "Autodidacta",
-  "Deliverance": "Distracción",
-  "Diversion": "Liberacion",
-  "Bardic Inspiration": "Inspiración bardica",
-  "Mirrored Illusion": "Ilusión reflejada",
-  "Still Sight": "Mirada fija",
-  "Boon: Illumination": "Bendicion: iluminación",
-  "Champion of Light": "Campeón de la luz",
-  "Deadline": "Fecha limite",
-  "Buckle Up": "Sujetate",
-  "Flip-Flop": "Nos vemos",
-  "Mettle of Man": "Sujetate",
-  "Borrowed Time": "Tiempo prestado",
-  "Left Behind": "Abandonado a tu suerte",
-  "Unbreakable": "Inquebrantable",
-  "Blood Pact": "Pacto de sangre",
-  "Repressed Alliance": "Alianza reprimida",
-  "Soul Guard": "Defensa de alma",
-  "Botany Knowledge": "Conocimientos de botánica",
-  "Empathy": "Empatía",
-  "Self-Care": "Autocuración",
-  "Dead Hard": "Fajador",
-  "No Mither": "Me da igual",
-  "We're Gonna Live Forever": "Vamos a vivir para siempre",
-  "Detective's Hunch": "Bajo vigilancia",
-  "Stake Out": "Corazonada",
-  "Tenacity": "Tenacidad",
-  "Bada Bada Boom": "Bada, bada, bum",
-  "Change of Plan": "Cambio de planes",
-  "Teamwork: Full Circuit": "Trabajo en equipo: circuito completo",
-  "Bond": "Vínculo",
-  "Leader": "Líder",
-  "Prove Thyself": "Demuestra lo que vales",
-  "Extrasensory Perception": "Percepción extrasensorial",
-  "Teamwork: Soft-Spoken": "Trabajo en equipo: tono gentil",
-  "We See You": "Te vemos",
-  "Chemical Trap": "Trampa química",
-  "Light-Footed": "Ágil",
-  "Lucky Star": "Estrella de la suerte",
-  "Built to Last": "Diseñado para durar",
-  "Desperate Measures": "Medidas desesperadas",
-  "Visionary": "Visionario",
-  "Alert": "Alerta",
-  "Lithe": "Agilidad",
-  "Technician": "Pericia técnica",
-  "Made for This": "Nacido para esto",
-  "Scavenger": "Chatarrero",
-  "Troubleshooter": "Solucionador de problemas",
-  "Inner Focus": "Enfoque interno",
-  "Overzealous": "Demasiado entusiasta",
-  "Residual Manifest": "Manifiesto residual",
-  "Calm Spirit": "Espíritu calmado",
-  "Iron Will": "Voluntad de hierro",
-  "Saboteur": "Sabotear",
-  "Head On": "De frente",
-  "Poised": "Serenidad",
-  "Solidarity": "Solidaridad",
-  "Aftercare": "Postratamiento",
-  "Breakdown": "Ruptura",
-  "Distortion": "Distorsión",
-  "Blast Mine": "Mina cegadora",
-  "Counterforce": "Contramedida",
-  "Resurgence": "Resurgimiento",
-  "Boon: Exponential": "Bendición: exponencial",
-  "Corrective Action": "Corrección",
-  "Overcome": "Superar",
-  "Boil Over": "Arrebato",
-  "Dance With Me": "Baila conmigo",
-  "Windows of Opportunity": "Oportunidades",
-  "A Place For Us": "Un lugar para nosotros",
-  "Five Moves Ahead": "Cinco movimientos por delante",
-  "Flow State": "Estado fluido",
-  "Finesse": "Elegancia",
-  "Hardened": "Endurecida",
-  "Specialist": "Especialista",
-  "Bite the Bullet": "Aguante el dolor",
-  "Flashbang": "Granada aturdidora",
-  "Rookie Spirit": "Granada aturdidora",
-  "Adrenaline": "Adrenalina",
-  "Quick & Quiet": "Velocidad silenciosa",
-  "Sprint Burst": "Esprint",
-  "Conviction": "Convicción",
-  "Last Stand": "Último enfrentamiento",
-  "Teamwork: Throw Down": "Trabajo en equipo: lanzamiento",
-  "Boon: Circle of Healing": "Bendición: circulo de curación",
-  "Boon: Shadow Step": "Bendición: paso de las sombras",
-  "Clairvoyance": "Clarividencia",
-  "Better Together": "Mejor juntos",
-  "Fixated": "Fijación",
-  "Inner Strength": "Fuerza interior",
-  "Balanced Landing": "Caída equilibrada",
-  "Streetwise": "De la calle",
-  "Urban Evasion": "Evasion urbana",
-  "Dramaturgy": "Dramaturgia",
-  "Plot Twist": "Dramaturgia",
-  "Scene Partner": "Compañero de escena",
-  "Do No Harm": "No hagas daño",
-  "Duty of Care": "El deber de cuidar",
-  "Rapid Response": "Respuesta rápida",
-  "Pharmacy": "Farmacia",
-  "Vigil": "Vigilia",
-  "Wake Up!": "¡despierta!",
-  "Better than New": "Consuelo",
-  "Hyperfocus": "Hiperconcentración",
-  "Reassurance": "Consuelo",
-  "Background Player": "Personaje secundario",
-  "Blood Rush": "Impulso sangriento",
-  "Teamwork: Collective Stealth": "Trabajo en equipo: sigilo colectivo",
-  "Apocalyptic Ingenuity": "Ingenio apocalíptico",
-  "Come and Get Me!": "¡Ven por mí!",
-  "Teamwork: Toughen Up": "Trabajo en equipo: entereza",
-  "Invocation: Weaving Spiders": "Invocación: arañas tejedoras",
-  "Strength in Shadows": "Fortaleza de las sombras",
-  "Wicked": "Malicia",
-  "Babysitter": "Niñero",
-  "Camaraderie": "Camaradería",
-  "Second Wind": "Segundo aliento",
-  "Clean Break": "Punto y aparte",
-  "Invocation: Treacherous Crows": "Invocación: cuervos traicioneros",
-  "Shoulder the Burden": "Cargar a cuestas",
-  "Cut Loose": "Suéltate",
-  "Friendly Competition": "Competencia amistosa",
-  "Teamwork: Power of Two": "Trabajo en equipo: el poder de dos",
-  "Exultation": "Exultación",
-  "Eyes of Belmont": "Ojos de Belmont",
-  "Moment of Glory": "Momento de gloria",
-  "Ghost Notes": "Notas fantasmas",
-  "One-Two-Three-Four!": "¡Uno, dos, tres, cuatro!",
-  "Road Life": "Vida itinerante",
-  "Fogwise": "Conocimiento de la niebla",
-  "Potential Energy": "Energía potencial",
-  "Quick Gambit": "Táctica rápida",
-  "Boon: Dark Theory": "Bendición: teoría oscura",
-  "Empathic Connection": "Conexión empática",
-  "Parental Guidance": "Consejos de papá",
-  "Any Means Necessary": "Por cualquier medio",
-  "Breakout": "Fuga",
-  "Lucky Break": "Golpe de suerte",
-  "For the People": "Por la gente",
-  "Off the Record": "Extraoficialmente",
-  "Red Herring": "Arenque rojo",
-  "Appraisal": "Detallista",
-  "Deception": "Engaño",
-  "Power Struggle": "Lucha de poderes",
-  "Agitation": "Agitación",
-  "Brutal Strength": "Fuerza brutal",
-  "Unnerving Presence": "Presencia perturbadora",
-  "Bloodhound": "Sabueso de sangre",
-  "Predator": "Depredación",
-  "Shadowborn": "Hijo de las sombras",
-  "Enduring": "Resistente",
-  "Lightborn": "Hijo de la luz",
-  "Tinkerer": "Manitas",
-  "A Nurse's Calling": "Vocación de enfermera",
-  "Stridor": "Aliento",
-  "Thanatophobia": "Tanatofobia",
-  "Hex: Devour Hope": "Maleficio: devorador de esperanza",
-  "Hex: Ruin": "Maleficio: ruina",
-  "Hex: The Third Seal": "Maleficio: el tercer sello",
-  "Monitor & Abuse": "Monitorización",
-  "Overcharge": "Sobrecarga",
-  "Overwhelming Presence": "Presencia abrumadora",
-  "Beast of Prey": "Bestia de presa",
-  "Hex: Huntress Lullaby": "Maleficio: nana de cazadora",
-  "Territorial Imperative": "Imperativo territorial",
-  "Barbecue & Chilli": "Barbacoa y chile",
-  "Franklin's Demise": "Muerte de Franklin",
-  "Knock Out": "Noqueo",
-  "Blood Warden": "Guardián de sangre",
-  "Fire Up": "Enfurecimiento",
-  "Remember Me": "Recuérdame",
-  "Make Your Choice": "Toma una decisión",
-  "Scourge Hook: Hangman's Trick": "Gancho flagelante: truco del verdugo",
-  "Surveillance": "Supervisión",
-  "Bamboozle": "Desconcierto",
-  "Coulrophobia": "Coulrofobia",
-  "Pop Goes the Weasel": "Pim, pam, pum",
-  "Hex: Haunted Ground": "Maleficio: tierra embrujada",
-  "Rancor": "Rencor",
-  "Spirit Fury": "Furia espiritual",
-  "Discordance": "Discordancia",
-  "Iron Maiden": "Doncella de hierro",
-  "Mad Grit": "Furia ciega",
-  "Corrupt Intervention": "Intervención corrupta",
-  "Dark Devotion": "Devoción oscura",
-  "Infectious Fright": "Terror contagioso",
-  "Furtive Chase": "Persecución furtiva",
-  "I'm All Ears": "Soy todo oídos",
-  "Thrilling Tremors": "Temblores trepidantes",
-  "Cruel Limits": "Restricción cruel",
-  "Mindbreaker": "Quebrantamentes",
-  "Surge": "Sobretensión",
-  "Blood Echo": "Eco sangriento",
-  "Nemesis": "Némesis",
-  "Zanshin Tactics": "Tácticas zanshin",
-  "Dead Man's Switch": "Interruptor del hombre muerto",
-  "Gearhead": "Oído para la maquinaria",
-  "Hex: Retribution": "Maleficio: represalias",
-  "Deathbound": "Vínculo inmortal",
-  "Forced Penance": "Imposición de penitencia",
-  "Trail of Torment": "Rastro de tormento",
-  "Dragon's Grip": "Agarre del dragón",
-  "Hex: Blood Favour": "Maleficio: favor de sangre",
-  "Hex: Undying": "Maleficio: inmortal",
-  "Coup de Grâce": "Golpe de gracia",
-  "Hoarder": "Acaparadora",
-  "Oppression": "Opresión",
-  "Hex: Crowd Control": "Maleficio: control de masas",
-  "No Way Out": "Sin escapatoria",
-  "Starstruck": "Deslumbrado",
-  "Eruption": "Erupción",
-  "Hysteria": "Histeria",
-  "Lethal Pursuer": "Acecho letal",
-  "Dominance": "Dominación",
-  "Hex: Wretched Fate": "Maleficio: Destino deplorable",
-  "Human Greed": "Codicia humana",
-  "Grim Embrace": "Acogida nefasta",
-  "Hex: Pentimento": "Maleficio: arrepentimiento",
-  "Scourge Hook: Pain Resonance": "Gancho flagelante: torrente de ira",
-  "Call of Brine": "Anuncio de salmuera",
-  "Merciless Storm": "Tormenta despiadada",
-  "Scourge Hook: Floods of Rage": "Gancho flagelante: torrente de ira",
-  "Darkness Revealed": "Oscuridad revelada",
-  "Dissolution": "Disolución",
-  "Septic Touch": "Contacto séptico",
-  "Awakened Awareness": "Conciencia despierta",
-  "Superior Anatomy": "Anatomía superior",
-  "Terminus": "Terminal",
-  "Hex: Face the Darkness": "Maleficio: enfrentar la oscuridad",
-  "Hubris": "Soberbia",
-  "Nowhere to Hide": "No hay donde esconderse",
-  "Game Afoot": "Hora de la cacería",
-  "Leverage": "Influencia",
-  "THWACK!": "¡Plaf!",
-  "Forced Hesitation": "Duda forzada",
-  "Genetic Limits": "Límites genéticos",
-  "Machine Learning": "Aprendizaje automatizado",
-  "Alien Instinct": "Instinto alienígena",
-  "Rapid Brutality": "Brutalidad veloz",
-  "Ultimate Weapon": "Arma definitiva",
-  "Batteries Included": "Baterías incluidas",
-  "Friends 'til the End": "Amigos hasta el fin",
-  "Hex: Two Can Play": "Maleficio: yo también puedo jugar",
-  "Unbound": "Desatado",
-  "Undone": "Inacabado",
-  "Unforeseen": "Imprevisto",
-  "Dark Arrogance": "Arrogancia oscura",
-  "Languid Touch": "Toque lánguido",
-  "Weave Attunement": "Armonización de tejido",
-  "All-Shaking Thunder": "Trueno sísmico",
-  "No Quarter": "Sin piedad",
-  "Scourge Hook: Jagged Compass": "Gancho flagelante: brújula irregular",
-  "Forever Entwined": "Unidos por siempre",
-  "Hex: Nothing but Misery": "Maleficio: pura miseria",
-  "None Are Free": "Nadie es libre",
-  "Haywire": "Caos",
-  "Help Wanted": "Pedido de ayuda",
-  "Phantom Fear": "Miedo fantasmal",
-  "Hex: Overture of Doom": "Maleficio: obertura de la perdición",
-  "Ravenous": "Voracidad",
-  "Wandering Eye": "Ojo errante",
-  "Hex: Hive Mind": "Maleficio: mente colmena",
-  "Secret Project": "Proyecto secreto",
-  "Turn Back the Clock": "Atrás en el tiempo",
-  "Dark Sense": "Percepción oscura",
-  "Déjà Vu": "Déjà vu",
-  "Hope": "Esperanza",
-  "Kindred": "Familia",
-  "Lightweight": "De pies ligeros",
-  "No One Left Behind": "Nadie se queda atrás",
-  "Plunderer's Instinct": "Instinto de saqueador",
-  "Premonition": "Premonición",
-  "Resilience": "Resiliencia",
-  "Slippery Meat": "Carne resbaladiza",
-  "Small Game": "Caza menor",
-  "Spine Chill": "Escalofríos",
-  "This Is Not Happening": "Esto no puede estar pasando",
-  "We'll Make It": "Lo lograremos",
-  "Bitter Murmur": "Murmullo amargo",
-  "Deerstalker": "Acechador de ciervos",
-  "Distressing": "Desasosiego",
-  "Hex: No One Escapes Death": "Maleficio: nadie escapa de la muerte",
-  "Hex: Thrill of the Hunt": "Maleficio: la emoción de la caza",
-  "Insidious": "Insidia",
-  "Iron Grasp": "Apretón de hierro",
-  "Scourge Hook: Monstrous Shrine": "Gancho flagelante: santuario monstruoso",
-  "Shattered Hope": "Esperanza rota",
-  "Sloppy Butcher": "Carnicero chapucero",
-  "Spies from the Shadows": "Espías de las sombras",
-  "Unrelenting": "Implacable",
-  "Whispers": "Susurros",
-  "Fast Track": "Vía rápida",
-  "Self-Preservation": "Autopreservación",
-  "Smash Hit": "Éxito arrollador",
-  "Mettle of a Man": "El temple del hombre",
-  "Self Care": "Autocuración",
-  "Light-footed": "Ágil",
-  "Rookie's Spirit": "Espíritu de novato",
-  "Better Than New": "Mejor que nuevo",
-  "Play With Your Food": "Jugar con la comida",
-  "Save The Best For Last": "Lo mejor para el final",
-  "Deadlock": "Candado",
-  "Hex: Plaything": "Maleficio: Juguete",
-  "Scourge Hook: Gift of Pain": "Gancho flagelante: Obsequio de dolor",
-  "Dying Light": "Luz que agoniza",
-  "Decisive Strike": "Golpe decisivo",
-  "Object of Obsession": "Objeto de obsesión",
-  "Sole Survivor": "Único superviviente"
-};
 const CHAR_NAMES_ES = {
   "Ace Visconti": "Ace Visconti",
   "Ada Wong": "Ada Wong",
@@ -1227,140 +927,99 @@ const CHAR_NAMES_ES = {
   "Laurie Strode": "Laurie Strode",
   "The Ghost Face": "Ghost Face"
 };
-const SUPABASE_PORTRAITS = {
-  "The Trapper": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K01_TheTrapper_Portrait.webp",
-  "The Wraith": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K02_TheWraith_Portrait.webp",
-  "The Hillbilly": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K03_TheHillbilly_Portrait.webp",
-  "The Nurse": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K04_TheNurse_Portrait.webp",
-  "The Shape": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K05_TheShape_Portrait.webp",
-  "The Hag": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K06_TheHag_Portrait.webp",
-  "The Doctor": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K07_TheDoctor_Portrait.webp",
-  "The Huntress": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K08_TheHuntress_Portrait.webp",
-  "The Cannibal": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K09_TheCannibal_Portrait.webp",
-  "The Nightmare": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K10_TheNightmare_Portrait.webp",
-  "The Pig": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K11_ThePig_Portrait.webp",
-  "The Clown": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K12_TheClown_Portrait.webp",
-  "The Spirit": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K13_TheSpirit_Portrait.webp",
-  "The Legion": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K14_TheLegion_Portrait.webp",
-  "The Plague": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K15_ThePlague_Portrait.webp",
-  "The Demogorgon": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K17_TheDemogorgon_Portrait.webp",
-  "The Oni": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K18_TheOni_Portrait.webp",
-  "The Deathslinger": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K19_TheDeathslinger_Portrait.webp",
-  "The Executioner": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K20_TheExecutioner_Portrait.webp",
-  "The Blight": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K21_TheBlight_Portrait.webp",
-  "The Twins": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K22_TheTwins_Portrait.webp",
-  "The Trickster": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K23_TheTrickster_Portrait.webp",
-  "The Nemesis": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K24_TheNemesis_Portrait.webp",
-  "The Cenobite": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K25_TheCenobite_Portrait.webp",
-  "The Artist": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K26_TheArtist_Portrait.webp",
-  "The Onryō": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K27_TheOnryo_Portrait.webp",
-  "The Dredge": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K28_TheDredge_Portrait.webp",
-  "The Mastermind": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K29_TheMastermind_Portrait.webp",
-  "The Knight": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K30_TheKnight_Portrait.webp",
-  "The Skull Merchant": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K31_TheSkullMerchant_Portrait.webp",
-  "The Singularity": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K32_TheSingularity_Portrait.webp",
-  "The Xenomorph": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K33_TheXenomorph_Portrait.webp",
-  "The Good Guy": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K34_TheGoodGuy_Portrait.webp",
-  "The Unknown": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K35_TheUnknown_Portrait.webp",
-  "The Lich": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K36_TheLich_Portrait.webp",
-  "The Dark Lord": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K37_TheDarkLord_Portrait.webp",
-  "The Houndmaster": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K38_TheHoundmaster_Portrait.webp",
-  "The Ghoul": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K39_TheGhoul_Portrait.webp",
-  "The Animatronic": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K40_TheAnimatronic_Portrait.webp",
-  "The Krasue": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K41_TheKrasue_Portrait.webp",
-  "The First One": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K42_TheFirst_Portrait.webp",
-  "The Ghost Face": "https://gvjdjhfdjccnuoztockj.supabase.co/storage/v1/object/public/portraits/K16_TheGhostFace_Portrait.webp"
-};
-
 let currentLang = localStorage.getItem('dbdLang') || 'es';
 
 function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('dbdLang', lang);
-  document.getElementById('langBtn').textContent = lang === 'es' ? '🌐 EN' : '🌐 ES';
-  const cards = document.querySelectorAll('.card.flipped');
-  if(cards.length) dealCards();
-  if(document.getElementById('page-config').classList.contains('active')) renderCharGrid();
+  currentLang=lang;
+  localStorage.setItem('dbdLang',lang);
+  document.getElementById('langBtn').textContent=lang==='es'?'EN':'ES';
+  document.querySelectorAll('.perk-name[data-index]').forEach(el=>{
+    const p=drawn[Number(el.dataset.index)];
+    if(p) el.textContent=role==='killer'?tChar(p.name):displayPerk(p);
+  });
+  renderCharGrid();
 }
-function tPerk(enName) {
-  if(currentLang === 'es') return PERK_NAMES_ES[enName] || enName;
-  return enName;
-}
+function displayPerk(p){return currentLang==='es'?(p.name_es_latam||p.name):p.name;}
+function tPerk(name){return name;}
 function tChar(name) {
   if(currentLang === 'es') return CHAR_NAMES_ES[name] || name;
   return name;
 }
 
-async function loadPerks(){
-  try{
-    setStatus('Cargando perks…');
-    const res = await fetch('./perks.json');
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    PERKS = await res.json();
-    loadPrefs();
-    onReady();
-  }catch(err){
-    setStatus('Error cargando perks.json — '+err.message, false, true);
-    document.getElementById('cardsArea').innerHTML='';
+const SB_URL='https://lupdwslzitamvvisdsma.supabase.co';
+const SB_KEY='sb_publishable_-kaooA97_bG-TZlXJ5zzJA_84ZEk2j8';
+let CHARACTERS=[],drawn=[],busy=false,revealing=false,drawEpoch=0;
+const timers=new Set();
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function storageURL(bucket,path){return path?SB_URL+'/storage/v1/object/public/'+bucket+'/'+path.split('/').map(encodeURIComponent).join('/'):'';}
+async function readTable(table){
+  const rows=[];
+  for(let offset=0;;offset+=500){
+    const response=await fetch(SB_URL+'/rest/v1/'+table+'?select=*&order=id.asc&limit=500&offset='+offset,{
+      headers:{apikey:SB_KEY},signal:AbortSignal.timeout(20000)
+    });
+    if(!response.ok) throw new Error(table+': HTTP '+response.status);
+    const page=await response.json(); rows.push(...page);
+    if(page.length<500) return rows;
   }
 }
-
-async function loadIconsAsync(){
+async function loadPerks(){
   try{
-    const res = await fetch('./perks-icons.json');
-    if(!res.ok) return;
-    const icons = await res.json();
-    // Inject icons into PERKS data
-    for(const arr of [PERKS.survivor, PERKS.killer]){
-      for(const p of arr){
-        if(p.wikiKey && icons[p.wikiKey]){
-          p.icon = icons[p.wikiKey];
-        }
-      }
-    }
-    // Refresh any visible card icons
-    document.querySelectorAll('.perk-img').forEach(img=>{
-      const name = img.alt;
-      const all = [...PERKS.survivor,...PERKS.killer];
-      const perk = all.find(p=>p.name===name);
-      if(perk && perk.icon && img.src !== perk.icon){
-        img.src = perk.icon;
-      }
-    });
-    // Refresh config grid icons if visible
-    if(document.getElementById('page-config').classList.contains('active')){
-      renderCharGrid();
-    }
-  }catch(e){}
+    setStatus('Cargando catálogo desde Supabase…');
+    const [characters,perks]=await Promise.all([readTable('characters'),readTable('perks')]);
+    CHARACTERS=characters;
+    const byId=new Map(characters.map(c=>[c.id,c]));
+    window.PORTRAITS=Object.fromEntries(characters.map(c=>[c.name,storageURL('portraits',c.portrait_path)]));
+    PERKS={survivor:perks.filter(p=>p.role==='survivor').map(p=>{
+      if(p.character_id&&!byId.has(p.character_id)) throw new Error('Perk sin personaje: '+p.name);
+      return {...p,character:p.character_id?byId.get(p.character_id).name:'General',icon:storageURL('perk-icons',p.icon_path)};
+    }),killer:characters.filter(c=>c.role==='killer').map(c=>({...c,character:c.name,icon:storageURL('portraits',c.portrait_path)}))};
+    if(!PERKS.survivor.length||!characters.length) throw new Error('El catálogo está vacío o no tiene permisos de lectura');
+    loadPrefs();
+    ['tabS','tabK','dealBtn'].forEach(id=>document.getElementById(id).disabled=false);
+    document.getElementById('hint').style.visibility='visible';
+    document.querySelector('.controls').classList.add('first-appear');
+    renderCharGrid();setLang(currentLang);
+    setStatus(PERKS.survivor.length+' perks · '+PERKS.killer.length+' killers · Supabase');
+    preloadAudioFiles();
+  }catch(error){
+    console.error(error);
+    setStatus('No se pudo cargar el catálogo: '+error.message+'. Recarga para reintentar.',false,true);
+  }
 }
-
-
-async function loadPortraitsAsync(){
-  try{
-    const res = await fetch('./portraits.json');
-    if(!res.ok) return;
-    window.PORTRAITS = await res.json();
-    // Re-render if config tab is open
-    if(document.getElementById('page-config').classList.contains('active')){
-      renderCharGrid();
-    }
-  }catch(e){}
+function later(fn,ms){const epoch=drawEpoch;const id=setTimeout(()=>{timers.delete(id);if(epoch===drawEpoch)fn();},ms);timers.add(id);return id;}
+function cancelDraw(){drawEpoch++;timers.forEach(clearTimeout);timers.clear();busy=false;revealing=false;drawn=[];flipped=0;document.getElementById('dealBtn').disabled=!PERKS;}
+function shuffle(array){const a=[...array];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+let noMitherMode='normal',noMitherChance=25;
+try{const p=JSON.parse(localStorage.getItem('dbdNoMither')||'{}');noMitherMode=p.mode==='custom'?'custom':'normal';noMitherChance=Number.isFinite(p.chance)?Math.max(0,Math.min(100,p.chance)):25;}catch(e){}
+function saveNoMither(){
+ noMitherMode=document.getElementById('nmMode').value;
+ noMitherChance=Math.max(0,Math.min(100,Number(document.getElementById('nmChance').value)||0));
+ localStorage.setItem('dbdNoMither',JSON.stringify({mode:noMitherMode,chance:noMitherChance}));
+ document.getElementById('nmChance').disabled=noMitherMode!=='custom';
+ document.getElementById('nmValue').textContent=noMitherChance+' %';
 }
-function onReady(){
-  document.getElementById('tabS').disabled = false;
-  document.getElementById('tabK').disabled = false;
-  document.getElementById('dealBtn').disabled = false;
-  document.getElementById('cardsArea').innerHTML = '';
-  document.getElementById('hint').style.visibility = 'visible';
-  const m = PERKS._meta;
-  setStatus(m.totalSurvivor+' survivor · '+m.totalKiller+' killer · v'+m.version);
-  document.getElementById('langBtn').textContent = currentLang === 'es' ? '🌐 EN' : '🌐 ES';
-  // Animate controls into view once on load
-  const controls = document.querySelector('.controls');
-  if(controls){ controls.classList.add('first-appear'); }
-  renderCharGrid();
-  loadPortraitsAsync();
-  preloadAudioFiles();
+function pickCards(){
+ const pool=getActivePool(role);
+ if(role==='killer'){if(!pool.length)throw new Error('Activa al menos un killer en Configuración.');return shuffle(pool).slice(0,1);}
+ let eligible=pool;
+ const nm=pool.find(p=>p.slug==='no-mither');
+ if(noMitherMode==='custom'){
+   eligible=pool.filter(p=>p.slug!=='no-mither');
+   if(nm&&Math.random()<noMitherChance/100){if(eligible.length<3)throw new Error('No hay suficientes perks.');return shuffle([nm,...shuffle(eligible).slice(0,3)]);}
+ }
+ if(eligible.length<4)throw new Error('Se necesitan al menos cuatro perks elegibles.');
+ return shuffle(eligible).slice(0,4);
+}
+async function warmImages(items){
+ await Promise.all(items.map(item=>new Promise(resolve=>{
+   if(!item.icon)return resolve();
+   const image=new Image();let done=false;
+   const finish=()=>{if(done)return;done=true;clearTimeout(timeout);resolve();};
+   const timeout=setTimeout(finish,5000);
+   image.onload=()=>{if(image.decode)image.decode().catch(()=>{}).finally(finish);else finish();};
+   image.onerror=finish;image.src=item.icon;
+ })));
 }
 
 /* ════════════════ ACTIVE POOL ════════════════ */
@@ -1378,143 +1037,70 @@ function getActivePool(r){
 const TAROT=['☽','✦','⊗','♰','⍟','⋈','⁂','⌘'];
 const ROMAN=['I','II','III','IV'];
 
-function setRole(r, btn){
-  if(!PERKS) return;
-  role=r;
-  document.querySelectorAll('.role-tab').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('cardsArea').innerHTML='';
-  document.getElementById('revealBtn').disabled=true;
-  document.getElementById('dealBtn').textContent='🃏 Tirar Cartas';
-  // Restore placeholder with animation
-  const ph = document.getElementById('dbdPlaceholder');
-  if(ph){
-    ph.style.display='flex';
-    ph.classList.remove('collapsing','entering');
-    void ph.offsetWidth;
-    ph.classList.add('entering');
-    // Update role label
-    const lbl = document.getElementById('phRole');
-    if(lbl) lbl.textContent = r==='survivor' ? 'Survivor' : 'Killer';
-  }
-  const pool = getActivePool(r);
-  const perkCount = pool.filter(p=>!p.isEmpty).length;
-  setStatus(perkCount+' perks activas · '+r);
+function setRole(r,btn){
+ if(!PERKS)return;
+ cancelDraw();role=r;
+ document.querySelectorAll('.role-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ document.getElementById('cardsArea').replaceChildren();
+ document.getElementById('revealBtn').disabled=true;
+ document.getElementById('dealBtn').textContent='Tirar Cartas';
+ const ph=document.getElementById('dbdPlaceholder');ph.style.display='flex';ph.classList.remove('collapsing','entering');
+ document.getElementById('phRole').textContent=r==='killer'?'Killer':'Survivor';
+ setStatus(getActivePool(r).length+(r==='killer'?' killers disponibles':' perks disponibles'));
 }
 
-function dealCards(){
-  if(!PERKS) return;
-  initAudio(); flipped=0;
-  // Animate placeholder collapsing instead of instant display:none
-  const ph = document.getElementById('dbdPlaceholder');
-  const isFirstDeal = ph && !ph.classList.contains('collapsing') && ph.style.display !== 'none';
-  if(ph && isFirstDeal){
-    ph.classList.remove('entering');
-    ph.classList.add('collapsing');
-    setTimeout(()=>{ ph.style.display='none'; }, 560);
-  }
-  const pool = getActivePool(role);
-  if(pool.filter(p=>!p.isEmpty).length < 1){
-    setStatus('⚠ No hay perks activas. Activa personajes en Configuración.', false, true);
-    return;
-  }
-  const picked = [...pool].sort(()=>Math.random()-.5).slice(0,4);
-  const area = document.getElementById('cardsArea');
-  area.innerHTML='';
-
-  // Timing constants (ms)
-  const dealDelay  = isFirstDeal ? 500 : 0; // wait for placeholder to fully collapse
-  const DEAL_DUR   = 750;                    // each card's full animation duration
-  const CARD_STRIDE= 260;                    // stagger between cards
-  const SLIDE_OFFSET = Math.round(DEAL_DUR * 0.38); // sound fires when slide phase starts (~285ms into anim)
-  const LAST_LAND  = dealDelay + 3*CARD_STRIDE + Math.round(DEAL_DUR * 0.88);
-
-  // Deck cluster offsets
-  const DECK_ROTS = [-6, -2, 2, 6];
-  const DECK_TX   = [-5, -2, 2, 5];
-
-  // Build wrappers invisible, append so layout is ready to measure
-  const wrappers = picked.map((perk, i) => {
-    const w = document.createElement('div');
-    w.className = 'card-wrapper';
-    const sym   = TAROT[Math.floor(Math.random()*TAROT.length)];
-    const empty = perk.isEmpty === true;
-    const front = empty
-      ? `<div class="empty-sym">✦</div><div class="empty-label">Slot Vacío</div><div class="empty-sub">Sin perk</div>`
-      : `<div class="icon-ring"><img class="perk-img" src="${perk.icon||'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'}" alt="${perk.name}" onerror="this.style.opacity='0.15'"></div>
-         <div class="perk-name">${tPerk(perk.name)}</div>
-         <div class="perk-character">${tChar(perk.character)}</div>`;
-    w.innerHTML = `<div class="card" id="c${i}" onclick="flip(${i})">
-      <div class="card-face card-back">
-        <div class="corner tl"></div><div class="corner tr"></div>
-        <div class="corner bl"></div><div class="corner br"></div>
-        <div class="sym">${sym}</div><div class="roman">${ROMAN[i]}</div>
-      </div>
-      <div class="card-face card-front${empty?' is-empty':''}">${front}</div>
-    </div>`;
-    // Keep invisible via CSS var, NOT opacity style, so layout is measured correctly
-    w.style.setProperty('--deal-dur', `${DEAL_DUR}ms`);
-    w.style.visibility = 'hidden';
-    area.appendChild(w);
-    return w;
+async function dealCards(){
+ if(!PERKS||busy||revealing)return;
+ let picked;try{picked=pickCards();}catch(e){setStatus(e.message,false,true);return;}
+ cancelDraw();busy=true;drawn=picked;const epoch=drawEpoch;
+ document.getElementById('dealBtn').disabled=true;
+ document.getElementById('revealBtn').disabled=true;
+ setStatus('Preparando cartas…');initAudio();
+ await warmImages(picked);if(epoch!==drawEpoch)return;
+ const ph=document.getElementById('dbdPlaceholder');
+ const first=ph.style.display!=='none';
+ if(first){ph.classList.remove('entering');ph.classList.add('collapsing');later(()=>{ph.style.display='none';},560);}
+ const area=document.getElementById('cardsArea');
+ area.replaceChildren();const fragment=document.createDocumentFragment();
+ const wrappers=picked.map((p,i)=>{
+  const wrapper=document.createElement('div');wrapper.className='card-wrapper';wrapper.style.visibility='hidden';
+  const name=role==='killer'?tChar(p.name):displayPerk(p);
+  const front=role==='killer'
+    ? `<img class="killer-result-img" src="${esc(p.icon)}" alt="${esc(p.name)}"><div class="perk-name" data-index="${i}">${esc(name)}</div><div class="perk-character">Killer seleccionado</div>`
+    : `<div class="icon-ring"><img class="perk-img" src="${esc(p.icon)}" alt="${esc(p.name)}"></div><div class="perk-name" data-index="${i}">${esc(name)}</div><div class="perk-character">${esc(tChar(p.character))}</div>`;
+  wrapper.innerHTML=`<div class="card" id="c${i}" role="button" tabindex="0" aria-label="Revelar carta ${i+1}"><div class="card-face card-back"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div><div class="sym">${TAROT[Math.floor(Math.random()*TAROT.length)]}</div><div class="roman">${ROMAN[i]}</div></div><div class="card-face card-front">${front}</div></div>`;
+  const card=wrapper.firstElementChild;
+  card.addEventListener('click',()=>flip(i));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip(i);}});
+  wrapper.style.setProperty('--deal-dur','750ms');fragment.appendChild(wrapper);return wrapper;
+ });
+ area.appendChild(fragment);
+ requestAnimationFrame(()=>{
+  if(epoch!==drawEpoch)return;
+  const rect=area.getBoundingClientRect(),center=rect.left+rect.width/2;
+  const offsets=wrappers.map(w=>{const r=w.getBoundingClientRect();return center-r.left-r.width/2;});
+  wrappers.forEach((w,i)=>{
+   w.style.setProperty('--deck-rot',`${picked.length===1?0:[-6,-2,2,6][i]}deg`);
+   w.style.setProperty('--deck-tx',`${picked.length===1?0:[-5,-2,2,5][i]}px`);
+   w.style.setProperty('--deal-tx',offsets[i]+'px');
+   later(()=>{w.style.visibility='';w.classList.add('dealing');later(playDeal,285);},(first?560:0)+i*220);
   });
-
-  // One rAF to let the browser lay out all slots, then measure positions
-  requestAnimationFrame(() => {
-    const areaRect   = area.getBoundingClientRect();
-    const areaCenter = areaRect.left + areaRect.width / 2;
-
-    wrappers.forEach((w, i) => {
-      const cardRect   = w.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const dx = areaCenter - cardCenter;
-
-      w.style.setProperty('--deck-rot', `${DECK_ROTS[i]}deg`);
-      w.style.setProperty('--deck-tx',  `${DECK_TX[i]}px`);
-      w.style.setProperty('--deal-tx',  `${dx}px`);
-
-      const cardDelay = dealDelay + i * CARD_STRIDE;
-
-      setTimeout(() => {
-        w.style.visibility = '';   // unhide exactly when animation starts
-        w.classList.add('dealing');
-        // Sound fires at the slide phase (38% into animation)
-        setTimeout(() => playDeal(), SLIDE_OFFSET);
-      }, cardDelay);
-    });
-  });
-
-  setStatus('4 cartas listas · Revélalas una a una ✦');
-  document.getElementById('dealBtn').textContent = '🔄 Tirar de Nuevo';
-  document.getElementById('revealBtn').disabled  = false;
+  later(()=>{busy=false;document.getElementById('dealBtn').disabled=false;document.getElementById('revealBtn').disabled=false;document.getElementById('dealBtn').textContent='Tirar de nuevo';setStatus(picked.length+' carta'+(picked.length>1?'s':'')+' lista'+(picked.length>1?'s':'')+' · Haz clic para revelar');},(first?560:0)+(picked.length-1)*220+760);
+ });
 }
-
 function flip(i){
-  const card=document.getElementById(`c${i}`);
-  if(!card||card.classList.contains('flipped')) return;
-  card.classList.add('flipped'); playFlip();
-  card.style.filter='brightness(1.4)';
-  setTimeout(()=>card.style.filter='',400);
-  flipped++;
-  if(flipped===4){
-    const empties=document.querySelectorAll('.card-front.is-empty').length;
-    const perks=4-empties;
-    if(empties===4)    setStatus('✦ Sin perks · ¡Buena suerte, la vas a necesitar! ✦',true);
-    else if(empties>0) setStatus(`✦ Build con ${perks} perk${perks!==1?'s':''} · ¡Buena suerte! ✦`,true);
-    else               setStatus('✦ Build completa · ¡Buena suerte en la partida! ✦',true);
-    document.getElementById('revealBtn').disabled=true;
-  }else{
-    setStatus(`${flipped} revelada${flipped>1?'s':''} · ${4-flipped} restante${4-flipped>1?'s':''}`);
-  }
+ if(busy)return;
+ const card=document.getElementById('c'+i);
+ if(!card||card.classList.contains('flipped'))return;
+ card.classList.add('flipped');card.setAttribute('aria-label',role==='killer'?tChar(drawn[i].name):displayPerk(drawn[i]));playFlip();flipped++;
+ if(flipped===drawn.length){document.getElementById('revealBtn').disabled=true;setStatus(role==='killer'?'Killer elegido · '+tChar(drawn[i].name):'Build completa · ¡Buena suerte!',true);}
+ else setStatus(flipped+' reveladas · '+(drawn.length-flipped)+' restantes');
 }
-
 function revealAll(){
-  initAudio(); let d=0;
-  for(let i=0;i<4;i++){
-    const c=document.getElementById(`c${i}`);
-    if(c&&!c.classList.contains('flipped')){setTimeout(()=>flip(i),d);d+=420;}
-  }
-  document.getElementById('revealBtn').disabled=true;
+ if(busy||revealing||!drawn.length)return;
+ revealing=true;document.getElementById('revealBtn').disabled=true;document.getElementById('dealBtn').disabled=true;
+ let delay=0;
+ drawn.forEach((_,i)=>{const c=document.getElementById('c'+i);if(c&&!c.classList.contains('flipped')){later(()=>flip(i),delay);delay+=300;}});
+ later(()=>{revealing=false;document.getElementById('dealBtn').disabled=false;},delay+450);
 }
 
 function setStatus(m,hi=false,err=false){
@@ -1532,89 +1118,41 @@ function setCfgRole(r, btn){
 }
 
 function getCharData(r){
-  // Build map: character -> [perks]
-  const map = {};
-  for(const p of PERKS[r]){
-    if(p.isEmpty || p.character==='General') continue;
-    if(!map[p.character]) map[p.character]=[];
-    map[p.character].push(p);
-  }
-  return map;
+ const map=Object.fromEntries(CHARACTERS.filter(c=>c.role===r).map(c=>[c.name,[]]));
+ if(r==='survivor')PERKS.survivor.forEach(p=>{if(p.character!=='General'&&map[p.character])map[p.character].push(p);});
+ return map;
 }
-
 function renderCharGrid(){
-  if(!PERKS) return;
-  const grid = document.getElementById('charGrid');
-  const map  = getCharData(cfgRole);
-  const disabled = disabledChars[cfgRole];
-  const chars = Object.keys(map).sort((a,b)=>tChar(a).localeCompare(tChar(b),'es'));
-
-  grid.innerHTML = chars.map(char=>{
-    const perks    = map[char];
-    const isActive = !disabled.has(char);
-    const portrait = SUPABASE_PORTRAITS[char] || (window.PORTRAITS && window.PORTRAITS[char]);
-    const ec       = char.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-
-    const imgHtml = portrait
-      ? `<img class="char-portrait" src="${portrait}" alt="${char}" loading="lazy">`
-      : `<div class="char-portrait-placeholder">☽</div>`;
-
-    return `<div class="char-card ${isActive?'active':'inactive'}" onclick="toggleChar('${ec}')">
-      <div class="char-portrait-wrap">
-        ${imgHtml}
-        <div class="corner-tl"></div><div class="corner-tr"></div>
-        <div class="corner-bl"></div><div class="corner-br"></div>
-        <div class="char-toggle">${isActive?'✓':'✕'}</div>
-      </div>
-      <div class="char-info">
-        <div class="char-name">${tChar(char)}</div>
-        <div class="char-perk-count">${perks.length} perk${perks.length!==1?'s':''}</div>
-      </div>
-    </div>`;
-  }).join('');
-
-  updateStats();
+ if(!PERKS)return;
+ const grid=document.getElementById('charGrid'),map=getCharData(cfgRole),disabled=disabledChars[cfgRole];
+ const chars=Object.keys(map).sort((a,b)=>tChar(a).localeCompare(tChar(b),'es'));
+ const fragment=document.createDocumentFragment();
+ chars.forEach(char=>{
+  const active=!disabled.has(char),portrait=window.PORTRAITS[char];
+  const card=document.createElement('div');card.className='char-card '+(active?'active':'inactive');card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-pressed',String(active));
+  card.innerHTML=`<div class="char-portrait-wrap">${portrait?`<img class="char-portrait" src="${esc(portrait)}" alt="${esc(char)}" loading="lazy" decoding="async">`:'<div class="char-portrait-placeholder">☽</div>'}<div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div><div class="char-toggle">${active?'✓':'✕'}</div></div><div class="char-info"><div class="char-name">${esc(tChar(char))}</div><div class="char-perk-count">${cfgRole==='killer'?'Elegible para la ruleta':map[char].length+' perks'}</div></div>`;
+  const toggle=()=>{const set=disabledChars[cfgRole];if(set.has(char))set.delete(char);else set.add(char);savePrefs();const enabled=!set.has(char);card.classList.toggle('active',enabled);card.classList.toggle('inactive',!enabled);card.setAttribute('aria-pressed',String(enabled));card.querySelector('.char-toggle').textContent=enabled?'✓':'✕';updateStats();};
+  card.addEventListener('click',toggle);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});fragment.appendChild(card);
+ });
+ grid.replaceChildren(fragment);
+ document.getElementById('generalPerksNote').hidden=cfgRole==='killer';
+ document.getElementById('nmOptions').hidden=cfgRole==='killer';
+ document.getElementById('nmMode').value=noMitherMode;document.getElementById('nmChance').value=noMitherChance;
+ document.getElementById('nmChance').disabled=noMitherMode!=='custom';document.getElementById('nmValue').textContent=noMitherChance+' %';
+ updateStats();
 }
-
-function toggleChar(char){
-  const disabled = disabledChars[cfgRole];
-  if(disabled.has(char)) disabled.delete(char);
-  else disabled.add(char);
-  savePrefs();
-  renderCharGrid();
-  // Update roulette status if on same role
-  if(PERKS && role === cfgRole){
-    const pool = getActivePool(role);
-    const perkCount = pool.filter(p=>!p.isEmpty).length;
-    setStatus(perkCount+' perks activas · '+role);
-  }
-}
-
 function updateStats(){
-  if(!PERKS) return;
-  const map = getCharData(cfgRole);
-  const disabled = disabledChars[cfgRole];
-  const activeChars = Object.keys(map).filter(c=>!disabled.has(c)).length;
-  const activePerks = Object.entries(map)
-    .filter(([c])=>!disabled.has(c))
-    .reduce((acc,[,perks])=>acc+perks.length, 0);
-  // Add general perks
-  const generalCount = PERKS[cfgRole].filter(p=>!p.isEmpty&&p.character==='General').length;
-  const pool = getActivePool(cfgRole);
-  document.getElementById('statChars').textContent = activeChars+'/'+Object.keys(map).length;
-  document.getElementById('statPerks').textContent = activePerks+generalCount;
-  document.getElementById('statPool').textContent  = pool.length;
+ if(!PERKS)return;
+ const map=getCharData(cfgRole),count=Object.keys(map).filter(n=>!disabledChars[cfgRole].has(n)).length,pool=getActivePool(cfgRole);
+ document.getElementById('statChars').textContent=count+'/'+Object.keys(map).length;
+ const stat=document.getElementById('statPerks');stat.textContent=pool.length;
+ stat.nextElementSibling.textContent=cfgRole==='killer'?'Killers disponibles':'Perks disponibles';
+ document.getElementById('statPool').textContent=cfgRole==='killer'?1:4;
+ document.getElementById('statPool').nextElementSibling.textContent='Cartas por tirada';
+ document.getElementById('nmEligibility').textContent=PERKS.survivor.some(p=>p.slug==='no-mither'&&!disabledChars.survivor.has(p.character))?'Se aplica a la build completa, no a cada carta.':'No Mither no está disponible: activa a David King para incluirla.';
 }
-
-function selectAll(){
-  disabledChars[cfgRole].clear();
-  savePrefs(); renderCharGrid();
-}
-function deselectAll(){
-  const map = getCharData(cfgRole);
-  Object.keys(map).forEach(c=>disabledChars[cfgRole].add(c));
-  savePrefs(); renderCharGrid();
-}
+function selectAll(){disabledChars[cfgRole].clear();savePrefs();renderCharGrid();}
+function deselectAll(){Object.keys(getCharData(cfgRole)).forEach(c=>disabledChars[cfgRole].add(c));savePrefs();renderCharGrid();}
 
 /* ════════════════ PAGE NAV ════════════════ */
 function showPage(id, btn){
@@ -1638,94 +1176,6 @@ function showPage(id, btn){
 
 loadPerks();
 
-// ── AMBIENT MUSIC ────────────────────────────────────────────────────────────
-const AMBIENT_URL = 'https://res.cloudinary.com/dtvguedqf/video/upload/q_auto/f_auto/v1777730395/1_Hour_Mystical_Ambient_Music_for_Tarot_Reading_Relaxing_Background_for_Divination_Meditation_-_witchygold_1_hyv0en.mp3';
-let ambientAudio = null;
-let ambientPlaying = false;
-let ambientReady = false;
-
-function initAmbient(){
-  if(ambientAudio) return;
-  ambientAudio = new Audio();
-  ambientAudio.src = AMBIENT_URL;
-  ambientAudio.loop = true;
-  ambientAudio.volume = 0.30;
-  ambientAudio.preload = 'none';
-  ambientAudio.addEventListener('canplaythrough', ()=>{ ambientReady=true; }, {once:true});
-}
-
-function toggleAmbient(){
-  initAmbient();
-  const btn = document.getElementById('ambientBtn');
-  const vol = document.getElementById('ambientVol');
-  if(!ambientPlaying){
-    ambientAudio.volume = 0;
-    ambientAudio.play().then(()=>{
-      ambientPlaying = true;
-      btn.textContent = '🔊';
-      btn.classList.add('playing');
-      fadeAmbient(0, 0.30, 1200);
-    }).catch(()=>{ btn.textContent = '🔮'; });
-  } else {
-    fadeAmbient(ambientAudio.volume, 0, 800, ()=>{
-      ambientAudio.pause();
-      ambientPlaying = false;
-      btn.textContent = '🔮';
-      btn.classList.remove('playing');
-    });
-  }
-  vol.classList.toggle('visible');
-}
-
-function fadeAmbient(from, to, durationMs, cb){
-  const steps = 30;
-  const stepTime = durationMs / steps;
-  const delta = (to - from) / steps;
-  let current = from, count = 0;
-  const iv = setInterval(()=>{
-    current += delta; count++;
-    ambientAudio.volume = Math.max(0, Math.min(1, current));
-    if(count >= steps){ clearInterval(iv); ambientAudio.volume = to; if(cb) cb(); }
-  }, stepTime);
-}
-
-function setAmbientVol(val){
-  const v = val / 100;
-  if(ambientAudio) ambientAudio.volume = v;
-  const slider = document.getElementById('ambientVolSlider');
-  slider.style.background = `linear-gradient(to right, var(--accent) 0%, var(--accent) ${val}%, rgba(155,93,229,.2) ${val}%)`;
-}
-
-// Cierre del panel de volumen — permanente
-document.addEventListener('click', e=>{
-  const vol = document.getElementById('ambientVol');
-  const btn = document.getElementById('ambientBtn');
-  if(vol && btn && !vol.contains(e.target) && !btn.contains(e.target)){
-    vol.classList.remove('visible');
-  }
-});
-
-// Autostart ambient solo en la primera interacción
-document.addEventListener('click', e=>{
-  if(e.target.id === 'ambientBtn') return;
-  initAmbient();
-  ambientAudio.volume = 0;
-  ambientAudio.play().then(()=>{
-    ambientPlaying = true;
-    document.getElementById('ambientBtn').textContent = '🔊';
-    document.getElementById('ambientBtn').classList.add('playing');
-    fadeAmbient(0, 0.30, 1800);
-  }).catch(()=>{});
-}, {once:true});
 </script>
-<!-- Ambient music player -->
-<button class="ambient-btn" id="ambientBtn" onclick="toggleAmbient()" title="Música de fondo">🔮</button>
-<div class="ambient-vol" id="ambientVol">
-  <label>volumen</label>
-  <input type="range" id="ambientVolSlider" min="0" max="100" value="30"
-    oninput="setAmbientVol(this.value)"
-    onmouseenter="document.getElementById('ambientVol').classList.add('visible')"
-  >
-</div>
 </body>
 </html>
